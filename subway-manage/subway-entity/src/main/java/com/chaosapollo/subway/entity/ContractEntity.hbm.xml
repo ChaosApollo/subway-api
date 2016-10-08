@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.chaosapollo.subway.entity.ContractEntity" table="contract" schema="hengsheng_subway_cloud">
+        <id name="id">
+            <column name="ID" sql-type="bigint(20) unsigned"/>
+        </id>
+        <property name="customerId">
+            <column name="CUSTOMER_ID" sql-type="int(11)"/>
+        </property>
+        <property name="userId">
+            <column name="USER_ID" sql-type="int(11)"/>
+        </property>
+        <property name="groupId">
+            <column name="GROUP_ID" sql-type="int(11)"/>
+        </property>
+        <property name="name">
+            <column name="NAME" sql-type="varchar(255)"/>
+        </property>
+        <property name="serialNumber">
+            <column name="SERIAL_NUMBER" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="totalResources">
+            <column name="TOTAL_RESOURCES" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="executeState">
+            <column name="EXECUTE_STATE" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="executeNumber">
+            <column name="EXECUTE_NUMBER" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="begin">
+            <column name="BEGIN" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="end">
+            <column name="END" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="promoteBrand">
+            <column name="PROMOTE_BRAND" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="payMethod">
+            <column name="PAY_METHOD" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="totalAmount">
+            <column name="TOTAL_AMOUNT" sql-type="decimal(10,2)" precision="10" scale="2" not-null="true"/>
+        </property>
+        <property name="discount">
+            <column name="DISCOUNT" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="otherDiscount">
+            <column name="OTHER_DISCOUNT" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="suit">
+            <column name="SUIT" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="sellCost">
+            <column name="SELL_COST" sql-type="decimal(10,2)" precision="10" scale="2" not-null="true"/>
+        </property>
+        <property name="resources">
+            <column name="RESOURCES" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="deliveryPlan">
+            <column name="DELIVERY_PLAN" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <property name="otherProgject">
+            <column name="OTHER_PROGJECT" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="periodication">
+            <column name="PERIODICATION" sql-type="decimal(10,2)" precision="10" scale="2" not-null="true"/>
+        </property>
+        <property name="reservationId">
+            <column name="RESERVATION_ID" sql-type="bigint(20)" not-null="true"/>
+        </property>
+        <property name="createDate">
+            <column name="CREATE_DATE" sql-type="datetime"/>
+        </property>
+        <property name="modificationTime">
+            <column name="MODIFICATION_TIME" sql-type="datetime"/>
+        </property>
+        <property name="delState">
+            <column name="DEL_STATE" sql-type="tinyint(1)"/>
+        </property>
+        <set name="lines" inverse="true">
+            <key>
+                <column name="CONTRACT_ID"/>
+            </key>
+            <one-to-many not-found="ignore" class="com.chaosapollo.subway.entity.ContractLineEntity"/>
+        </set>
+        <list name="approvals" inverse="true">
+            <key>
+                <column name="CONTRACT_ID"/>
+            </key>
+            <one-to-many not-found="ignore" class="com.chaosapollo.subway.entity.ContractApprovalEntity"/>
+        </list>
+    </class>
+</hibernate-mapping>

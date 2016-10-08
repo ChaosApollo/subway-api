@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.chaosapollo.subway.entity.ContractApprovalEntity" table="contract_approval"
+           schema="hengsheng_subway_cloud">
+        <id name="id">
+            <column name="ID" sql-type="bigint(20) unsigned"/>
+        </id>
+        <property name="contractId">
+            <column name="CONTRACT_ID" sql-type="bigint(20)"/>
+        </property>
+        <property name="submitUserId">
+            <column name="SUBMIT_USER_ID" sql-type="int(11)"/>
+        </property>
+        <property name="submtiDate">
+            <column name="SUBMTI_DATE" sql-type="datetime"/>
+        </property>
+        <property name="approvalUserId">
+            <column name="APPROVAL_USER_ID" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="approvalDate">
+            <column name="APPROVAL_DATE" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="status">
+            <column name="STATUS" sql-type="tinyint(1)"/>
+        </property>
+        <property name="advice">
+            <column name="ADVICE" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="createDate">
+            <column name="CREATE_DATE" sql-type="datetime"/>
+        </property>
+        <property name="modificationTime">
+            <column name="MODIFICATION_TIME" sql-type="datetime"/>
+        </property>
+        <property name="delState">
+            <column name="DEL_STATE" sql-type="tinyint(1)"/>
+        </property>
+        <many-to-one name="contract" class="com.chaosapollo.subway.entity.ContractEntity">
+            <column name="CONTRACT_ID"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

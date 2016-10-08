@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Subway API Web Application</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- 配置SESSION超时，单位是分钟 -->
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
+
+
+
+    <!-- ############################################ filter start  ############################################ -->
+
+    <!-- 编码过滤器 -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <async-supported>true</async-supported>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- OpenSessionInView -->
+    <filter>
+        <filter-name>OpenSessionInViewFilter</filter-name>
+        <filter-class>
+            org.springframework.orm.hibernate4.support.OpenSessionInViewFilter
+        </filter-class>
+        <init-param>
+            <param-name>singleSession</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <!--
+        org.springframework.orm.hibernate4.support.OpenSessionInViewFilter
+        延迟加载的实现的原理是cglib动态字节码
+        Hibernate对延迟加载的实现原理是CGLIB动态字节码生成技术，即返回的实体并非真正的实体对象，而是经过CGLIB处理后的代理实体，当调用某一未经加载的属性时，代理实体就可以截获这一调用，然后由Hibernate实现动态加载。
+
+        如果要使用Hibernate的延迟加载特性，则渲染视图阶段不能关闭事务，因此，事务的范围变为整个HTTP请求的周期。
+
+        采用OpenSessionInView模式可以将事务范围界定在请求开始和渲染视图结束后，使得Hibernate的Session在视图渲染时仍有效。有两种方式实现OpenSessionInView模式，一种是使用Spring提供的OpenSessionInViewInterceptor，如果采用Spring MVC框架，可以将这个Interceptor加入到Controller的拦截器链中，事务在Controller处理前开始，在视图渲染后结束，如图11-17所示。
+
+
+
+        如果Web层没有采用Spring的MVC框架，而是使用Struts等其他MVC框架，甚至没有使用MVC框架，此时，就无法定义Interceptor，只能采用Filter来实现OpenSessionInView模式。
+
+        OpenSessionInViewFilter是Spring提供的一个Filter。在OpenSessionInViewFilter模式下，所有的HTTP请求都将被OpenSessionInViewFilter截获，事务在请求处理前开始，在请求处理完毕后结束，而不管采用何种MVC框架，甚至直接使用JSP，如图11-18所示。
+
+        org.springframework.orm.hibernate4.support.OpenSessionInViewFilter(延迟加载，)
+
+        图11-18
+
+        两种方式各有优劣。OpenSessionInViewInterceptor只能用于Spring MVC，但是配置简单，无须过滤URL；OpenSessionInViewFilter适用范围更广，但是必须手动配置web.xml文件，并且必须正确过滤URL。
+
+        无论如何，采用以上两种方式的目的都是为了使用Hibernate的延迟加载特性。由于事务也是一种数据库资源，事务持续的时间越久，数据库资源被锁定也越久，应用程序的吞吐量就会降低。因此，要尽量将事务限定在最小的范围内
+    -->
+    <filter-mapping>
+        <filter-name>OpenSessionInViewFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- session的过滤控制用户在登录时的权限限制-->
+    <!--
+    <filter>
+        <filter-name>authorizen</filter-name>
+        <filter-class>
+            org.springframework.web.filter.DelegatingFilterProxy
+        </filter-class>
+        <init-param>
+            <param-name>targetFilterLifecycle</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    -->
+    <!-- 以前学习框架经常做登录页面的demo，输入正确的id+pwd就返回成功了。。可是这种模式无法阻止通过URL直接访问其他的页面，在一个非玩具系统中，控制未登录用户的页面访问权限是一个基本功能。
+
+        从实现思路讲，验证一个用户的有效登录，大多采用的是登入时候向Session写一个User认证信息，然后在访问每个页面前来判断Session中是否有认证信息。
+
+        if(session.get("User")==null)
+        另外有很多网站提供记住登陆信息xx天，这种是结合了Cookie的认证信息存储。谈到这里，也可以仔细想想Cookie和Session的作用。比如卓越的购物车就是Cookie做的（因为关闭IE后再访问购物车还记得你的物品），而大多数群集Web服务器的信息也是采用Cookie（因为群集的Session同步开销很大），掌握了Cookie和Session的基本特性，这些都是理所当然的做法了。
+
+        一。下面说第一种拦截实现：基于javax.servlet.Filter
+
+        1.首先需要到web.xml注册一个filter
+
+        （这里是将authorityFilter这个类委托给spring来代理）
+    -->
+    <!--
+    <filter-mapping>
+        <filter-name>authorizen</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+    -->
+
+    <!-- druid 数据源，用于采集 web-jdbc 关联监控的数据 -->
+    <!-- 具体参考官网：https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE_%E9%85%8D%E7%BD%AEWebStatFilter-->
+    <filter>
+        <filter-name>DruidWebStatFilter</filter-name>
+        <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+        <init-param>
+            <param-name>exclusions</param-name>
+            <param-value>*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*</param-value>
+        </init-param>
+        <init-param>
+            <param-name>profileEnable</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>DruidWebStatFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ############################################ filter end  ############################################ -->
+
+
+
+    <!-- ############################################ servlet start  ############################################ -->
+
+    <!-- Spring MVC servlet -->
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring/spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <!-- 此处可以可以配置成 *.do ，对应struts的后缀习惯 -->
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <!-- Spring配置文件 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:spring/applicationContext*.xml</param-value>
+    </context-param>
+
+    <!-- Spring监听器 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- 防止Spring内存溢出监听器 -->
+    <listener>
+        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+    </listener>
+
+    <!-- 注册Spring的request作用域 -->
+    <!--
+        request
+        request表示该针对每一次HTTP请求都会产生一个新的bean，同时该bean仅在当前HTTP request内有效，配置实例：
+        request、session、global session
+
+        http://blog.csdn.net/nacey5201/article/details/8547772
+    -->
+    <listener>
+        <listener-class>
+            org.springframework.web.context.request.RequestContextListener
+        </listener-class>
+    </listener>
+
+    <!-- ############################################ servlet end  ############################################ -->
+
+
+
+    <!--展示Druid的统计信息-->
+    <!--具体可以看官网信息：https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE_StatViewServlet%E9%85%8D%E7%BD%AE-->
+    <servlet>
+        <servlet-name>DruidStatView</servlet-name>
+        <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+        <init-param>
+            <!-- 允许清空统计数据 -->
+            <param-name>resetEnable</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <!-- 用户名 -->
+            <param-name>loginUsername</param-name>
+            <param-value>druid</param-value>
+        </init-param>
+        <init-param>
+            <!-- 密码 -->
+            <param-name>loginPassword</param-name>
+            <param-value>druid</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DruidStatView</servlet-name>
+        <!--访问路径eg：http://localhost:8080/druid/index.html -->
+        <url-pattern>/druid/*</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!-- 如果使用Struts，那么需要在Struts的配置文件struts-config.xml里面配置一个Spring的plugin：ContextLoaderPlugIn。
+
+        实际上ContextLoaderListener和ContextLoaderPlugIn的功能是重叠的，他们都是进行Spring配置的初始化工作的。因此，如果你不打算使用OpenSessionInView，那么你并不需要在web.xml里面配置ContextLoaderListener。
+
+        好了，但是你现在既需要Struts集成Spring，又需要OpenSessionInView模式，问题就来了！
+
+        由于ContextLoaderListener和ContextLoaderPlugIn功能重叠，都是初始化Spring，你不应该进行两次初始化，所以你不应该同时使用这两者，只能选择一个，因为你现在需要集成Struts，所以你只能使用ContextLoaderPlugIn。
+
+        但是令人困惑的是，ContextLoaderListener和ContextLoaderPlugIn有一个非常矛盾的地方！
+
+        ContextLoaderListener初始化spring配置，然后把它放在ServletContext对象里面保存：
+
+        [code:1]servletContext.setAttribute(
+        WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, this.context);[/code:1]
+
+        请注意，保存的对象的key是WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE！
+
+        但是ContextLoaderPlugIn初始化spring配置，然后把它放在ServletContext对象里面保存：
+
+        [code:1]
+        String attrName = getServletContextAttributeName();
+        getServletContext().setAttribute(attrName, wac);[/code:1]
+
+        这个attrName和WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE名字是不一样的！
+
+        如果仅仅是名字不一样，问题还不大，你仍然可以放心使用ContextLoaderPlugIn，但是当你使用OpenSessionInView的时候，OpenSessionInViewFilter是使用哪个key取得spring配置的呢？
+
+        [code:1]WebApplicationContext wac =
+        WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext());[/code:1]
+
+        显然，OpenSessionInViewFilter是按照WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE这个key去拿spring配置的！
+
+        我们整理一下思路：
+
+        ContextLoaderPlugIn保存spring配置的名字叫做attrName；
+        ，ContextLoaderListener保存spring配置的名字叫做WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE；
+        而OpenSessionInView是按照WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE这个名字去取得spring配置的！
+        而你的应用程序却是按照attrName去取得spring的配置的！
+
+        所以，OpenSessionInView模式失效！
+
+        解决办法：
+        修改ContextLoaderPlugIn代码，在getServletContext().setAttribute(attrName, wac);这个地方加上一行代码：
+        getServletContext().setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, wac);
+
+        或者修改OpenSessionInViewFilter，让它按照attrName去取得spring配置。
+    -->
+</web-app>

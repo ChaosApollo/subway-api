@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://192.168.0.74:3306/hengsheng_subway_cloud</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <mapping resource="com/chaosapollo/subway/entity/ContractEntity.hbm.xml"/>
+        <mapping class="com.chaosapollo.subway.entity.ContractEntity"/>
+        <mapping resource="com/chaosapollo/subway/entity/ContractApprovalEntity.hbm.xml"/>
+        <mapping class="com.chaosapollo.subway.entity.ContractApprovalEntity"/>
+        <mapping class="com.chaosapollo.subway.entity.ContractLineEntity"/>
+        <mapping resource="com/chaosapollo/subway/entity/ContractLineEntity.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

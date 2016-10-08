@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.chaosapollo.subway.entity.ContractLineEntity" table="contract_line"
+           schema="hengsheng_subway_cloud">
+        <id name="id">
+            <column name="ID" sql-type="bigint(20) unsigned"/>
+        </id>
+        <property name="contractId">
+            <column name="CONTRACT_ID" sql-type="bigint(20)"/>
+        </property>
+        <property name="lineId">
+            <column name="LINE_ID" sql-type="bigint(20)"/>
+        </property>
+        <property name="createDate">
+            <column name="CREATE_DATE" sql-type="datetime"/>
+        </property>
+        <property name="modificationTime">
+            <column name="MODIFICATION_TIME" sql-type="datetime"/>
+        </property>
+        <property name="delState">
+            <column name="DEL_STATE" sql-type="tinyint(1)"/>
+        </property>
+        <many-to-one name="contract" class="com.chaosapollo.subway.entity.ContractEntity">
+            <column name="CONTRACT_ID"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

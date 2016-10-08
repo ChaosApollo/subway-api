@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!-- 指定连接数据库的 url -->
+    <property name="connection.url">jdbc:mysql://192.168.0.74:3306/hengsheng_subway_cloud</property>
+    <!-- 指定连接数据库所用的驱动 -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <!-- 指定连接数据库的用户名 -->
+    <property name="hibernate.connection.username">hengsheng</property>
+    <!-- 指定连接数据库的密码 -->
+    <property name="hibernate.connection.password">bjjr123456</property>
+    <!-- 指定数据库连接池的最大并发连接数 -->
+    <!--<property name="hibernate.connection.pool_size">5</property>-->
+    <!-- 指定数据库方言 -->
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+    <!-- 指定外链接抓取的数量 -->
+    <property name="hibernate.max_fetch_depth">5</property>
+    <!-- 是否在控制台输出 Hibernate 持久化操作底层所使用的 SQL 语句 -->
+    <property name="hibernate.show_sql">true</property>
+    <!-- 是否将 SQL 语句转成格式良好的 SQL -->
+    <property name="hibernate.format_sql">true</property>
+    <!-- 是否在 Hibernate 生成的 SQL 语句中添加有助于调试的注释 -->
+    <property name="hibernate.use_sql_comments">false</property>
+    <!-- 指定 JDBC 抓取数量的大小 -->
+    <!--<property name="hibernate.jdbc.fetch_size">0</property>-->
+    <!-- 指定 Hibernate 使用 JDBC2 的批量更新的大小 -->
+    <!--<property name="hibernate.jdbc.batch_size">5</property>-->
+    <!-- 设置是否自动提交。通常不建议打开自动提交 -->
+    <property name="hibernate.connection.autocommit">false</property>
+    <!-- 设置当创建 SessionFactory 时，是否根据持久化类的映射关系自动建立数据库表 -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+    <!--  -->
+    <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+    <!--  -->
+    <property name="hibernate.generate_statistics">true</property>
+    <!--  -->
+    <property name="hibernate.jdbc.batch_versioned_data">true</property>
+    <!--  -->
+    <property name="hibernate.search.autoregister_listeners">false</property>
+    <!--  -->
+    <property name="hibernate.service.allow_crawling">false</property>
+
+    <!-- 指定Hibernate的连接提供方式，如果没有将不会使用c3p0作为Hibernate的连接池 -->
+    <property name="hibernate.connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+    <!-- 当连接池里面的连接用完的时候，C3P0一下获取的新的连接数 -->
+    <property name="hibernate.c3p0.acquire_increment">2</property>
+    <!-- 每隔120秒检查连接池里的空闲连接 ，单位是秒-->
+    <property name="hibernate.c3p0.idle_test_period">120</property>
+    <!-- 获得连接的超时时间,如果超过这个时间,会抛出异常，单位毫秒 -->
+    <property name="hibernate.c3p0.timeout">120</property>
+    <!-- 连接池的最大连接数 -->
+    <property name="hibernate.c3p0.max_size">20</property>
+    <!-- 缓存Statement的数量 -->
+    <property name="hibernate.c3p0.max_statements">100</property>
+    <!-- 连接池的最小连接数 -->
+    <property name="hibernate.c3p0.min_size">5</property>
+    <!-- 每次都验证连接是否可用 -->
+    <property name="hibernate.c3p0.validate">true</property>
+  </session-factory>
+</hibernate-configuration>
