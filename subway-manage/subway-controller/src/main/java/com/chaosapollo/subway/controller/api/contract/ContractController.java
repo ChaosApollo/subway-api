@@ -3,6 +3,7 @@ package com.chaosapollo.subway.controller.api.contract;
 import com.chaosapollo.subway.entity.ContractEntity;
 import com.chaosapollo.subway.service.contract.ContractService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,6 +15,7 @@ import java.util.List;
  * Created by steven on 08/10/2016.
  */
 
+@Scope("prototype")
 @Controller
 @RequestMapping(value = "/api/contract")
 public class ContractController {

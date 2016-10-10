@@ -1,4 +1,4 @@
-package com.chaosapollo.subway.dao;
+package com.chaosapollo.subway.dao.contract;
 
 import com.chaosapollo.subway.entity.ContractEntity;
 

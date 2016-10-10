@@ -1,6 +1,6 @@
-package com.chaosapollo.subway.dao.impl;
+package com.chaosapollo.subway.dao.contract.impl;
 
-import com.chaosapollo.subway.dao.ContractDAO;
+import com.chaosapollo.subway.dao.contract.ContractDAO;
 import com.chaosapollo.subway.entity.ContractEntity;
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;

@@ -3,6 +3,7 @@ package com.chaosapollo.subway.controller.api;
 import com.chaosapollo.subway.entity.ContractEntity;
 import com.chaosapollo.subway.service.contract.ContractService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,9 +15,10 @@ import java.util.List;
  * Created by steven on 28/09/2016.
  */
 
+@Scope("prototype")
 @Controller
-@RequestMapping(value = "/test")
-public class HelloWorldController {
+@RequestMapping(value = "/")
+public class RootController {
     @Autowired
     private ContractService contractService;
 
