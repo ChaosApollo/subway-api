@@ -6,26 +6,38 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html lang="zh-cn">
+<%@include file="include/default-page-taglib.jsp" %>
+<%@include file="include/default-page-html-class.jsp" %>
 <head>
     <title>Subway API Template</title>
 
-    <%@ include file="include/bootstrap-head-content.jsp"%>
+    <%@ include file="include/default-page-head.jsp" %>
 
     <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
-<body>
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-    <h1>Hello, world!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a
-        jumbotron and three supporting pieces of content. Use it as a starting point to create something more
-        unique.</p>
-    <p><a href="#">Learn more »</a></p>
-</div>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
 
-<%@ include file="include/bootstrap-body-footer.jsp"%>
+<%@include file="include/default-system-header.jsp" %>
+
+<!-- BEGIN HEADER & CONTENT DIVIDER -->
+<div class="clearfix"></div>
+<!-- END HEADER & CONTENT DIVIDER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+
+    <%@include file="include/default-system-sidebar.jsp" %>
+
+    <%@include file="include/default-system-content.jsp" %>
+
+    <%@include file="include/default-system-quick-sidebar.jsp" %>
+
+</div>
+<!-- END CONTAINER -->
+
+<%@include file="include/default-system-footer.jsp" %>
+
+<%@ include file="include/default-system-end-of-page.jsp" %>
+
 </body>
 </html>
