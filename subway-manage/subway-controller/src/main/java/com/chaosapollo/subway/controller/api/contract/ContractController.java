@@ -22,6 +22,11 @@ public class ContractController {
     @Autowired
     private ContractService contractService;
 
+    @RequestMapping(value = "test", method = RequestMethod.GET)
+    public String index() {
+        return "index";
+    }
+
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
     public List<ContractEntity> getAllContract() {

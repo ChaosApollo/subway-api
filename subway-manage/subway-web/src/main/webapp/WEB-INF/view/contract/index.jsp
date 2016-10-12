@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: steven
-  Date: 28/09/2016
-  Time: 1:45 PM
+  Date: 11/10/2016
+  Time: 11:50 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,7 +12,7 @@
 <head>
     <title>Subway API Template</title>
 
-    <%@ include file="include/bootstrap-head-content.jsp"%>
+    <%@include file="include/bootstrap-head-content.jsp"%>
 
     <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
@@ -26,6 +26,6 @@
     <p><a href="#">Learn more »</a></p>
 </div>
 
-<%@ include file="include/bootstrap-body-footer.jsp"%>
+<%@include file="include/bootstrap-body-footer.jsp"%>
 </body>
 </html>
