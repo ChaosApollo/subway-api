@@ -1,7 +1,7 @@
 var BootstrapTable = function () {
 
     var TableTransform = function () {
-        var $table_transform = $('#table-transform');
+         var $table_transform = $('#table-transform');
         $('#transform').click(function () {
             $table_transform.bootstrapTable();
         });
@@ -12,7 +12,7 @@ var BootstrapTable = function () {
 
     var TableStyle = function () {
         var $table_style = $('#table-style');
-        // $table_style.bootstrapTable();
+       // $table_style.bootstrapTable();
 
         $('#hover, #striped, #condensed').click(function () {
             var classes = 'table';
@@ -55,6 +55,6 @@ var BootstrapTable = function () {
 
 }();
 
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {
     BootstrapTable.init();
 });

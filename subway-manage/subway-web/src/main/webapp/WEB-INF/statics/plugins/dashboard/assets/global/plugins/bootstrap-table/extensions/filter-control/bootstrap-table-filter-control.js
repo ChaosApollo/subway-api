@@ -85,7 +85,7 @@
         });
     };
 
-    var setValues = function (that) {
+    var setValues = function(that) {
         var field = null,
             result = [],
             header = getCurrentHeader(that),
@@ -195,13 +195,13 @@
 
             header.off('mouseup', 'input').on('mouseup', 'input', function (event) {
                 var $input = $(this),
-                    oldValue = $input.val();
+                oldValue = $input.val();
 
                 if (oldValue === "") {
                     return;
                 }
 
-                setTimeout(function () {
+                setTimeout(function(){
                     var newValue = $input.val();
 
                     if (newValue === "") {
@@ -282,7 +282,7 @@
                 if (that.options.height) {
                     fixHeaderCSS(that);
                 }
-            }).on('column-switch.bs.table', function (field, checked) {
+            }).on('column-switch.bs.table', function(field, checked) {
                 setValues(that);
             });
         }
@@ -301,9 +301,9 @@
                 $btnClear = $btnGroup.find('div.export');
 
             if (!$btnClear.length) {
-                $btnClear = $([
+              $btnClear = $([
                     '<button class="btn btn-default " ' +
-                    'type="button">',
+                        'type="button">',
                     '<i class="glyphicon glyphicon-trash icon-share"></i> ',
                     '</button>',
                     '</ul>'].join('')).appendTo($btnGroup);
@@ -374,21 +374,20 @@
                     that.header.formatters[$.inArray(key, that.header.fields)],
                     [value, item, i], value);
 
-                if (thisColumn.filterStrictSearch) {
+                if(thisColumn.filterStrictSearch){
                     if (!($.inArray(key, that.header.fields) !== -1 &&
                         (typeof value === 'string' || typeof value === 'number') &&
                         value.toString().toLowerCase() === fval.toString().toLowerCase())) {
                         return false;
                     }
                 }
-                else {
+                else{
                     if (!($.inArray(key, that.header.fields) !== -1 &&
                         (typeof value === 'string' || typeof value === 'number') &&
                         (value + '').toLowerCase().indexOf(fval) !== -1)) {
                         return false;
                     }
-                }
-                ;
+                };
             }
             return true;
         }) : this.data;

@@ -27,12 +27,12 @@ var TableDatatablesButtons = function () {
 
 
             buttons: [
-                {extend: 'print', className: 'btn dark btn-outline'},
-                {extend: 'copy', className: 'btn red btn-outline'},
-                {extend: 'pdf', className: 'btn green btn-outline'},
-                {extend: 'excel', className: 'btn yellow btn-outline '},
-                {extend: 'csv', className: 'btn purple btn-outline '},
-                {extend: 'colvis', className: 'btn dark btn-outline', text: 'Columns'}
+                { extend: 'print', className: 'btn dark btn-outline' },
+                { extend: 'copy', className: 'btn red btn-outline' },
+                { extend: 'pdf', className: 'btn green btn-outline' },
+                { extend: 'excel', className: 'btn yellow btn-outline ' },
+                { extend: 'csv', className: 'btn purple btn-outline ' },
+                { extend: 'colvis', className: 'btn dark btn-outline', text: 'Columns'}
             ],
 
             // setup responsive extension: http://datatables.net/extensions/responsive/
@@ -44,7 +44,7 @@ var TableDatatablesButtons = function () {
             "order": [
                 [0, 'asc']
             ],
-
+            
             "lengthMenu": [
                 [5, 10, 15, 20, -1],
                 [5, 10, 15, 20, "All"] // change per page values here
@@ -87,15 +87,15 @@ var TableDatatablesButtons = function () {
             //},
 
             buttons: [
-                {extend: 'print', className: 'btn default'},
-                {extend: 'copy', className: 'btn default'},
-                {extend: 'pdf', className: 'btn default'},
-                {extend: 'excel', className: 'btn default'},
-                {extend: 'csv', className: 'btn default'},
+                { extend: 'print', className: 'btn default' },
+                { extend: 'copy', className: 'btn default' },
+                { extend: 'pdf', className: 'btn default' },
+                { extend: 'excel', className: 'btn default' },
+                { extend: 'csv', className: 'btn default' },
                 {
                     text: 'Reload',
                     className: 'btn default',
-                    action: function (e, dt, node, config) {
+                    action: function ( e, dt, node, config ) {
                         //dt.ajax.reload();
                         alert('Custom Button');
                     }
@@ -105,7 +105,7 @@ var TableDatatablesButtons = function () {
             "order": [
                 [0, 'asc']
             ],
-
+            
             "lengthMenu": [
                 [5, 10, 15, 20, -1],
                 [5, 10, 15, 20, "All"] // change per page values here
@@ -148,12 +148,12 @@ var TableDatatablesButtons = function () {
             //},
 
             buttons: [
-                {extend: 'print', className: 'btn dark btn-outline'},
-                {extend: 'copy', className: 'btn red btn-outline'},
-                {extend: 'pdf', className: 'btn green btn-outline'},
-                {extend: 'excel', className: 'btn yellow btn-outline '},
-                {extend: 'csv', className: 'btn purple btn-outline '},
-                {extend: 'colvis', className: 'btn dark btn-outline', text: 'Columns'}
+                { extend: 'print', className: 'btn dark btn-outline' },
+                { extend: 'copy', className: 'btn red btn-outline' },
+                { extend: 'pdf', className: 'btn green btn-outline' },
+                { extend: 'excel', className: 'btn yellow btn-outline ' },
+                { extend: 'csv', className: 'btn purple btn-outline ' },
+                { extend: 'colvis', className: 'btn dark btn-outline', text: 'Columns'}
             ],
 
             // setup responsive extension: http://datatables.net/extensions/responsive/
@@ -165,7 +165,7 @@ var TableDatatablesButtons = function () {
             "order": [
                 [0, 'asc']
             ],
-
+            
             "lengthMenu": [
                 [5, 10, 15, 20, -1],
                 [5, 10, 15, 20, "All"] // change per page values here
@@ -182,7 +182,7 @@ var TableDatatablesButtons = function () {
         });
 
         // handle datatable custom tools
-        $('#sample_3_tools > li > a.tool-action').on('click', function () {
+        $('#sample_3_tools > li > a.tool-action').on('click', function() {
             var action = $(this).attr('data-action');
             oTable.DataTable().button(action).trigger();
         });
@@ -208,7 +208,7 @@ var TableDatatablesButtons = function () {
             onError: function (grid) {
                 // execute some code on network or other general error  
             },
-            onDataLoad: function (grid) {
+            onDataLoad: function(grid) {
                 // execute some code on ajax data load
             },
             loadingMessage: 'Loading...',
@@ -217,9 +217,9 @@ var TableDatatablesButtons = function () {
                 // Uncomment below line("dom" parameter) to fix the dropdown overflow issue in the datatable cells. The default datatable layout
                 // setup uses scrollable div(table-scrollable) with overflow:auto to enable vertical scroll(see: assets/global/scripts/datatable.js). 
                 // So when dropdowns used the scrollable div should be removed. 
-
+                
                 //"dom": "<'row'<'col-md-8 col-sm-12'pli><'col-md-4 col-sm-12'<'table-group-actions pull-right'>>r>t<'row'<'col-md-8 col-sm-12'pli><'col-md-4 col-sm-12'>>",
-
+                
                 "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
 
                 "lengthMenu": [
@@ -233,22 +233,22 @@ var TableDatatablesButtons = function () {
                 "order": [
                     [1, "asc"]
                 ],// set first column as a default sort by asc
-
+            
                 // Or you can use remote translation file
                 //"language": {
                 //   url: '//cdn.datatables.net/plug-ins/3cfcc339e89/i18n/Portuguese.json'
                 //},
 
                 buttons: [
-                    {extend: 'print', className: 'btn default'},
-                    {extend: 'copy', className: 'btn default'},
-                    {extend: 'pdf', className: 'btn default'},
-                    {extend: 'excel', className: 'btn default'},
-                    {extend: 'csv', className: 'btn default'},
+                    { extend: 'print', className: 'btn default' },
+                    { extend: 'copy', className: 'btn default' },
+                    { extend: 'pdf', className: 'btn default' },
+                    { extend: 'excel', className: 'btn default' },
+                    { extend: 'csv', className: 'btn default' },
                     {
                         text: 'Reload',
                         className: 'btn default',
-                        action: function (e, dt, node, config) {
+                        action: function ( e, dt, node, config ) {
                             dt.ajax.reload();
                             alert('Datatable reloaded!');
                         }
@@ -292,7 +292,7 @@ var TableDatatablesButtons = function () {
         //grid.clearAjaxParams();
 
         // handle datatable custom tools
-        $('#datatable_ajax_tools > li > a.tool-action').on('click', function () {
+        $('#datatable_ajax_tools > li > a.tool-action').on('click', function() {
             var action = $(this).attr('data-action');
             grid.getDataTable().button(action).trigger();
         });
@@ -318,6 +318,6 @@ var TableDatatablesButtons = function () {
 
 }();
 
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {
     TableDatatablesButtons.init();
 });

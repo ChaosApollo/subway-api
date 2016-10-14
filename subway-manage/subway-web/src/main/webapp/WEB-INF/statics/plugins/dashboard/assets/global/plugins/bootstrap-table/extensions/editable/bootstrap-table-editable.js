@@ -76,30 +76,30 @@
 
             that.$body.find('a[data-name="' + column.field + '"]').editable(column.editable)
                 .off('save').on('save', function (e, params) {
-                var data = that.getData(),
-                    index = $(this).parents('tr[data-index]').data('index'),
-                    row = data[index],
-                    oldValue = row[column.field];
+                    var data = that.getData(),
+                        index = $(this).parents('tr[data-index]').data('index'),
+                        row = data[index],
+                        oldValue = row[column.field];
 
-                row[column.field] = params.submitValue;
-                that.trigger('editable-save', column.field, row, oldValue, $(this));
-            });
+                    row[column.field] = params.submitValue;
+                    that.trigger('editable-save', column.field, row, oldValue, $(this));
+                });
             that.$body.find('a[data-name="' + column.field + '"]').editable(column.editable)
                 .off('shown').on('shown', function (e, editable) {
-                var data = that.getData(),
-                    index = $(this).parents('tr[data-index]').data('index'),
-                    row = data[index];
-
-                that.trigger('editable-shown', column.field, row, $(this), editable);
-            });
+                    var data = that.getData(),
+                        index = $(this).parents('tr[data-index]').data('index'),
+                        row = data[index];
+                    
+                    that.trigger('editable-shown', column.field, row, $(this), editable);
+                });
             that.$body.find('a[data-name="' + column.field + '"]').editable(column.editable)
                 .off('hidden').on('hidden', function (e, reason) {
-                var data = that.getData(),
-                    index = $(this).parents('tr[data-index]').data('index'),
-                    row = data[index];
-
-                that.trigger('editable-hidden', column.field, row, $(this), reason);
-            });
+                    var data = that.getData(),
+                        index = $(this).parents('tr[data-index]').data('index'),
+                        row = data[index];
+                    
+                    that.trigger('editable-hidden', column.field, row, $(this), reason);
+                });
         });
         this.trigger('editable-init');
     };

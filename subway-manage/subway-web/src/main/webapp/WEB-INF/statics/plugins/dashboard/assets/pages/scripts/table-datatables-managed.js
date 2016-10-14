@@ -21,7 +21,7 @@ var TableDatatablesManaged = function () {
                 "search": "Search:",
                 "zeroRecords": "No matching records found",
                 "paginate": {
-                    "previous": "Prev",
+                    "previous":"Prev",
                     "next": "Next",
                     "last": "Last",
                     "first": "First"
@@ -40,7 +40,7 @@ var TableDatatablesManaged = function () {
 
             "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
 
-            "columnDefs": [{
+            "columnDefs": [ {
                 "targets": 0,
                 "orderable": false,
                 "searchable": false
@@ -51,7 +51,7 @@ var TableDatatablesManaged = function () {
                 [5, 15, 20, "All"] // change per page values here
             ],
             // set the initial value
-            "pageLength": 5,
+            "pageLength": 5,            
             "pagingType": "bootstrap_full_number",
             "columnDefs": [{  // set default column settings
                 'orderable': false,
@@ -106,7 +106,7 @@ var TableDatatablesManaged = function () {
                 "search": "Search:",
                 "zeroRecords": "No matching records found",
                 "paginate": {
-                    "previous": "Prev",
+                    "previous":"Prev",
                     "next": "Next",
                     "last": "Last",
                     "first": "First"
@@ -175,20 +175,20 @@ var TableDatatablesManaged = function () {
                 "search": "Search:",
                 "zeroRecords": "No matching records found",
                 "paginate": {
-                    "previous": "Prev",
+                    "previous":"Prev",
                     "next": "Next",
                     "last": "Last",
                     "first": "First"
                 }
             },
-
+            
             // Uncomment below line("dom" parameter) to fix the dropdown overflow issue in the datatable cells. The default datatable layout
             // setup uses scrollable div(table-scrollable) with overflow:auto to enable vertical scroll(see: assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js). 
             // So when dropdowns used the scrollable div should be removed. 
             //"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>",
 
             "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
-
+            
             "lengthMenu": [
                 [6, 15, 20, -1],
                 [6, 15, 20, "All"] // change per page values here
@@ -243,21 +243,21 @@ var TableDatatablesManaged = function () {
                 "search": "Search:",
                 "zeroRecords": "No matching records found",
                 "paginate": {
-                    "previous": "Prev",
+                    "previous":"Prev",
                     "next": "Next",
                     "last": "Last",
                     "first": "First"
                 }
             },
 
-
+            
             // Uncomment below line("dom" parameter) to fix the dropdown overflow issue in the datatable cells. The default datatable layout
             // setup uses scrollable div(table-scrollable) with overflow:auto to enable vertical scroll(see: assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js). 
             // So when dropdowns used the scrollable div should be removed. 
             //"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>",
 
             "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
-
+            
             "lengthMenu": [
                 [6, 15, 20, -1],
                 [6, 15, 20, "All"] // change per page values here
@@ -312,53 +312,53 @@ var TableDatatablesManaged = function () {
                 "search": "Search:",
                 "zeroRecords": "No matching records found",
                 "paginate": {
-                    "previous": "Prev",
+                    "previous":"Prev",
                     "next": "Next",
                     "last": "Last",
                     "first": "First"
                 }
             },
 
-            "footerCallback": function (row, data, start, end, display) {
+            "footerCallback": function ( row, data, start, end, display ) {
                 var api = this.api(), data;
-
+     
                 // Remove the formatting to get integer data for summation
-                var intVal = function (i) {
+                var intVal = function ( i ) {
                     return typeof i === 'string' ?
-                    i.replace(/[\$,]/g, '') * 1 :
+                        i.replace(/[\$,]/g, '')*1 :
                         typeof i === 'number' ?
                             i : 0;
                 };
-
+     
                 // Total over all pages
                 total = api
-                    .column(3)
+                    .column( 3 )
                     .data()
-                    .reduce(function (a, b) {
+                    .reduce( function (a, b) {
                         return intVal(a) + intVal(b);
-                    }, 0);
-
+                    }, 0 );
+     
                 // Total over this page
                 pageTotal = api
-                    .column(3, {page: 'current'})
+                    .column( 3, { page: 'current'} )
                     .data()
-                    .reduce(function (a, b) {
+                    .reduce( function (a, b) {
                         return intVal(a) + intVal(b);
-                    }, 0);
-
+                    }, 0 );
+     
                 // Update footer
-                $(api.column(3).footer()).html(
-                    '$' + pageTotal + ' ( $' + total + ' total)'
+                $( api.column( 3 ).footer() ).html(
+                    '$'+pageTotal +' ( $'+ total +' total)'
                 );
             },
-
+            
             // Uncomment below line("dom" parameter) to fix the dropdown overflow issue in the datatable cells. The default datatable layout
             // setup uses scrollable div(table-scrollable) with overflow:auto to enable vertical scroll(see: assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js). 
             // So when dropdowns used the scrollable div should be removed. 
             //"dom": "<'row'<'col-md-6 col-sm-12'l><'col-md-6 col-sm-12'f>r>t<'row'<'col-md-5 col-sm-12'i><'col-md-7 col-sm-12'p>>",
 
             "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
-
+            
             "lengthMenu": [
                 [6, 15, 20, -1],
                 [6, 15, 20, "All"] // change per page values here
@@ -411,8 +411,8 @@ var TableDatatablesManaged = function () {
 
 }();
 
-if (App.isAngularJsApp() === false) {
-    jQuery(document).ready(function () {
+if (App.isAngularJsApp() === false) { 
+    jQuery(document).ready(function() {
         TableDatatablesManaged.init();
     });
 }

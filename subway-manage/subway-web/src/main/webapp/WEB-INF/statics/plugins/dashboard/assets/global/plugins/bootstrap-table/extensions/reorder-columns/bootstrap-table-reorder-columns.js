@@ -75,13 +75,12 @@
         var that = this;
         try {
             $(this.$el).dragtable('destroy');
-        } catch (e) {
-        }
+        } catch (e) {}
         $(this.$el).dragtable({
             maxMovingRows: that.options.maxMovingRows,
             dragaccept: that.options.dragaccept,
-            clickDelay: 200,
-            beforeStop: function () {
+            clickDelay:200,
+            beforeStop: function() {
                 var ths = [],
                     formatters = [],
                     columns = [],
@@ -95,7 +94,7 @@
                 //Exist columns not shown
                 if (ths.length < that.columns.length) {
                     columnsHidden = $.grep(that.columns, function (column) {
-                        return !column.visible;
+                       return !column.visible;
                     });
                     for (var i = 0; i < columnsHidden.length; i++) {
                         ths.push(columnsHidden[i].field);
@@ -103,7 +102,7 @@
                     }
                 }
 
-                for (var i = 0; i < ths.length; i++) {
+                for (var i = 0; i < ths.length; i++ ) {
                     columnIndex = $.fn.bootstrapTable.utils.getFieldIndex(that.columns, ths[i]);
                     if (columnIndex !== -1) {
                         columns.push(that.columns[columnIndex]);

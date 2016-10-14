@@ -12,9 +12,9 @@ var ComponentsDateTimePickers = function () {
         }
 
         /* Workaround to restrict daterange past date select: http://stackoverflow.com/questions/11933173/how-to-restrict-the-selectable-date-ranges-in-bootstrap-datepicker */
-
+    
         // Workaround to fix datepicker position on window scroll
-        $(document).scroll(function () {
+        $( document ).scroll(function(){
             $('#form_modal2 .date-picker').datepicker('place'); //#modal is the id of the modal
         });
     }
@@ -41,13 +41,13 @@ var ComponentsDateTimePickers = function () {
             });
 
             // handle input group button click
-            $('.timepicker').parent('.input-group').on('click', '.input-group-btn', function (e) {
+            $('.timepicker').parent('.input-group').on('click', '.input-group-btn', function(e){
                 e.preventDefault();
                 $(this).parent('.input-group').find('.timepicker').timepicker('showWidget');
             });
 
             // Workaround to fix timepicker position on window scroll
-            $(document).scroll(function () {
+            $( document ).scroll(function(){
                 $('#form_modal4 .timepicker-default, #form_modal4 .timepicker-no-seconds, #form_modal4 .timepicker-24').timepicker('place'); //#modal is the id of the modal
             });
         }
@@ -78,7 +78,7 @@ var ComponentsDateTimePickers = function () {
             function (start, end) {
                 $('#defaultrange input').val(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
             }
-        );
+        );        
 
         $('#defaultrange_modal').daterangepicker({
                 opens: (App.isRTL() ? 'left' : 'right'),
@@ -92,11 +92,11 @@ var ComponentsDateTimePickers = function () {
             function (start, end) {
                 $('#defaultrange_modal input').val(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
             }
-        );
+        );  
 
         // this is very important fix when daterangepicker is used in modal. in modal when daterange picker is opened and mouse clicked anywhere bootstrap modal removes the modal-open class from the body element.
         // so the below code will fix this issue.
-        $('#defaultrange_modal').on('click', function () {
+        $('#defaultrange_modal').on('click', function(){
             if ($('#daterangepicker_modal').is(":visible") && $('body').hasClass("modal-open") == false) {
                 $('body').addClass("modal-open");
             }
@@ -182,7 +182,7 @@ var ComponentsDateTimePickers = function () {
         $('body').removeClass("modal-open"); // fix bug when inline picker is used in modal
 
         // Workaround to fix datetimepicker position on window scroll
-        $(document).scroll(function () {
+        $( document ).scroll(function(){
             $('#form_modal1 .form_datetime, #form_modal1 .form_advance_datetime, #form_modal1 .form_meridian_datetime').datetimepicker('place'); //#modal is the id of the modal
         });
     }
@@ -220,7 +220,7 @@ var ComponentsDateTimePickers = function () {
         }).clockface('show', '14:30');
 
         // Workaround to fix clockface position on window scroll
-        $(document).scroll(function () {
+        $( document ).scroll(function(){
             $('#form_modal5 .clockface_1, #form_modal5 #clockface_2_modal').clockface('place'); //#modal is the id of the modal
         });
     }
@@ -238,8 +238,8 @@ var ComponentsDateTimePickers = function () {
 
 }();
 
-if (App.isAngularJsApp() === false) {
-    jQuery(document).ready(function () {
-        ComponentsDateTimePickers.init();
+if (App.isAngularJsApp() === false) { 
+    jQuery(document).ready(function() {    
+        ComponentsDateTimePickers.init(); 
     });
 }

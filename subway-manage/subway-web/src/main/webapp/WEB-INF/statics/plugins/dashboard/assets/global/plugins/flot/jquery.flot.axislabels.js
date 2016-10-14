@@ -1,32 +1,32 @@
 /*
- Axis Labels Plugin for flot.
- http://github.com/markrcote/flot-axislabels
- Original code is Copyright (c) 2010 Xuan Luo.
- Original code was released under the GPLv3 license by Xuan Luo, September 2010.
- Original code was rereleased under the MIT license by Xuan Luo, April 2012.
- Permission is hereby granted, free of charge, to any person obtaining
- a copy of this software and associated documentation files (the
- "Software"), to deal in the Software without restriction, including
- without limitation the rights to use, copy, modify, merge, publish,
- distribute, sublicense, and/or sell copies of the Software, and to
- permit persons to whom the Software is furnished to do so, subject to
- the following conditions:
- The above copyright notice and this permission notice shall be
- included in all copies or substantial portions of the Software.
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
- OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
- WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Axis Labels Plugin for flot.
+http://github.com/markrcote/flot-axislabels
+Original code is Copyright (c) 2010 Xuan Luo.
+Original code was released under the GPLv3 license by Xuan Luo, September 2010.
+Original code was rereleased under the MIT license by Xuan Luo, April 2012.
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
 (function ($) {
     var options = {
-        axisLabels: {
-            show: true
-        }
+      axisLabels: {
+        show: true
+      }
     };
 
     function canvasSupported() {
@@ -61,7 +61,7 @@
         this.height = 0;
     }
 
-    AxisLabel.prototype.cleanup = function () {
+    AxisLabel.prototype.cleanup = function() {
     };
 
 
@@ -69,10 +69,10 @@
     CanvasAxisLabel.prototype.constructor = CanvasAxisLabel;
     function CanvasAxisLabel(axisName, position, padding, plot, opts) {
         AxisLabel.prototype.constructor.call(this, axisName, position, padding,
-            plot, opts);
+                                             plot, opts);
     }
 
-    CanvasAxisLabel.prototype.calculateSize = function () {
+    CanvasAxisLabel.prototype.calculateSize = function() {
         if (!this.opts.axisLabelFontSizePixels)
             this.opts.axisLabelFontSizePixels = 14;
         if (!this.opts.axisLabelFontFamily)
@@ -89,7 +89,7 @@
         }
     };
 
-    CanvasAxisLabel.prototype.draw = function (box) {
+    CanvasAxisLabel.prototype.draw = function(box) {
         if (!this.opts.axisLabelColour)
             this.opts.axisLabelColour = 'black';
         var ctx = this.plot.getCanvas().getContext('2d');
@@ -101,19 +101,19 @@
         var height = this.opts.axisLabelFontSizePixels;
         var x, y, angle = 0;
         if (this.position == 'top') {
-            x = box.left + box.width / 2 - width / 2;
-            y = box.top + height * 0.72;
+            x = box.left + box.width/2 - width/2;
+            y = box.top + height*0.72;
         } else if (this.position == 'bottom') {
-            x = box.left + box.width / 2 - width / 2;
-            y = box.top + box.height - height * 0.72;
+            x = box.left + box.width/2 - width/2;
+            y = box.top + box.height - height*0.72;
         } else if (this.position == 'left') {
-            x = box.left + height * 0.72;
-            y = box.height / 2 + box.top + width / 2;
-            angle = -Math.PI / 2;
+            x = box.left + height*0.72;
+            y = box.height/2 + box.top + width/2;
+            angle = -Math.PI/2;
         } else if (this.position == 'right') {
-            x = box.left + box.width - height * 0.72;
-            y = box.height / 2 + box.top - width / 2;
-            angle = Math.PI / 2;
+            x = box.left + box.width - height*0.72;
+            y = box.height/2 + box.top - width/2;
+            angle = Math.PI/2;
         }
         ctx.translate(x, y);
         ctx.rotate(angle);
@@ -126,13 +126,13 @@
     HtmlAxisLabel.prototype.constructor = HtmlAxisLabel;
     function HtmlAxisLabel(axisName, position, padding, plot, opts) {
         AxisLabel.prototype.constructor.call(this, axisName, position,
-            padding, plot, opts);
+                                             padding, plot, opts);
         this.elem = null;
     }
 
-    HtmlAxisLabel.prototype.calculateSize = function () {
+    HtmlAxisLabel.prototype.calculateSize = function() {
         var elem = $('<div class="axisLabels" style="position:absolute;">' +
-            this.opts.axisLabel + '</div>');
+                     this.opts.axisLabel + '</div>');
         this.plot.getPlaceholder().append(elem);
         // store height and width of label itself, for use in draw()
         this.labelWidth = elem.outerWidth(true);
@@ -147,36 +147,36 @@
         }
     };
 
-    HtmlAxisLabel.prototype.cleanup = function () {
+    HtmlAxisLabel.prototype.cleanup = function() {
         if (this.elem) {
             this.elem.remove();
         }
     };
 
-    HtmlAxisLabel.prototype.draw = function (box) {
+    HtmlAxisLabel.prototype.draw = function(box) {
         this.plot.getPlaceholder().find('#' + this.axisName + 'Label').remove();
         this.elem = $('<div id="' + this.axisName +
-            'Label" " class="axisLabels" style="position:absolute;">'
-            + this.opts.axisLabel + '</div>');
+                      'Label" " class="axisLabels" style="position:absolute;">'
+                      + this.opts.axisLabel + '</div>');
         this.plot.getPlaceholder().append(this.elem);
         if (this.position == 'top') {
-            this.elem.css('left', box.left + box.width / 2 - this.labelWidth / 2 +
-                'px');
+            this.elem.css('left', box.left + box.width/2 - this.labelWidth/2 +
+                          'px');
             this.elem.css('top', box.top + 'px');
         } else if (this.position == 'bottom') {
-            this.elem.css('left', box.left + box.width / 2 - this.labelWidth / 2 +
-                'px');
+            this.elem.css('left', box.left + box.width/2 - this.labelWidth/2 +
+                          'px');
             this.elem.css('top', box.top + box.height - this.labelHeight +
-                'px');
+                          'px');
         } else if (this.position == 'left') {
-            this.elem.css('top', box.top + box.height / 2 - this.labelHeight / 2 +
-                'px');
+            this.elem.css('top', box.top + box.height/2 - this.labelHeight/2 +
+                          'px');
             this.elem.css('left', box.left + 'px');
         } else if (this.position == 'right') {
-            this.elem.css('top', box.top + box.height / 2 - this.labelHeight / 2 +
-                'px');
+            this.elem.css('top', box.top + box.height/2 - this.labelHeight/2 +
+                          'px');
             this.elem.css('left', box.left + box.width - this.labelWidth +
-                'px');
+                          'px');
         }
     };
 
@@ -185,10 +185,10 @@
     CssTransformAxisLabel.prototype.constructor = CssTransformAxisLabel;
     function CssTransformAxisLabel(axisName, position, padding, plot, opts) {
         HtmlAxisLabel.prototype.constructor.call(this, axisName, position,
-            padding, plot, opts);
+                                                 padding, plot, opts);
     }
 
-    CssTransformAxisLabel.prototype.calculateSize = function () {
+    CssTransformAxisLabel.prototype.calculateSize = function() {
         HtmlAxisLabel.prototype.calculateSize.call(this);
         this.width = this.height = 0;
         if (this.position == 'left' || this.position == 'right') {
@@ -198,7 +198,7 @@
         }
     };
 
-    CssTransformAxisLabel.prototype.transforms = function (degrees, x, y) {
+    CssTransformAxisLabel.prototype.transforms = function(degrees, x, y) {
         var stransforms = {
             '-moz-transform': '',
             '-webkit-transform': '',
@@ -230,23 +230,23 @@
         return s;
     };
 
-    CssTransformAxisLabel.prototype.calculateOffsets = function (box) {
-        var offsets = {x: 0, y: 0, degrees: 0};
+    CssTransformAxisLabel.prototype.calculateOffsets = function(box) {
+        var offsets = { x: 0, y: 0, degrees: 0 };
         if (this.position == 'bottom') {
-            offsets.x = box.left + box.width / 2 - this.labelWidth / 2;
+            offsets.x = box.left + box.width/2 - this.labelWidth/2;
             offsets.y = box.top + box.height - this.labelHeight;
         } else if (this.position == 'top') {
-            offsets.x = box.left + box.width / 2 - this.labelWidth / 2;
+            offsets.x = box.left + box.width/2 - this.labelWidth/2;
             offsets.y = box.top;
         } else if (this.position == 'left') {
             offsets.degrees = -90;
-            offsets.x = box.left - this.labelWidth / 2 + this.labelHeight / 2;
-            offsets.y = box.height / 2 + box.top;
+            offsets.x = box.left - this.labelWidth/2 + this.labelHeight/2;
+            offsets.y = box.height/2 + box.top;
         } else if (this.position == 'right') {
             offsets.degrees = 90;
-            offsets.x = box.left + box.width - this.labelWidth / 2
-                - this.labelHeight / 2;
-            offsets.y = box.height / 2 + box.top;
+            offsets.x = box.left + box.width - this.labelWidth/2
+                        - this.labelHeight/2;
+            offsets.y = box.height/2 + box.top;
         }
         offsets.x = Math.round(offsets.x);
         offsets.y = Math.round(offsets.y);
@@ -254,13 +254,13 @@
         return offsets;
     };
 
-    CssTransformAxisLabel.prototype.draw = function (box) {
+    CssTransformAxisLabel.prototype.draw = function(box) {
         this.plot.getPlaceholder().find("." + this.axisName + "Label").remove();
         var offsets = this.calculateOffsets(box);
         this.elem = $('<div class="axisLabels ' + this.axisName +
-            'Label" style="position:absolute; ' +
-            this.transforms(offsets.degrees, offsets.x, offsets.y) +
-            '">' + this.opts.axisLabel + '</div>');
+                      'Label" style="position:absolute; ' +
+                      this.transforms(offsets.degrees, offsets.x, offsets.y) +
+                      '">' + this.opts.axisLabel + '</div>');
         this.plot.getPlaceholder().append(this.elem);
     };
 
@@ -269,17 +269,17 @@
     IeTransformAxisLabel.prototype.constructor = IeTransformAxisLabel;
     function IeTransformAxisLabel(axisName, position, padding, plot, opts) {
         CssTransformAxisLabel.prototype.constructor.call(this, axisName,
-            position, padding,
-            plot, opts);
+                                                         position, padding,
+                                                         plot, opts);
         this.requiresResize = false;
     }
 
-    IeTransformAxisLabel.prototype.transforms = function (degrees, x, y) {
+    IeTransformAxisLabel.prototype.transforms = function(degrees, x, y) {
         // I didn't feel like learning the crazy Matrix stuff, so this uses
         // a combination of the rotation transform and CSS positioning.
         var s = '';
         if (degrees != 0) {
-            var rotation = degrees / 90;
+            var rotation = degrees/90;
             while (rotation < 0) {
                 rotation += 4;
             }
@@ -296,9 +296,9 @@
         return s;
     };
 
-    IeTransformAxisLabel.prototype.calculateOffsets = function (box) {
+    IeTransformAxisLabel.prototype.calculateOffsets = function(box) {
         var offsets = CssTransformAxisLabel.prototype.calculateOffsets.call(
-            this, box);
+                          this, box);
         // adjust some values to take into account differences between
         // CSS and IE rotations.
         if (this.position == 'top') {
@@ -307,19 +307,19 @@
             offsets.y = box.top + 1;
         } else if (this.position == 'left') {
             offsets.x = box.left;
-            offsets.y = box.height / 2 + box.top - this.labelWidth / 2;
+            offsets.y = box.height/2 + box.top - this.labelWidth/2;
         } else if (this.position == 'right') {
             offsets.x = box.left + box.width - this.labelHeight;
-            offsets.y = box.height / 2 + box.top - this.labelWidth / 2;
+            offsets.y = box.height/2 + box.top - this.labelWidth/2;
         }
         return offsets;
     };
 
-    IeTransformAxisLabel.prototype.draw = function (box) {
+    IeTransformAxisLabel.prototype.draw = function(box) {
         CssTransformAxisLabel.prototype.draw.call(this, box);
         if (this.requiresResize) {
             this.elem = this.plot.getPlaceholder().find("." + this.axisName +
-                "Label");
+                                                        "Label");
             // Since we used CSS positioning instead of transforms for
             // translating the element, and since the positioning is done
             // before any rotations, we have to reset the width and height
@@ -348,14 +348,14 @@
             var secondPass = false;
 
             var axisLabels = {};
-            var axisOffsetCounts = {left: 0, right: 0, top: 0, bottom: 0};
+            var axisOffsetCounts = { left: 0, right: 0, top: 0, bottom: 0 };
 
             var defaultPadding = 2;  // padding between axis and tick labels
             plot.hooks.draw.push(function (plot, ctx) {
                 var hasAxisLabels = false;
                 if (!secondPass) {
                     // MEASURE AND SET OPTIONS
-                    $.each(plot.getAxes(), function (axisName, axis) {
+                    $.each(plot.getAxes(), function(axisName, axis) {
                         var opts = axis.options // Flot 0.7
                             || plot.getOptions()[axisName]; // Flot 0.6
 
@@ -380,7 +380,7 @@
                         if (!opts.axisLabelUseHtml &&
                             navigator.appName == 'Microsoft Internet Explorer') {
                             var ua = navigator.userAgent;
-                            var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                            var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
                             if (re.exec(ua) != null) {
                                 rv = parseFloat(RegExp.$1);
                             }
@@ -404,11 +404,11 @@
                         }
 
                         var padding = opts.axisLabelPadding === undefined ?
-                            defaultPadding : opts.axisLabelPadding;
+                                      defaultPadding : opts.axisLabelPadding;
 
                         axisLabels[axisName] = new renderer(axisName,
-                            axis.position, padding,
-                            plot, opts);
+                                                            axis.position, padding,
+                                                            plot, opts);
 
                         // flot interprets axis.labelHeight and .labelWidth as
                         // the height and width of the tick labels. We increase
@@ -439,7 +439,7 @@
                 } else {
                     secondPass = false;
                     // DRAW
-                    $.each(plot.getAxes(), function (axisName, axis) {
+                    $.each(plot.getAxes(), function(axisName, axis) {
                         var opts = axis.options // Flot 0.7
                             || plot.getOptions()[axisName]; // Flot 0.6
                         if (!opts || !opts.axisLabel || !axis.show)

@@ -1,17 +1,17 @@
-var ChartsFlotcharts = function () {
+var ChartsFlotcharts = function() {
 
     return {
         //main function to initiate the module
 
-        init: function () {
+        init: function() {
 
-            App.addResizeHandler(function () {
+            App.addResizeHandler(function() {
                 Charts.initPieCharts();
             });
 
         },
 
-        initCharts: function () {
+        initCharts: function() {
 
             if (!jQuery.plot) {
                 return;
@@ -125,7 +125,6 @@ var ChartsFlotcharts = function () {
                 function randValue() {
                     return (Math.floor(Math.random() * (1 + 40 - 20))) + 20;
                 }
-
                 var pageviews = [
                     [1, randValue()],
                     [2, randValue()],
@@ -264,7 +263,7 @@ var ChartsFlotcharts = function () {
                 }
 
                 var previousPoint = null;
-                $("#chart_2").bind("plothover", function (event, pos, item) {
+                $("#chart_2").bind("plothover", function(event, pos, item) {
                     $("#x").text(pos.x.toFixed(2));
                     $("#y").text(pos.y.toFixed(2));
 
@@ -337,7 +336,7 @@ var ChartsFlotcharts = function () {
                 });
 
                 var legends = $("#chart_3 .legendLabel");
-                legends.each(function () {
+                legends.each(function() {
                     // fix the widths so they don't jump around
                     $(this).css('width', $(this).width());
                 });
@@ -361,7 +360,7 @@ var ChartsFlotcharts = function () {
                         for (j = 0; j < series.data.length; ++j)
                             if (series.data[j][0] > pos.x) break;
 
-                        // now interpolate
+                            // now interpolate
                         var y, p1 = series.data[j - 1],
                             p2 = series.data[j];
 
@@ -373,7 +372,7 @@ var ChartsFlotcharts = function () {
                     }
                 }
 
-                $("#chart_3").bind("plothover", function (event, pos, item) {
+                $("#chart_3").bind("plothover", function(event, pos, item) {
                     latestPosition = pos;
                     if (!updateLegendTimeout) updateLegendTimeout = setTimeout(updateLegend, 50);
                 });
@@ -406,7 +405,7 @@ var ChartsFlotcharts = function () {
                         min: 0,
                         max: 100,
                         tickColor: "#eee",
-                        tickFormatter: function (v) {
+                        tickFormatter: function(v) {
                             return v + "%";
                         }
                     },
@@ -428,7 +427,6 @@ var ChartsFlotcharts = function () {
                     plot.draw();
                     setTimeout(update, updateInterval);
                 }
-
                 update();
             }
 
@@ -507,13 +505,13 @@ var ChartsFlotcharts = function () {
                     );
                 }
 
-                $(".stackControls input").click(function (e) {
+                $(".stackControls input").click(function(e) {
                     e.preventDefault();
                     stack = $(this).val() == "With stacking" ? true : null;
                     plotWithOptions();
                 });
 
-                $(".graphControls input").click(function (e) {
+                $(".graphControls input").click(function(e) {
                     e.preventDefault();
                     bars = $(this).val().indexOf("Bars") != -1;
                     lines = $(this).val().indexOf("Lines") != -1;
@@ -533,7 +531,7 @@ var ChartsFlotcharts = function () {
 
         },
 
-        initBarCharts: function () {
+        initBarCharts: function() {
 
             // bar chart:
             var data = GenerateSeries(0);
@@ -618,7 +616,7 @@ var ChartsFlotcharts = function () {
             }
         },
 
-        initPieCharts: function () {
+        initPieCharts: function() {
 
             var data = [];
             var series = Math.floor(Math.random() * 10) + 1;
@@ -666,7 +664,7 @@ var ChartsFlotcharts = function () {
                             label: {
                                 show: true,
                                 radius: 1,
-                                formatter: function (label, series) {
+                                formatter: function(label, series) {
                                     return '<div style="font-size:8pt;text-align:center;padding:2px;color:white;">' + label + '<br/>' + Math.round(series.percent) + '%</div>';
                                 },
                                 background: {
@@ -691,7 +689,7 @@ var ChartsFlotcharts = function () {
                             label: {
                                 show: true,
                                 radius: 3 / 4,
-                                formatter: function (label, series) {
+                                formatter: function(label, series) {
                                     return '<div style="font-size:8pt;text-align:center;padding:2px;color:white;">' + label + '<br/>' + Math.round(series.percent) + '%</div>';
                                 },
                                 background: {
@@ -716,7 +714,7 @@ var ChartsFlotcharts = function () {
                             label: {
                                 show: true,
                                 radius: 3 / 4,
-                                formatter: function (label, series) {
+                                formatter: function(label, series) {
                                     return '<div style="font-size:8pt;text-align:center;padding:2px;color:white;">' + label + '<br/>' + Math.round(series.percent) + '%</div>';
                                 },
                                 background: {
@@ -742,7 +740,7 @@ var ChartsFlotcharts = function () {
                             label: {
                                 show: true,
                                 radius: 3 / 4,
-                                formatter: function (label, series) {
+                                formatter: function(label, series) {
                                     return '<div style="font-size:8pt;text-align:center;padding:2px;color:white;">' + label + '<br/>' + Math.round(series.percent) + '%</div>';
                                 },
                                 background: {
@@ -768,7 +766,7 @@ var ChartsFlotcharts = function () {
                             label: {
                                 show: true,
                                 radius: 2 / 3,
-                                formatter: function (label, series) {
+                                formatter: function(label, series) {
                                     return '<div style="font-size:8pt;text-align:center;padding:2px;color:white;">' + label + '<br/>' + Math.round(series.percent) + '%</div>';
                                 },
                                 threshold: 0.1
@@ -808,7 +806,7 @@ var ChartsFlotcharts = function () {
                             radius: 300,
                             label: {
                                 show: true,
-                                formatter: function (label, series) {
+                                formatter: function(label, series) {
                                     return '<div style="font-size:8pt;text-align:center;padding:2px;color:white;">' + label + '<br/>' + Math.round(series.percent) + '%</div>';
                                 },
                                 threshold: 0.1
@@ -832,7 +830,7 @@ var ChartsFlotcharts = function () {
                             label: {
                                 show: true,
                                 radius: 1,
-                                formatter: function (label, series) {
+                                formatter: function(label, series) {
                                     return '<div style="font-size:8pt;text-align:center;padding:2px;color:white;">' + label + '<br/>' + Math.round(series.percent) + '%</div>';
                                 },
                                 background: {
@@ -896,19 +894,19 @@ var ChartsFlotcharts = function () {
 
         },
 
-        initAxisLabelsPlugin: function () {
+        initAxisLabelsPlugin: function() {
             var d1 = [];
 
-            for (var i = 0; i < Math.PI * 2; i += 0.25)
-                d1.push([i, Math.sin(i)]);
+                for (var i = 0; i < Math.PI * 2; i += 0.25)
+                    d1.push([i, Math.sin(i)]);
 
-            var d2 = [];
-            for (var i = 0; i < Math.PI * 2; i += 0.25)
-                d2.push([i, Math.cos(i)]);
+                var d2 = [];
+                for (var i = 0; i < Math.PI * 2; i += 0.25)
+                    d2.push([i, Math.cos(i)]);
 
-            var d3 = [];
-            for (var i = 0; i < Math.PI * 2; i += 0.1)
-                d3.push([i, Math.tan(i)]);
+                var d3 = [];
+                for (var i = 0; i < Math.PI * 2; i += 0.1)
+                    d3.push([i, Math.tan(i)]);
 
             var options = {
                 axisLabels: {
@@ -962,7 +960,7 @@ var ChartsFlotcharts = function () {
     };
 }();
 
-jQuery(document).ready(function () {
+jQuery(document).ready(function() {    
     ChartsFlotcharts.init();
     ChartsFlotcharts.initCharts();
     ChartsFlotcharts.initPieCharts();
