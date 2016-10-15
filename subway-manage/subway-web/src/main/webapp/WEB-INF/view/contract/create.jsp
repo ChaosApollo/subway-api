@@ -1,16 +1,43 @@
 <%--
   Created by IntelliJ IDEA.
   User: steven
-  Date: 08/10/2016
-  Time: 4:32 PM
+  Date: 28/09/2016
+  Time: 1:45 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<%@include file="../include/default-page-taglib.jsp" %>
+<%@include file="../include/default-page-html-class.jsp" %>
 <head>
-    <title>Create Contract</title>
+    <title>Subway API Template</title>
+
+    <%@ include file="../include/default-page-head.jsp" %>
+
+    <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
-<body>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+
+<%@include file="../include/default-system-header.jsp" %>
+
+<!-- BEGIN HEADER & CONTENT DIVIDER -->
+<div class="clearfix"></div>
+<!-- END HEADER & CONTENT DIVIDER -->
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+
+    <%@include file="../include/default-system-sidebar.jsp" %>
+
+    <%@include file="include-create-content.jsp" %>
+
+    <%@include file="../include/default-system-quick-sidebar.jsp" %>
+
+</div>
+<!-- END CONTAINER -->
+
+<%@include file="../include/default-system-footer.jsp" %>
+
+<%@ include file="../include/default-system-end-of-page.jsp" %>
 
 </body>
 </html>

@@ -22,9 +22,9 @@ public class ContractController {
     @Autowired
     private ContractService contractService;
 
-    @RequestMapping(value = "test", method = RequestMethod.GET)
+    @RequestMapping(value = "create", method = RequestMethod.GET)
     public String index() {
-        return "index";
+        return "contract/create";
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
