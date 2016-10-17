@@ -28,7 +28,18 @@
 
     <%@include file="include/default-system-sidebar.jsp" %>
 
-    <%@include file="include/default-system-content.jsp" %>
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <!-- BEGIN CONTENT BODY -->
+        <div class="page-content">
+            <%@include file="include/default-system-content-page-header.jsp"%>
+            <!-- BEGIN PAGE CONTENT-->
+            <%@include file="include/default-system-page-content.jsp"%>
+            <!-- END PAGE CONTENT-->
+        </div>
+        <!-- END CONTENT BODY -->
+    </div>
+    <!-- END CONTENT -->
 
     <%@include file="include/default-system-quick-sidebar.jsp" %>
 
