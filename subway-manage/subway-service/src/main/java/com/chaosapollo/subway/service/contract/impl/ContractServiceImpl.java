@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -20,11 +21,22 @@ public class ContractServiceImpl implements ContractService {
     private ContractDAO contractDao;
 
     @Override
-    public List<ContractEntity> getAllContract() {
-//        List<ContractEntity> contractEntities = new ArrayList<ContractEntity>();
-//        contractEntities.add(new ContractEntity());
-//        contractEntities.add(new ContractEntity());
-//        return contractEntities;
+    public List<ContractEntity> getAllContracts() {
         return contractDao.findAll();
+    }
+
+    @Override
+    public Serializable save(ContractEntity contract) {
+        return contractDao.save((contract));
+    }
+
+    @Override
+    public ContractEntity update(ContractEntity contract) {
+        return null;
+    }
+
+    @Override
+    public ContractEntity get(long id) {
+        return null;
     }
 }

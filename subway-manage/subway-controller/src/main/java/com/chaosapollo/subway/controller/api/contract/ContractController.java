@@ -5,9 +5,11 @@ import com.chaosapollo.subway.service.contract.ContractService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -23,13 +25,21 @@ public class ContractController {
     private ContractService contractService;
 
     @RequestMapping(value = "create", method = RequestMethod.GET)
-    public String index() {
-        return "contract/create";
+    public ModelAndView  create() {
+        ModelAndView modelandView = new ModelAndView("contract/create", "contract", new ContractEntity());
+        return modelandView;
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
     public List<ContractEntity> getAllContract() {
-        return contractService.getAllContract();
+        return contractService.getAllContracts();
+    }
+
+    @RequestMapping(value = "save", method = RequestMethod.POST)
+    public String saveContract(@ModelAttribute ContractEntity contract){
+        contractService.save(contract);
+//        return "redirect:contract/save";
+        return "contract/create";
     }
 }

@@ -277,7 +277,7 @@ public class ContractEntity {
     @Basic
     //@Temporal(TemporalType.TIMESTAMP)
     @org.hibernate.annotations.Generated(GenerationTime.ALWAYS)
-    @Column(name = "CREATE_DATE", nullable = false, insertable = false, updatable = false)
+    @Column(name = "CREATE_DATE", nullable = false, insertable = false, updatable = true)
     public Timestamp getCreateDate() {
         return createDate;
     }
@@ -289,7 +289,7 @@ public class ContractEntity {
     @Basic
     //@Temporal(TemporalType.TIMESTAMP)
     @org.hibernate.annotations.Generated(GenerationTime.ALWAYS)
-    @Column(name = "MODIFICATION_TIME", nullable = false, insertable = false, updatable = false)
+    @Column(name = "MODIFICATION_TIME", nullable = false, insertable = false, updatable = true)
     public Timestamp getModificationTime() {
         return modificationTime;
     }
@@ -300,7 +300,7 @@ public class ContractEntity {
 
     @Basic
     @Enumerated(EnumType.ORDINAL)
-    @Column(name = "DEL_STATE", nullable = false)
+    @Column(name = "DEL_STATE", nullable = true)
     public DeleteState getDelState() {
         return delState;
     }

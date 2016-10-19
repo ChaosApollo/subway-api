@@ -2,6 +2,7 @@ package com.chaosapollo.subway.dao.contract;
 
 import com.chaosapollo.subway.entity.ContractEntity;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -9,4 +10,12 @@ import java.util.List;
  */
 public interface ContractDAO {
     List<ContractEntity> findAll();
+
+    Serializable save(ContractEntity contract);
+
+    void update(ContractEntity contract);
+
+    ContractEntity get(long id);
+
+    void delete(ContractEntity contract);
 }

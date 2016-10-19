@@ -11,7 +11,8 @@
 <head>
     <title>Subway API Template</title>
 
-    <%@ include file="../include/default-page-head.jsp" %>
+    <%@ include file="../include/default-page-global-head.jsp" %>
+    <%@ include file="../include/default-system-page-level-head.jsp" %>
 
     <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>

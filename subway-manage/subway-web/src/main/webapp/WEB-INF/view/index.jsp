@@ -11,7 +11,8 @@
 <head>
     <title>Subway API Template</title>
 
-    <%@ include file="include/default-page-head.jsp" %>
+    <%@ include file="include/default-page-global-head.jsp" %>
+    <%@ include file="include/default-system-page-level-head.jsp" %>
 
     <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
@@ -32,9 +33,9 @@
     <div class="page-content-wrapper">
         <!-- BEGIN CONTENT BODY -->
         <div class="page-content">
-            <%@include file="include/default-system-content-page-header.jsp"%>
+            <%@include file="include/default-system-content-page-header.jsp" %>
             <!-- BEGIN PAGE CONTENT-->
-            <%@include file="include/default-system-page-content.jsp"%>
+            <%@include file="include/default-system-page-content.jsp" %>
             <!-- END PAGE CONTENT-->
         </div>
         <!-- END CONTENT BODY -->
