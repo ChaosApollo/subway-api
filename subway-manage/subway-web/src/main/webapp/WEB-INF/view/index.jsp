@@ -50,6 +50,6 @@
 <%@include file="include/default-system-footer.jsp" %>
 
 <%@ include file="include/default-system-end-of-page.jsp" %>
-
+<%@include file="include/default-system-page-level-end-of-page.jsp"%>
 </body>
 </html>

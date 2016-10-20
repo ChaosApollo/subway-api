@@ -64,7 +64,7 @@
                             </div>
                         </li>
                         <li class="media">
-                            <img class="media-object" src=${pageContext.request.contextPath}/plugins/dashboard/assets/layouts/layout/img/avatar1.jpg" alt="...">
+                            <img class="media-object" src="${pageContext.request.contextPath}/plugins/dashboard/assets/layouts/layout/img/avatar1.jpg" alt="...">
                             <div class="media-body">
                                 <h4 class="media-heading">Nick Larson</h4>
                                 <div class="media-heading-sub"> Art Director </div>
