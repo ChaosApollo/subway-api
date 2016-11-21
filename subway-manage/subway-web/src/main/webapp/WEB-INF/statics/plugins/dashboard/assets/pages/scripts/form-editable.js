@@ -75,7 +75,7 @@ var FormEditable = function() {
                     text: 'Service'
                 }, {
                     value: 2,
-                    text: 'Customer'
+                    text: 'customer'
                 }, {
                     value: 3,
                     text: 'Operator'

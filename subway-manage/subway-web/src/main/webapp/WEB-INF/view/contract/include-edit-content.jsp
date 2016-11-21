@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: steven
-  Date: 15/10/2016
-  Time: 2:43 PM
+  User: zdw
+  Date: 31/10/2016
+  Time: 1:31 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
@@ -26,35 +26,6 @@
 			</div>
 			<div class="portlet-body ">
 				<div class="panel-group accordion scrollable " id="accordion1">
-					<%--预约情况--%>
-					<div class="panel panel-default ">
-						<div class="panel-heading">
-							<h4 class="panel-title" style="background-color: #23b3eb">
-								<%--#23b3eb--%>
-								<a class="accordion-toggle" data-toggle="collapse"
-									data-parent="#accordion1" href="#collapse_4"> 是否有预约 </a>
-							</h4>
-						</div>
-						<div id="collapse_4" class="panel-collapse collapse">
-							<div class="panel-body">
-								<p>Duis autem vel eum iriure dolor in hendrerit in
-									vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci
-									tation ullamcorper suscipit lobortis nisl ut.</p>
-								<p>Anim pariatur cliche reprehenderit, enim eiusmod high
-									life accusamus terry richardson ad squid. 3 wolf moon officia
-									aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-									nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.</p>
-								<p>Duis autem vel eum iriure dolor in hendrerit in
-									vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci
-									tation ullamcorper suscipit lobortis nisl ut.</p>
-								<p>
-									<a class="btn red"
-										href="ui_tabs_accordions_navs.html#collapse_4" target="_blank">
-										Activate this section via URL </a>
-								</p>
-							</div>
-						</div>
-					</div>
 					<%--合同信息--%>
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -696,9 +667,9 @@
 						<div id="collapse_2" class="panel-collapse collapse">
 							<div class="panel-body">
 								<div class="form-group">
-									<label class="col-sm-2 control-label th-head"
+									<label for="area" class="col-sm-2 control-label th-head"
 										style="text-align: center; ">支付方式：</label>
-									<label for="onelumpsum" class="col-sm-1 control-label th-head" checked="true"
+									<label for="onelumpsum" class="col-sm-1 control-label th-head"
 										style="text-align: left; ">一次付清</label>
 									<div class="col-sm-1">
 										<input type="radio" path="onelumpsum" name="payment" style="margin-top: 12px" id="onelumpsum">
@@ -1173,7 +1144,8 @@
 										<label for="note" class="col-sm-1 control-label" style="">备注：</label>
 										<div class="col-sm-10">
 											<input type="text" path="note"
-												class="form-control" id="note" placeholder="" />
+												class="form-control " id="note" placeholder="" />
+
 										</div>
 									</div>
 							</div>

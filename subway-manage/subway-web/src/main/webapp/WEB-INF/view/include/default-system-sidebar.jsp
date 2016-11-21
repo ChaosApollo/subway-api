@@ -85,7 +85,7 @@
             <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-diamond"></i>
-                    <span class="title">UI Features</span>
+                    <span class="title">用户管理</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
@@ -238,7 +238,7 @@
             <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-puzzle"></i>
-                    <span class="title">Components</span>
+                    <span class="title">线路管理</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
@@ -344,7 +344,7 @@
             <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-settings"></i>
-                    <span class="title">Form Stuff</span>
+                    <span class="title">设备管理</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
@@ -422,7 +422,7 @@
             <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-bulb"></i>
-                    <span class="title">Elements</span>
+                    <span class="title">驱动管理</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
@@ -456,7 +456,7 @@
             <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-briefcase"></i>
-                    <span class="title">Tables</span>
+                    <span class="title">客户管理</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
@@ -515,7 +515,7 @@
             <li class="nav-item  ">
                 <a href="?p=" class="nav-link nav-toggle">
                     <i class="icon-wallet"></i>
-                    <span class="title">Portlets</span>
+                    <span class="title">预约排期</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
@@ -549,7 +549,7 @@
             <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-bar-chart"></i>
-                    <span class="title">Charts</span>
+                    <span class="title">合同管理</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
@@ -605,7 +605,7 @@
             <li class="nav-item  ">
                 <a href="javascript:;" class="nav-link nav-toggle">
                     <i class="icon-pointer"></i>
-                    <span class="title">Maps</span>
+                    <span class="title">约定排期</span>
                     <span class="arrow"></span>
                 </a>
                 <ul class="sub-menu">
@@ -617,6 +617,157 @@
                     <li class="nav-item  ">
                         <a href="maps_vector.html" class="nav-link ">
                             <span class="title">Vector Maps</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-layers"></i>
+                    <span class="title">节目管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="layout_blank_page.html" class="nav-link ">
+                            <span class="title">Blank Page</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_classic_page_head.html" class="nav-link ">
+                            <span class="title">Classic Page Head</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_light_page_head.html" class="nav-link ">
+                            <span class="title">Light Page Head</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_content_grey.html" class="nav-link ">
+                            <span class="title">Grey Bg Content</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_search_on_header_1.html" class="nav-link ">
+                            <span class="title">Search Box On Header 1</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_search_on_header_2.html" class="nav-link ">
+                            <span class="title">Search Box On Header 2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_language_bar.html" class="nav-link ">
+                            <span class="title">Header Language Bar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_footer_fixed.html" class="nav-link ">
+                            <span class="title">Fixed Footer</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_boxed_page.html" class="nav-link ">
+                            <span class="title">Boxed Page</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-feed"></i>
+                    <span class="title">节目审核</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="layout_sidebar_menu_light.html" class="nav-link ">
+                            <span class="title">Light Sidebar Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_sidebar_menu_hover.html" class="nav-link ">
+                            <span class="title">Hover Sidebar Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_sidebar_search_1.html" class="nav-link ">
+                            <span class="title">Sidebar Search Option 1</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_sidebar_search_2.html" class="nav-link ">
+                            <span class="title">Sidebar Search Option 2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_toggler_on_sidebar.html" class="nav-link ">
+                            <span class="title">Sidebar Toggler On Sidebar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_sidebar_reversed.html" class="nav-link ">
+                            <span class="title">Reversed Sidebar Page</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_sidebar_fixed.html" class="nav-link ">
+                            <span class="title">Fixed Sidebar Layout</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_sidebar_closed.html" class="nav-link ">
+                            <span class="title">Closed Sidebar Layout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-paper-plane"></i>
+                    <span class="title">总排期管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="layout_mega_menu_light.html" class="nav-link ">
+                            <span class="title">Light Mega Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_mega_menu_dark.html" class="nav-link ">
+                            <span class="title">Dark Mega Menu</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_full_width.html" class="nav-link ">
+                            <span class="title">Full Width Layout</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item  ">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class=" icon-wrench"></i>
+                    <span class="title">实拍管理</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    <li class="nav-item  ">
+                        <a href="layout_disabled_menu.html" class="nav-link ">
+                            <span class="title">Disabled Menu Links</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_full_height_portlet.html" class="nav-link ">
+                            <span class="title">Full Height Portlet</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a href="layout_full_height_content.html" class="nav-link ">
+                            <span class="title">Full Height Content</span>
                         </a>
                     </li>
                 </ul>

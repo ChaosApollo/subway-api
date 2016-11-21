@@ -17,11 +17,18 @@
     <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
 <style type="text/css">
+    body,label,a,div{
+        /*font-family:"Microsoft YaHei",微软雅黑;*/
+        /*font-weight: bold;*/
+    }
     .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
         font-size: 12px;
-    }
-    thead, tr, th,td,.table td, .table th,.table thead tr th{
         text-align: center;
+    }
+    td:hover
+    {
+        text-overflow:inherit;
+        overflow:visible;
     }
 </style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
@@ -43,7 +50,7 @@
         <div class="page-content" >
             <%@include file="../include/default-system-content-page-header.jsp"%>
             <!-- BEGIN PAGE CONTENT-->
-            <%@include file="include-create-content.jsp"%>
+            <%@include file="include-list-content.jsp"%>
             <!-- END PAGE CONTENT-->
         </div>
         <!-- END CONTENT BODY -->
@@ -74,3 +81,5 @@
         });
     });
 </script>
+
+</html>
