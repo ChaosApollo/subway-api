@@ -5,7 +5,6 @@
   Time: 13:01
   To change this template use File | Settings | File Templates.
 --%>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../include/default-page-taglib.jsp" %>
 <%@include file="../include/default-page-html-class.jsp" %>
@@ -14,7 +13,7 @@
 
     <%@ include file="../include/default-page-global-head.jsp" %>
     <%@ include file="include-page-level-head.jsp" %>
-
+    <%@ include file="../include/default-system-css.jsp" %>
     <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
 <style type="text/css">
@@ -59,6 +58,13 @@
     }
     .page-content-wrapper .page-content{
         padding-bottom: 0px;
+    }
+
+    .ms-container{
+        width: 450px;
+    }
+    .ms-container .ms-selectable, .ms-container .ms-selection{
+        width: 45%;
     }
 </style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
@@ -159,15 +165,6 @@
                     }
                 ]
             },
-            {
-                text: "Parent 3"
-            },
-            {
-                text: "Parent 4"
-            },
-            {
-                text: "Parent 5"
-            }
         ];
         return tree;
     }

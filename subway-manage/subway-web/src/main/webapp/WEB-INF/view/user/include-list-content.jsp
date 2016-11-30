@@ -135,7 +135,7 @@
 
     <!-- END ACCORDION PORTLET-->
 </form>
-<div class="modal fade" id="addusers" tabindex="-1" data-width="450">
+<div class="modal fade" id="addusers" tabindex="-1" data-width="800">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
         <h4 class="modal-title">组别设置</h4>
@@ -179,13 +179,123 @@
             </div>
             <div class="form-group">
                 <label for="associate_lines" class="col-sm-4 control-label "
-                       style="text-align: center; "></label>
+                       style="text-align: center; ">关联线路</label>
                 <div class="col-sm-8">
-                    <div class="btn-group" id="btngroup2">
-                        <a href="javascript:;" class="btn green" style="margin-right: 8px" id="associate_lines">
-                            &nbsp;<span style="margin-left: 58px;margin-right: 58px">关&nbsp;联&nbsp;线&nbsp;路</span>&nbsp;&nbsp;
-                        </a>
+                    <div class="col-sm-6" style="margin-bottom: 10px;padding-left: 0px">
+                        <select path="contry" class="form-control" id="contry">
+                            <option>中国</option>
+                        </select>
                     </div>
+                    <div class="col-sm-6" style="margin-bottom: 10px">
+                        <select path="city" class="form-control" id="city">
+                            <option>北京</option>
+                            <option>运营组</option>
+                            <option>运维组</option>
+                            <option>公司组</option>
+                            <option>管理员组</option>
+                            <option>地铁公司组</option>
+                        </select>
+                    </div>
+                    <select multiple="multiple" path="line" class="multi-select" id="my_multi_select2" name="my_multi_select2[]">
+                        <optgroup label="1号线">
+                            <option style="font-size: 12px">复兴门往西单</option>
+                            <option>天安门西往天安门东</option>
+                            <option>东单往建国门</option>
+                            <option>永安里往国贸</option>
+                            <option>永安里往建国门</option>
+                            <option>西单往天安门西</option>
+                            <option>天安门东往王府井</option>
+                            <option>建国门往永安里</option>
+                            <option>国贸往大望路</option>
+                            <option>军事博物馆往公主坟</option>
+                        </optgroup>
+                        <optgroup label="4号线">
+                            <option>南站往陶然亭A</option>
+                            <option>南站往陶然亭B</option>
+                            <option>陶然亭往菜市口</option>
+                            <option>菜市口往宣武门A</option>
+                            <option>菜市口往宣武门B</option>
+                            <option>宣武门往西单</option>
+                            <option>西单往宣武门</option>
+                            <option>西单往灵境</option>
+                            <option>灵境往西单</option>
+                            <option>灵境往西四</option>
+                            <option>西四往平安里</option>
+                            <option>平安里往新街口</option>
+                            <option>新街口往西直门</option>
+                            <option>西直门往新街口</option>
+                            <option>西直门往动物园A</option>
+                            <option>西直门往动物园B</option>
+                            <option>动物园往西直门A</option>
+                            <option>动物园往西直门B</option>
+                            <option>动物园往国图A</option>
+                            <option>动物园往国图B</option>
+                            <option>国图往魏公村A</option>
+                            <option>国图往魏公村B</option>
+                            <option>魏公村往人民大学</option>
+                            <option>人民大学往海淀黄庄</option>
+                            <option>海淀黄庄往人民大学</option>
+                            <option>海淀黄庄往中关村</option>
+                            <option>中关村往海淀黄庄</option>
+                        </optgroup>
+                        <optgroup label="5号线">
+                            <option>东单往灯市口上行</option>
+                            <option>东四往灯市口上行</option>
+                        </optgroup>
+                        <optgroup label="6号线">
+                            <option>车公庄往平安里</option>
+                            <option>平安里往车公庄</option>
+                            <option>平安里往北海北</option>
+                            <option>北海北往平安里</option>
+                            <option>南锣鼓巷往东四</option>
+                            <option>东四往南锣鼓巷</option>
+                            <option>东四往朝阳门</option>
+                            <option>朝阳门往东四</option>
+                            <option>呼家楼往东大桥</option>
+                            <option>呼家楼往金台路</option>
+                            <option>金台路往呼家楼</option>
+                            <option>十里堡往青年路</option>
+                            <option>青年路往十里堡</option>
+                        </optgroup>
+                        <optgroup label="8号线">
+                            <option>南锣鼓巷往什刹海</option>
+                        </optgroup>
+                        <optgroup label="10号线">
+                            <option>海淀黄庄往知春路</option>
+                            <option>知春里往海淀黄庄</option>
+                            <option>知春路往西土城</option>
+                            <option>知春路往知春里</option>
+                            <option>北土城往安贞门</option>
+                            <option>北土城往健德门</option>
+                            <option>农展馆往团结湖</option>
+                            <option>芍药居往惠新西街南口</option>
+                            <option>农展馆往亮马桥</option>
+                            <option>亮马桥往农展馆</option>
+                            <option>呼家楼往团结湖A</option>
+                            <option>呼家楼往团结湖B</option>
+                            <option>团结湖往呼家楼A</option>
+                            <option>团结湖往呼家楼B</option>
+                            <option>呼家楼往金台夕照</option>
+                            <option>金台夕照往呼家楼</option>
+                            <option>金台夕照往国贸</option>
+                            <option>国贸往金台夕照</option>
+                            <option>国贸往双井A</option>
+                            <option>国贸往双井B</option>
+                            <option>双井往国贸A</option>
+                            <option>双井往国贸B</option>
+                            <option>十里河往潘家园</option>
+                            <option>成寿寺往宋家庄</option>
+                            <option>角门西往角门东A</option>
+                            <option>角门西往角门东B</option>
+                            <option>莲花桥往公主坟</option>
+                            <option>公主坟往西钓鱼台</option>
+                            <option>西钓鱼台往慈寿寺</option>
+                            <option>丰台站往首经贸</option>
+                            <option>角门西往草桥A</option>
+                            <option>角门西往草桥B</option>
+                        </optgroup>
+                    </select>
+
                 </div>
             </div>
         </fieldset>

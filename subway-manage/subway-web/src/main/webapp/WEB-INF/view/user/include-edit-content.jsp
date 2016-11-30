@@ -71,7 +71,7 @@
                             <div class="form-group">
                                 <label  class="col-sm-2 control-label "
                                         style="text-align: center; ">权限：</label>
-                                <div class="col-sm-6" style="border: 1px solid #c2cad8;color: black;height: 150px;overflow: auto;text-align: left; ">
+                                <div class="col-sm-6" style="border: 1px solid #c2cad8;color: black;height: 150px;overflow: auto;text-align: left;margin-left: 15px ">
                                     <div class="col-sm-6 control-label" style="text-align:left">
                                         <label >
                                             <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;设备端指令操作</span></label>

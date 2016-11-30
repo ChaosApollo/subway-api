@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: zhaidawei
-  Date: 16/11/21
-  Time: 下午1:53
+  Date: 16/11/29
+  Time: 上午8:57
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -23,27 +23,6 @@
     thead, tr, th,td,.table td, .table th,.table thead tr th{
         text-align: center;
     }
-    .page-sidebar .page-sidebar-menu>li>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a {
-        display: block;
-        position: relative;
-        margin: 0;
-        border: 0;
-        /*padding: 10px 15px;*/
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: 300;
-    }
-    .page-sidebar .page-sidebar-menu>li.open>a, .page-sidebar .page-sidebar-menu>li:hover>a{
-        background: #f4f6f8;
-        color: black;
-    }
-    .dropdown-menu {
-        box-shadow: 0px 0px ;
-        left: 10px;
-        min-width: 135px;
-        position: absolute;
-        background-color: #eaedf1;
-    }
     legend{
         font-size: 12px;
         font-weight: bold;
@@ -52,16 +31,6 @@
     }
     .table>tbody>tr>td{
         line-height: 2;
-    }
-    .backgrandcolor{
-        background-color: white;
-    }
-    .page-content-wrapper .page-content{
-        padding-bottom: 0px;
-    }
-    .list-group-item {
-        padding-left:0px;
-        padding-right: 0px;
     }
 </style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
@@ -96,7 +65,7 @@
                 <div class="col-sm-9 backgrandcolor" >
                     <%@include file="../include/default-system-content-page-header.jsp"%>
                     <!-- BEGIN PAGE CONTENT-->
-                    <%@include file="include-create-content.jsp"%>
+                    <%@include file="include-light-content.jsp"%>
                 </div>
                 <!-- END PAGE CONTENT-->
             </div>
@@ -119,19 +88,6 @@
 
 
 </body>
-
-<script type="text/javascript">
-    $(function () {
-        $(".date-picker").datetimepicker({
-            language: "zh-CN",
-            autoclose: true,//选中之后自动隐藏日期选择框
-            clearBtn: false,//清除按钮
-            todayBtn: true,//今日按钮
-            format: "yyyy-mm-dd",//日期格式，详见 http://bootstrap-datepicker.readthedocs.org/en/release/options.html#format
-            minView:4
-        });
-    });
-</script>
 <script type="text/javascript">
     function getTree() {
         var tree = [
@@ -441,3 +397,4 @@
         collapseIcon:'glyphicon glyphicon-triangle-bottom',
         borderColor:'#eaedf1'});
 </script>
+

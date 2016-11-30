@@ -26,4 +26,8 @@
 <script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/icheck/icheck.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/plugins/dashboard/assets/pages/scripts/form-icheck.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/plugins/treeView/bootstrap-treeview.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/jquery-multi-select/js/jquery.multi-select.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/plugins/dashboard//assets/pages/scripts/components-multi-select.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->

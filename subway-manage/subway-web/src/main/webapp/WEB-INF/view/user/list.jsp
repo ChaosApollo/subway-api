@@ -5,7 +5,6 @@
   Time: 13:01
   To change this template use File | Settings | File Templates.
 --%>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../include/default-page-taglib.jsp" %>
 <%@include file="../include/default-page-html-class.jsp" %>
@@ -14,55 +13,68 @@
 
     <%@ include file="../include/default-page-global-head.jsp" %>
     <%@ include file="include-page-level-head.jsp" %>
-
+    <%@ include file="../include/default-system-css.jsp" %>
     <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
-<style type="text/css">
-    .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
-        font-size: 12px;
-    }
-    thead, tr, th,td,.table td, .table th,.table thead tr th{
-        text-align: center;
-    }
-    .page-sidebar .page-sidebar-menu>li>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a {
-        display: block;
-        position: relative;
-        margin: 0;
-        border: 0;
-        /*padding: 10px 15px;*/
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: 300;
-    }
-    .page-sidebar .page-sidebar-menu>li.open>a, .page-sidebar .page-sidebar-menu>li:hover>a{
-        background: #f4f6f8;
-        color: black;
-    }
-    .dropdown-menu {
-        box-shadow: 0px 0px ;
-        left: 10px;
-        min-width: 135px;
-        position: absolute;
-        background-color: #eaedf1;
-    }
-    legend{
-        font-size: 12px;
-        font-weight: bold;
-        padding-left: 10px;
-        padding-bottom: 10px;
-    }
-    .table>tbody>tr>td{
-        line-height: 2;
-    }
-    .backgrandcolor{
-        background-color: white;
-    }
-    .page-content-wrapper .page-content{
-        padding-bottom: 0px;
-    }
-</style>
-<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
+<%--<style type="text/css">--%>
+    <%--.control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body,option {--%>
+        <%--font-size: 12px;--%>
+    <%--}--%>
+    <%--thead, tr, th,td,.table td, .table th,.table thead tr th{--%>
+        <%--text-align: center;--%>
+    <%--}--%>
+    <%--.page-sidebar .page-sidebar-menu>li>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a {--%>
+        <%--display: block;--%>
+        <%--position: relative;--%>
+        <%--margin: 0;--%>
+        <%--border: 0;--%>
+        <%--/*padding: 10px 15px;*/--%>
+        <%--text-decoration: none;--%>
+        <%--font-size: 12px;--%>
+        <%--font-weight: 300;--%>
+    <%--}--%>
+    <%--.page-sidebar .page-sidebar-menu>li.open>a, .page-sidebar .page-sidebar-menu>li:hover>a{--%>
+        <%--background: #f4f6f8;--%>
+        <%--color: black;--%>
+    <%--}--%>
+    <%--.dropdown-menu {--%>
+        <%--box-shadow: 0px 0px ;--%>
+        <%--left: 10px;--%>
+        <%--min-width: 135px;--%>
+        <%--position: absolute;--%>
+        <%--background-color: #eaedf1;--%>
+    <%--}--%>
+    <%--legend{--%>
+        <%--font-size: 12px;--%>
+        <%--font-weight: bold;--%>
+        <%--padding-left: 10px;--%>
+        <%--padding-bottom: 10px;--%>
+    <%--}--%>
+    <%--.table>tbody>tr>td{--%>
+        <%--line-height: 2;--%>
+    <%--}--%>
+    <%--.backgrandcolor{--%>
+        <%--background-color: white;--%>
+    <%--}--%>
+    <%--.page-content-wrapper .page-content{--%>
+        <%--padding-bottom: 0px;--%>
+    <%--}--%>
 
+    .ms-container .ms-selectable li.ms-elem-selectable,
+    .ms-container .ms-selection li.ms-elem-selection{
+        border-bottom: 1px #eee solid;
+        padding: 2px 10px;
+        color: #555;
+        font-size: 12px;
+    }
+    .ms-container{
+        width: 460px;
+    }
+    .ms-container .ms-selectable, .ms-container .ms-selection{
+        width: 47%;
+    }
+<%--</style>--%>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
 <%@include file="../include/default-system-header.jsp" %>
 
 <!-- BEGIN HEADER & CONTENT DIVIDER -->
@@ -84,8 +96,9 @@
             <div class="row">
                 <div class="col-sm-3 inner-menu-list" style="margin-top: -25px;margin-left: -20px;">
                     <div style="height: 1300px;width:230px;background-color: #eaedf1;padding-bottom: 0px">
-
+                        <%@include file="treeview.jsp" %>
                         <div style="text-align: center;font-weight: bold;padding: 10px 20px 10px 20px;"><span >用户管理</span></div>
+
                         <div id="tree"></div>
                         <%--<%@include file="zuocedaohang.jsp"%>--%>
                     </div>
@@ -129,51 +142,51 @@
         });
     });
 </script>
-<script type="text/javascript">
-    function getTree() {
-        var tree = [
-            {
-                text: "系统管理员组",
+<%--<script type="text/javascript">--%>
+    <%--function getTree() {--%>
+        <%--var tree = [--%>
+            <%--{--%>
+                <%--text: "系统管理员组",--%>
 
-                nodes: [
-                    {
-                        text: "系统管理员",
-                    },
-                ]
+                <%--nodes: [--%>
+                    <%--{--%>
+                        <%--text: "系统管理员",--%>
+                    <%--},--%>
+                <%--]--%>
 
-            },
-            {
-                text: "运维组",
-                nodes: [
-                    {
-                        text: "运维01（运维经理）"
-                    },
-                    {
-                        text: "运维02（运维人员）"
-                    },
-                    {
-                        text: "运维03（运维人员）"
-                    },
-                    {
-                        text: "运维04（运维人员）"
-                    }
-                ]
-            },
-            {
-                text: "Parent 3"
-            },
-            {
-                text: "Parent 4"
-            },
-            {
-                text: "Parent 5"
-            }
-        ];
-        return tree;
-    }
-    $('#tree').treeview({data: getTree(),
-        backColor:'#eaedf1',
-        expandIcon:'glyphicon glyphicon-triangle-right',
-        collapseIcon:'glyphicon glyphicon-triangle-bottom',
-        borderColor:'#eaedf1'});
-</script>
+            <%--},--%>
+            <%--{--%>
+                <%--text: "运维组",--%>
+                <%--nodes: [--%>
+                    <%--{--%>
+                        <%--text: "运维01（运维经理）"--%>
+                    <%--},--%>
+                    <%--{--%>
+                        <%--text: "运维02（运维人员）"--%>
+                    <%--},--%>
+                    <%--{--%>
+                        <%--text: "运维03（运维人员）"--%>
+                    <%--},--%>
+                    <%--{--%>
+                        <%--text: "运维04（运维人员）"--%>
+                    <%--}--%>
+                <%--]--%>
+            <%--},--%>
+            <%--{--%>
+                <%--text: "Parent 3"--%>
+            <%--},--%>
+            <%--{--%>
+                <%--text: "Parent 4"--%>
+            <%--},--%>
+            <%--{--%>
+                <%--text: "Parent 5"--%>
+            <%--}--%>
+        <%--];--%>
+        <%--return tree;--%>
+    <%--}--%>
+    <%--$('#tree').treeview({data: getTree(),--%>
+        <%--backColor:'#eaedf1',--%>
+        <%--expandIcon:'glyphicon glyphicon-triangle-right',--%>
+        <%--collapseIcon:'glyphicon glyphicon-triangle-bottom',--%>
+        <%--borderColor:'#eaedf1'});--%>
+<%--</script>--%>

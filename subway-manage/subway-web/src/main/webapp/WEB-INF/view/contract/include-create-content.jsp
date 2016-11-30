@@ -142,14 +142,14 @@
 									</div>
 								</div>
 								<table
-									class="table table-striped table-bordered table-hover table-checkable sample_1"
+									class="table table-striped table-bordered table-hover table-checkable " id="sample_1"
 									>
 									<thead>
 										<tr>
 											<th><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
 													<input type="checkbox" class="group-checkable"
-													data-set=".sample_1 .checkboxes" /> <span></span>
+													data-set="#sample_1 .checkboxes" /> <span></span>
 											</label></th>
 											<th>区域</th>
 											<th>线路</th>

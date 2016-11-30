@@ -14,19 +14,24 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping(value = "/api/driver")
 public class DriverController {
-    @RequestMapping(value = "create", method = RequestMethod.GET)
-    public ModelAndView create() {
-        ModelAndView modelandView = new ModelAndView("driver/create", "driver", new ContractEntity());
+    @RequestMapping(value = "light", method = RequestMethod.GET)
+    public ModelAndView light() {
+        ModelAndView modelandView = new ModelAndView("driver/light", "driver", new ContractEntity());
         return modelandView;
     }
-    @RequestMapping(value = "edit", method = RequestMethod.GET)
-    public ModelAndView  edit() {
-        ModelAndView modelandView = new ModelAndView("driver/edit", "driver", new ContractEntity());
+    @RequestMapping(value = "detection", method = RequestMethod.GET)
+    public ModelAndView  detection() {
+        ModelAndView modelandView = new ModelAndView("driver/detection", "driver", new ContractEntity());
         return modelandView;
     }
-    @RequestMapping(value = "list", method = RequestMethod.GET)
-    public ModelAndView  list() {
-        ModelAndView modelandView = new ModelAndView("driver/list", "driver", new ContractEntity());
+    @RequestMapping(value = "sensor", method = RequestMethod.GET)
+    public ModelAndView  sensor() {
+        ModelAndView modelandView = new ModelAndView("driver/sensor", "driver", new ContractEntity());
+        return modelandView;
+    }
+    @RequestMapping(value = "synchronizer", method = RequestMethod.GET)
+    public ModelAndView  synchronizer() {
+        ModelAndView modelandView = new ModelAndView("driver/synchronizer", "driver", new ContractEntity());
         return modelandView;
     }
 }
