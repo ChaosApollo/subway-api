@@ -13,11 +13,11 @@
 
     <%@ include file="../include/default-page-global-head.jsp" %>
     <%@ include file="include-page-level-head.jsp" %>
+    <%@ include file="../include/default-system-css.jsp" %>
 
-    <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
 <style type="text/css">
-    .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
+  /*  .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
         font-size: 12px;
     }
     thead, tr, th,td,.table td, .table th,.table thead tr th{
@@ -28,7 +28,7 @@
         position: relative;
         margin: 0;
         border: 0;
-        /*padding: 10px 15px;*/
+        /*padding: 10px 15px;
         text-decoration: none;
         font-size: 12px;
         font-weight: 300;
@@ -62,7 +62,7 @@
     .list-group-item {
         padding-left:0px;
         padding-right: 0px;
-    }
+    } */
 </style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
 
@@ -90,7 +90,13 @@
 
                         <div style="text-align: center;font-weight: bold;padding: 10px 20px 10px 20px;"><span >线路管理</span></div>
                         <div id="tree" ></div>
-                        <%--<%@include file="zuocedaohang.jsp"%>--%>
+                        <%--<div class="navbar-collapse-inner fixed">--%>
+                            <%--<div class="navbar-collapse-bg"></div>--%>
+                            <%--<div class="navbar-collapse-icon">--%>
+                                <%--<i class="alico icon-list-open"></i>--%>
+                                <%--<i class="alico icon-list-close"></i>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
                     </div>
                 </div>
                 <div class="col-sm-9 backgrandcolor" >

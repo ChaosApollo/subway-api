@@ -12,4 +12,5 @@
 <link href="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/jquery-nestable/jquery.nestable.css" rel="stylesheet" type="text/css" />
 <link href="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css" />
 <link href="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
 <!-- END PAGE LEVEL PLUGINS -->

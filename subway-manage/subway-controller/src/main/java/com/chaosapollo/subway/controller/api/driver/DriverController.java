@@ -14,24 +14,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping(value = "/api/driver")
 public class DriverController {
-    @RequestMapping(value = "light", method = RequestMethod.GET)
-    public ModelAndView light() {
-        ModelAndView modelandView = new ModelAndView("driver/light", "driver", new ContractEntity());
+    @RequestMapping(value = "setting", method = RequestMethod.GET)
+    public ModelAndView setting() {
+        ModelAndView modelandView = new ModelAndView("driver/setting", "driver", new ContractEntity());
         return modelandView;
     }
-    @RequestMapping(value = "detection", method = RequestMethod.GET)
-    public ModelAndView  detection() {
-        ModelAndView modelandView = new ModelAndView("driver/detection", "driver", new ContractEntity());
-        return modelandView;
-    }
-    @RequestMapping(value = "sensor", method = RequestMethod.GET)
-    public ModelAndView  sensor() {
-        ModelAndView modelandView = new ModelAndView("driver/sensor", "driver", new ContractEntity());
-        return modelandView;
-    }
-    @RequestMapping(value = "synchronizer", method = RequestMethod.GET)
-    public ModelAndView  synchronizer() {
-        ModelAndView modelandView = new ModelAndView("driver/synchronizer", "driver", new ContractEntity());
-        return modelandView;
-    }
+
 }
