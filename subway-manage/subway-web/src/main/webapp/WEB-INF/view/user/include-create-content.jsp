@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="associate_lines" class="col-sm-2 control-label "
+                                <label class="col-sm-2 control-label "
                                        style="text-align: center; ">关联线路</label>
                                 <div class="col-sm-6">
                                     <div class="col-sm-6" style="margin-bottom: 10px;padding-left: 0px">

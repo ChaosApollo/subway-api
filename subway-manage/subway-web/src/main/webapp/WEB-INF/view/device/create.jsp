@@ -13,8 +13,8 @@
 
     <%@ include file="../include/default-page-global-head.jsp" %>
     <%@ include file="include-page-level-head.jsp" %>
+    <%@ include file="../include/default-system-css.jsp" %>
 
-    <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
 <style type="text/css">
     .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {

@@ -12,6 +12,7 @@
     }
     thead, tr, th,td,.table td, .table th,.table thead tr th{
         text-align: center;
+        line-height: 1.42857;
     }
     .page-sidebar .page-sidebar-menu>li>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a {
         display: block;
@@ -20,19 +21,12 @@
         border: 0;
         /*padding: 10px 15px;*/
         text-decoration: none;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 300;
     }
     .page-sidebar .page-sidebar-menu>li.open>a, .page-sidebar .page-sidebar-menu>li:hover>a{
         background: #f4f6f8;
         color: black;
-    }
-    .dropdown-menu {
-        box-shadow: 0px 0px ;
-        left: 10px;
-        min-width: 135px;
-        position: absolute;
-        background-color: #eaedf1;
     }
     legend{
         font-size: 12px;
@@ -63,53 +57,5 @@
     .ms-container .ms-selectable, .ms-container .ms-selection{
         width: 47%;
     }
+
 </style>
-
-<script type="text/javascript">
-    function getTree() {
-        var tree = [
-            {
-                text: "系统管理员组",
-
-                nodes: [
-                    {
-                        text: "系统管理员",
-                    },
-                ]
-
-            },
-            {
-                text: "运维组",
-                nodes: [
-                    {
-                        text: "运维01（运维经理）"
-                    },
-                    {
-                        text: "运维02（运维人员）"
-                    },
-                    {
-                        text: "运维03（运维人员）"
-                    },
-                    {
-                        text: "运维04（运维人员）"
-                    }
-                ]
-            },
-            {
-                text: "Parent 3"
-            },
-            {
-                text: "Parent 4"
-            },
-            {
-                text: "Parent 5"
-            }
-        ];
-        return tree;
-    }
-    $('#tree').treeview({data: getTree(),
-        backColor:'#eaedf1',
-        expandIcon:'glyphicon glyphicon-triangle-right',
-        collapseIcon:'glyphicon glyphicon-triangle-bottom',
-        borderColor:'#eaedf1'});
-</script>

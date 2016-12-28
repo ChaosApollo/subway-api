@@ -1,15 +1,15 @@
 <%--
   Created by IntelliJ IDEA.
-  User: zdw
-  Date: 31/10/2016
-  Time: 1:31 PM
+  User: steven
+  Date: 15/10/2016
+  Time: 2:43 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <form commandName="contract" class="form-horizontal" role="form"
-	id="addForm"
-	action="${pageContext.request.contextPath}/api/contract/save"
-	method="post">
+	  id="addForm"
+	  action="${pageContext.request.contextPath}/api/contract/save"
+	  method="post">
 	<!-- BEGIN ACCORDION PORTLET-->
 	<div id="addFormInfo">
 		<div class="portlet box green ">
@@ -26,33 +26,62 @@
 			</div>
 			<div class="portlet-body ">
 				<div class="panel-group accordion scrollable " id="accordion1">
+					<%--预约情况--%>
+					<div class="panel panel-default ">
+						<div class="panel-heading">
+							<h4 class="panel-title" style="background-color: #23b3eb">
+								<%--#23b3eb--%>
+								<a class="accordion-toggle" data-toggle="collapse"
+								   data-parent="#accordion1" href="#collapse_4"> 是否有预约 </a>
+							</h4>
+						</div>
+						<div id="collapse_4" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Duis autem vel eum iriure dolor in hendrerit in
+									vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci
+									tation ullamcorper suscipit lobortis nisl ut.</p>
+								<p>Anim pariatur cliche reprehenderit, enim eiusmod high
+									life accusamus terry richardson ad squid. 3 wolf moon officia
+									aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+									nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.</p>
+								<p>Duis autem vel eum iriure dolor in hendrerit in
+									vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci
+									tation ullamcorper suscipit lobortis nisl ut.</p>
+								<p>
+									<a class="btn red"
+									   href="ui_tabs_accordions_navs.html#collapse_4" target="_blank">
+										Activate this section via URL </a>
+								</p>
+							</div>
+						</div>
+					</div>
 					<%--合同信息--%>
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title" style="background-color: #23b3eb">
 								<a class="accordion-toggle" data-toggle="collapse"
-									data-parent="#accordion1" href="#collapse_1"> 合同信息(必填项) </a>
+								   data-parent="#accordion1" href="#collapse_1"> 合同信息(必填项) </a>
 							</h4>
 						</div>
 						<div id="collapse_1" class="panel-collapse in">
 							<div class="panel-body">
 								<div class="form-group">
 									<label for="serialNumber" class="col-sm-1 control-label "
-										style="text-align: center; ">合同编号</label>
+										   style="text-align: center; ">合同编号</label>
 									<div class="col-sm-3">
 										<input type="text" path="serialNumber" class="form-control"
-											id="serialNumber" placeholder="" />
+											   id="serialNumber" placeholder="" />
 									</div>
 									<label for="name" class="col-sm-1 control-label"
-										style="text-align: center; ">合同名称</label>
+										   style="text-align: center; ">合同名称</label>
 									<div class="col-sm-3">
 										<input type="text" path="name" class="form-control" id="name"
-											placeholder="" />
+											   placeholder="" />
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="customerId" class="col-sm-1 control-label"
-										style="text-align: center; ">客户名称</label>
+										   style="text-align: center; ">客户名称</label>
 									<div class="col-sm-3">
 										<select path="customerId" class="form-control" id="customerId">
 											<option>蔚锦飞</option>
@@ -62,15 +91,15 @@
 										</select>
 									</div>
 									<label for="promoteBrand" class="col-sm-1 control-label"
-										style="text-align: center; ">推广品牌</label>
+										   style="text-align: center; ">推广品牌</label>
 									<div class="col-sm-3">
 										<input type="text" path="promoteBrand" class="form-control"
-											id="promoteBrand" placeholder="" />
+											   id="promoteBrand" placeholder="" />
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="customerId" class="col-sm-1 control-label"
-										style="text-align: center; ">地区</label>
+									<label for="area" class="col-sm-1 control-label"
+										   style="text-align: center; ">地区</label>
 									<div class="col-sm-2">
 										<select path="area" class="form-control" id="area">
 											<option>朝阳区</option>
@@ -81,8 +110,8 @@
 											<option>大兴区</option>
 										</select>
 									</div>
-									<label for="customerId" class="col-sm-1 control-label"
-										style="text-align: center; ">线路</label>
+									<label for="route" class="col-sm-1 control-label"
+										   style="text-align: center; ">线路</label>
 									<div class="col-sm-2">
 										<select path="route" class="form-control" id="route">
 											<option>1号线</option>
@@ -93,7 +122,7 @@
 										</select>
 									</div>
 									<label for="stationId" class="col-sm-1 control-label th-head"
-										style="">站点</label>
+										   style="">站点</label>
 									<div class="col-sm-2">
 										<select path="stationId" class="form-control" id="stationId">
 											<option>十里河站</option>
@@ -113,425 +142,425 @@
 									</div>
 								</div>
 								<table
-									class="table table-striped table-bordered table-hover table-checkable sample_1"
-									>
+										class="table table-striped table-bordered table-hover table-checkable sample_6"
+								>
 									<thead>
-										<tr>
-											<th><label
+									<tr>
+										<th><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="group-checkable"
-													data-set=".sample_1 .checkboxes" /> <span></span>
-											</label></th>
-											<th>区域</th>
-											<th>线路</th>
-											<th>站点</th>
-											<th>线路级别</th>
-											<th></th>
-										</tr>
+											<input type="checkbox" class="group-checkable"
+												   data-set="sample_6 .checkboxes" /> <span></span>
+										</label></th>
+										<th>区域</th>
+										<th>线路</th>
+										<th>站点</th>
+										<th>线路级别</th>
+										<th></th>
+									</tr>
 									</thead>
 									<tbody>
-										<tr class="odd gradeX">
-											<td><label
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>shuxer</td>
-											<td><a href="mailto:shuxer@gmail.com">
-													shuxer@gmail.com </a></td>
-											<td><span class="label label-sm label-success">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>shuxer</td>
+										<td><a href="mailto:shuxer@gmail.com">
+											shuxer@gmail.com </a></td>
+										<td><span class="label label-sm label-success">
 													Approved </span></td>
-											<td class="center">12 Jan 2012</td>
-											<td>
-												<div class="btn-group">
-													 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-												</div>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12 Jan 2012</td>
+										<td>
+											<div class="btn-group">
+												<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+													<i class="fa fa-trash-o"></i> </a>
+											</div>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>looper</td>
-											<td><a href="mailto:looper90@gmail.com">
-													looper90@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>looper</td>
+										<td><a href="mailto:looper90@gmail.com">
+											looper90@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>userwow</td>
-											<td><a href="mailto:userwow@yahoo.com">
-													userwow@yahoo.com </a></td>
-											<td><span class="label label-sm label-success">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>userwow</td>
+										<td><a href="mailto:userwow@yahoo.com">
+											userwow@yahoo.com </a></td>
+										<td><span class="label label-sm label-success">
 													Approved </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>user1wow</td>
-											<td><a href="mailto:userwow@gmail.com">
-													userwow@gmail.com </a></td>
-											<td><span class="label label-sm label-danger">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>user1wow</td>
+										<td><a href="mailto:userwow@gmail.com">
+											userwow@gmail.com </a></td>
+										<td><span class="label label-sm label-danger">
 													Blocked </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>restest</td>
-											<td><a href="mailto:userwow@gmail.com">
-													test@gmail.com </a></td>
-											<td><span class="label label-sm label-success">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>restest</td>
+										<td><a href="mailto:userwow@gmail.com">
+											test@gmail.com </a></td>
+										<td><span class="label label-sm label-success">
 													Approved </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>foopl</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-info"> Info
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>foopl</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-info"> Info
 											</span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>weep</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-danger">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>weep</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-danger">
 													Rejected </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>coop</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-info"> Info
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>coop</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-info"> Info
 											</span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>pppol</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-danger">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>pppol</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-danger">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>test</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>test</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>userwow</td>
-											<td><a href="mailto:userwow@gmail.com">
-													userwow@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>userwow</td>
+										<td><a href="mailto:userwow@gmail.com">
+											userwow@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>test</td>
-											<td><a href="mailto:userwow@gmail.com">
-													test@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>test</td>
+										<td><a href="mailto:userwow@gmail.com">
+											test@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>goop</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>goop</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>weep</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>weep</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>toopl</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>toopl</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>userwow</td>
-											<td><a href="mailto:userwow@gmail.com">
-													userwow@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>userwow</td>
+										<td><a href="mailto:userwow@gmail.com">
+											userwow@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>tes21t</td>
-											<td><a href="mailto:userwow@gmail.com">
-													test@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>tes21t</td>
+										<td><a href="mailto:userwow@gmail.com">
+											test@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>fop</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>fop</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>kop</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>kop</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>vopl</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>vopl</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>userwow</td>
-											<td><a href="mailto:userwow@gmail.com">
-													userwow@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>userwow</td>
+										<td><a href="mailto:userwow@gmail.com">
+											userwow@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>wap</td>
-											<td><a href="mailto:userwow@gmail.com">
-													test@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>wap</td>
+										<td><a href="mailto:userwow@gmail.com">
+											test@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>test</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>test</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>toop</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>toop</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
-										<tr class="odd gradeX">
-											<td><label
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-													<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-											</label></td>
-											<td>weep</td>
-											<td><a href="mailto:userwow@gmail.com">
-													good@gmail.com </a></td>
-											<td><span class="label label-sm label-warning">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>weep</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-											<td class="center">12.12.2011</td>
-											<td>
-												 <a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-                                                            <i class="fa fa-trash-o"></i> </a>
-											</td>
-										</tr>
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
 									</tbody>
 								</table>
 							</div>
@@ -542,7 +571,7 @@
 						<div class="panel-heading">
 							<h4 class="panel-title" style="background-color: #23b3eb">
 								<a class="accordion-toggle" data-toggle="collapse"
-									data-parent="#accordion1" href="#collapse_3"> 金额情况</a>
+								   data-parent="#accordion1" href="#collapse_3"> 金额情况</a>
 							</h4>
 						</div>
 						<div id="collapse_3" class="panel-collapse collapse">
@@ -551,16 +580,16 @@
 									<div id="formContentInfo">
 										<div class="form-group">
 											<label for="totalAmount" class="col-sm-2 control-label"
-												style="text-align: center; ">合作金额</label>
+												   style="text-align: center; ">合作金额</label>
 											<div class="col-sm-3">
 												<input type="text" path="totalAmount" class="form-control"
-													id="totalAmount" placeholder="" />
+													   id="totalAmount" placeholder="" />
 											</div>
 											<label for="sellCost" class="col-sm-2 control-label"
-												style="text-align: center; ">销售费用</label>
+												   style="text-align: center; ">销售费用</label>
 											<div class="col-sm-3">
 												<input type="text" path="sellCost" class="form-control"
-													id="sellCost" placeholder="" />
+													   id="sellCost" placeholder="" />
 											</div>
 										</div>
 										<div class="form-group">
@@ -581,16 +610,16 @@
 										</div>
 										<div class="form-group">
 											<label for="otherDiscount" class="col-sm-2 control-label"
-												style="text-align: center; ">其它折扣</label>
+												   style="text-align: center; ">其它折扣</label>
 											<div class="col-sm-3">
 												<input type="text" path="otherDiscount" class="form-control"
-													id="otherDiscount" placeholder="" />
+													   id="otherDiscount" placeholder="" />
 											</div>
 											<label for="otherProgject" class="col-sm-2 control-label"
-												style="text-align: center; ">其它优惠项目</label>
+												   style="text-align: center; ">其它优惠项目</label>
 											<div class="col-sm-3">
 												<input type="text" path="otherProgject" class="form-control"
-													id="otherProgject" placeholder="" />
+													   id="otherProgject" placeholder="" />
 											</div>
 										</div>
 									</div>
@@ -604,34 +633,34 @@
 						<div class="panel-heading">
 							<h4 class="panel-title" style="background-color: #23b3eb">
 								<a class="accordion-toggle" data-toggle="collapse"
-									data-parent="#accordion1" href="#collapse_5"> 资源情况 </a>
+								   data-parent="#accordion1" href="#collapse_5"> 资源情况 </a>
 							</h4>
 						</div>
 						<div id="collapse_5" class="panel-collapse collapse">
 							<div class="panel-body" style="overflow-y: auto;">
 								<div class="form-group">
 									<label for="totalResources" class="col-sm-2 control-label"
-										style="text-align: center; ">资源总数</label>
+										   style="text-align: center; ">资源总数</label>
 									<div class="col-sm-3">
 										<input type="text" path="totalResources" class="form-control"
-											id="totalResources" placeholder="" />
+											   id="totalResources" placeholder="" />
 									</div>
 									<label for="resources" class="col-sm-2 control-label"
-										style="text-align: center; ">购买资源量</label>
+										   style="text-align: center; ">购买资源量</label>
 									<div class="col-sm-3">
 										<input type="text" path="resources" class="form-control"
-											id="resources" placeholder="" />
+											   id="resources" placeholder="" />
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="executeNumber" class="col-sm-2 control-label"
-										style="text-align: center; ">执行批次</label>
+										   style="text-align: center; ">执行批次</label>
 									<div class="col-sm-3">
 										<input type="text" path="executeNumber" class="form-control"
-											id="executeNumber" placeholder="" />
+											   id="executeNumber" placeholder="" />
 									</div>
 									<label for="suit" class="col-sm-2  control-label "
-										style="text-align: center; ">使用套装</label>
+										   style="text-align: center; ">使用套装</label>
 									<div class="col-sm-3">
 										<select path="suit" class="form-control" id="suit">
 											<option>不使用</option>
@@ -661,22 +690,22 @@
 						<div class="panel-heading">
 							<h4 class="panel-title" style="background-color: #23b3eb">
 								<a class="accordion-toggle" data-toggle="collapse"
-									data-parent="#accordion1" href="#collapse_2"> 支付方式 </a>
+								   data-parent="#accordion1" href="#collapse_2"> 支付方式 </a>
 							</h4>
 						</div>
 						<div id="collapse_2" class="panel-collapse collapse">
 							<div class="panel-body">
 								<div class="form-group">
-									<label for="area" class="col-sm-2 control-label th-head"
-										style="text-align: center; ">支付方式：</label>
-									<label for="onelumpsum" class="col-sm-1 control-label th-head"
-										style="text-align: left; ">一次付清</label>
+									<label class="col-sm-2 control-label th-head"
+										   style="text-align: center; ">支付方式：</label>
+									<label for="onelumpsum" class="col-sm-1 control-label th-head" checked="true"
+										   style="text-align: left; ">一次付清</label>
 									<div class="col-sm-1">
 										<input type="radio" path="onelumpsum" name="payment" style="margin-top: 12px" id="onelumpsum">
 									</div>
 									<label for="paymentbyinstallment"
-										class="col-sm-1 control-label th-head"
-										style="text-align: left; ">分期付款</label>
+										   class="col-sm-1 control-label th-head"
+										   style="text-align: left; ">分期付款</label>
 									<div class="col-sm-1">
 										<input type="radio" path="paymentbyinstallment" name="payment" style="margin-top: 12px" id="paymentbyinstallment">
 									</div>
@@ -692,427 +721,427 @@
 									</div>
 								</div>
 								<table
-									class="table table-striped table-bordered table-hover table-checkable sample_1 "
-									>
-								<thead>
-								<tr>
-									<th><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="group-checkable"
-											   data-set=".sample_1 .checkboxes" /> <span></span>
-									</label></th>
-									<th>款项</th>
-									<th>支付比例（%）</th>
-									<th>付款日期</th>
-									<th>付款金额</th>
-									<th></th>
-								</tr>
-								</thead>
-								<tbody>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>shuxer</td>
-									<td><a href="mailto:shuxer@gmail.com">
-										shuxer@gmail.com </a></td>
-									<td><span class="label label-sm label-success">
+										class="table table-striped table-bordered table-hover table-checkable sample_6 "
+								>
+									<thead>
+									<tr>
+										<th><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="group-checkable"
+												   data-set=".sample_6 .checkboxes" /> <span></span>
+										</label></th>
+										<th>款项</th>
+										<th>支付比例（%）</th>
+										<th>付款日期</th>
+										<th>付款金额</th>
+										<th></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>shuxer</td>
+										<td><a href="mailto:shuxer@gmail.com">
+											shuxer@gmail.com </a></td>
+										<td><span class="label label-sm label-success">
 													Approved </span></td>
-									<td class="center">12 Jan 2012</td>
-									<td>
-										<div class="btn-group">
+										<td class="center">12 Jan 2012</td>
+										<td>
+											<div class="btn-group">
+												<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+													<i class="fa fa-trash-o"></i> </a>
+											</div>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>looper</td>
+										<td><a href="mailto:looper90@gmail.com">
+											looper90@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
+													Suspended </span></td>
+										<td class="center">12.12.2011</td>
+										<td>
 											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
 												<i class="fa fa-trash-o"></i> </a>
-										</div>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>looper</td>
-									<td><a href="mailto:looper90@gmail.com">
-										looper90@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
-													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>userwow</td>
-									<td><a href="mailto:userwow@yahoo.com">
-										userwow@yahoo.com </a></td>
-									<td><span class="label label-sm label-success">
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>userwow</td>
+										<td><a href="mailto:userwow@yahoo.com">
+											userwow@yahoo.com </a></td>
+										<td><span class="label label-sm label-success">
 													Approved </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>user1wow</td>
-									<td><a href="mailto:userwow@gmail.com">
-										userwow@gmail.com </a></td>
-									<td><span class="label label-sm label-danger">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>user1wow</td>
+										<td><a href="mailto:userwow@gmail.com">
+											userwow@gmail.com </a></td>
+										<td><span class="label label-sm label-danger">
 													Blocked </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>restest</td>
-									<td><a href="mailto:userwow@gmail.com">
-										test@gmail.com </a></td>
-									<td><span class="label label-sm label-success">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>restest</td>
+										<td><a href="mailto:userwow@gmail.com">
+											test@gmail.com </a></td>
+										<td><span class="label label-sm label-success">
 													Approved </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>foopl</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-info"> Info
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>foopl</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-info"> Info
 											</span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>weep</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-danger">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>weep</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-danger">
 													Rejected </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>coop</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-info"> Info
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>coop</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-info"> Info
 											</span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>pppol</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-danger">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>pppol</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-danger">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>test</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>test</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>userwow</td>
-									<td><a href="mailto:userwow@gmail.com">
-										userwow@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>userwow</td>
+										<td><a href="mailto:userwow@gmail.com">
+											userwow@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>test</td>
-									<td><a href="mailto:userwow@gmail.com">
-										test@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>test</td>
+										<td><a href="mailto:userwow@gmail.com">
+											test@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>goop</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>goop</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>weep</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>weep</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>toopl</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>toopl</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>userwow</td>
-									<td><a href="mailto:userwow@gmail.com">
-										userwow@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>userwow</td>
+										<td><a href="mailto:userwow@gmail.com">
+											userwow@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>tes21t</td>
-									<td><a href="mailto:userwow@gmail.com">
-										test@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>tes21t</td>
+										<td><a href="mailto:userwow@gmail.com">
+											test@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>fop</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>fop</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>kop</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>kop</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>vopl</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>vopl</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>userwow</td>
-									<td><a href="mailto:userwow@gmail.com">
-										userwow@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>userwow</td>
+										<td><a href="mailto:userwow@gmail.com">
+											userwow@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>wap</td>
-									<td><a href="mailto:userwow@gmail.com">
-										test@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>wap</td>
+										<td><a href="mailto:userwow@gmail.com">
+											test@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>test</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>test</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>toop</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>toop</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								<tr class="odd gradeX">
-									<td><label
-											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" value="1" /> <span></span>
-									</label></td>
-									<td>weep</td>
-									<td><a href="mailto:userwow@gmail.com">
-										good@gmail.com </a></td>
-									<td><span class="label label-sm label-warning">
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									<tr class="odd gradeX">
+										<td><label
+												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+											<input type="checkbox" class="checkboxes" value="1" /> <span></span>
+										</label></td>
+										<td>weep</td>
+										<td><a href="mailto:userwow@gmail.com">
+											good@gmail.com </a></td>
+										<td><span class="label label-sm label-warning">
 													Suspended </span></td>
-									<td class="center">12.12.2011</td>
-									<td>
-										<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
-											<i class="fa fa-trash-o"></i> </a>
-									</td>
-								</tr>
-								</tbody>
-							</table>
+										<td class="center">12.12.2011</td>
+										<td>
+											<a href="javascript:;" class="btn btn-outline btn-circle dark btn-sm black">
+												<i class="fa fa-trash-o"></i> </a>
+										</td>
+									</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
@@ -1121,33 +1150,32 @@
 						<div class="panel-heading">
 							<h4 class="panel-title" style="background-color: #23b3eb">
 								<a class="accordion-toggle" data-toggle="collapse"
-									data-parent="#accordion1" href="#collapse_6"> 其他 </a>
+								   data-parent="#accordion1" href="#collapse_6"> 其他 </a>
 							</h4>
 						</div>
 						<div id="collapse_6" class="panel-collapse collapse">
 							<div class="panel-body" style="overflow-y: auto;">
-									<div class="form-group">
-										<label for="begin" class="col-sm-1 control-label" style=";">有效日期</label>
-										<div class="col-sm-3">
-											<input type="text" path="begin"
-												class="form-control date-picker" id="begin"
-												placeholder="请选择开始日期" />
-										</div>
-										<label for="end" class="col-sm-1 control-label" style="">——</label>
-										<div class="col-sm-3">
-											<input type="text" path="end"
-												class="form-control date-picker" id="end"
-												placeholder="请选择结束日期" />
-										</div>
+								<div class="form-group">
+									<label for="begin" class="col-sm-1 control-label" style=";">有效日期</label>
+									<div class="col-sm-3">
+										<input type="text" path="begin"
+											   class="form-control date-picker" id="begin"
+											   placeholder="请选择开始日期" />
 									</div>
-									<div class="form-group">
-										<label for="note" class="col-sm-1 control-label" style="">备注：</label>
-										<div class="col-sm-10">
-											<input type="text" path="note"
-												class="form-control " id="note" placeholder="" />
-
-										</div>
+									<label for="end" class="col-sm-1 control-label" style="">——</label>
+									<div class="col-sm-3">
+										<input type="text" path="end"
+											   class="form-control date-picker" id="end"
+											   placeholder="请选择结束日期" />
 									</div>
+								</div>
+								<div class="form-group">
+									<label for="note" class="col-sm-1 control-label" style="">备注：</label>
+									<div class="col-sm-10">
+										<input type="text" path="note"
+											   class="form-control" id="note" placeholder="" />
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1166,3 +1194,4 @@
 		</div>
 	</div>
 </form>
+

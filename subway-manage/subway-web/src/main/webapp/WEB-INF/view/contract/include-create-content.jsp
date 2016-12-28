@@ -98,7 +98,7 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="customerId" class="col-sm-1 control-label"
+									<label for="area" class="col-sm-1 control-label"
 										style="text-align: center; ">地区</label>
 									<div class="col-sm-2">
 										<select path="area" class="form-control" id="area">
@@ -110,7 +110,7 @@
 											<option>大兴区</option>
 										</select>
 									</div>
-									<label for="customerId" class="col-sm-1 control-label"
+									<label for="route" class="col-sm-1 control-label"
 										style="text-align: center; ">线路</label>
 									<div class="col-sm-2">
 										<select path="route" class="form-control" id="route">
@@ -142,14 +142,14 @@
 									</div>
 								</div>
 								<table
-									class="table table-striped table-bordered table-hover table-checkable " id="sample_1"
+									class="table table-striped table-bordered table-hover table-checkable sample_6"
 									>
 									<thead>
 										<tr>
 											<th><label
 												class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
 													<input type="checkbox" class="group-checkable"
-													data-set="#sample_1 .checkboxes" /> <span></span>
+													data-set="sample_6 .checkboxes" /> <span></span>
 											</label></th>
 											<th>区域</th>
 											<th>线路</th>
@@ -721,14 +721,14 @@
 									</div>
 								</div>
 								<table
-									class="table table-striped table-bordered table-hover table-checkable sample_1 "
+									class="table table-striped table-bordered table-hover table-checkable sample_6 "
 									>
 								<thead>
 								<tr>
 									<th><label
 											class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
 										<input type="checkbox" class="group-checkable"
-											   data-set=".sample_1 .checkboxes" /> <span></span>
+											   data-set=".sample_6 .checkboxes" /> <span></span>
 									</label></th>
 									<th>款项</th>
 									<th>支付比例（%）</th>
@@ -1194,3 +1194,4 @@
 		</div>
 	</div>
 </form>
+

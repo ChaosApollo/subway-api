@@ -13,11 +13,13 @@
     <!-- BEGIN ACCORDION PORTLET-->
     <div id="addFormInfo">
         <div>
-            <%--<div class="col-sm-2"></div>--%>
-            <div class="col-sm-6" style="margin: auto">
-                <div class="btn-group" id="btngroup1">
-                    <a href="javascript:;" class="btn green" style="margin-bottom: 8px;">
-                        &nbsp;&nbsp;&nbsp;<i class="fa fa-plus" style="color: white;font-weight: bold"> 新增  </i>&nbsp;&nbsp;&nbsp;
+            <div class="col-sm-6">
+                <div class="btn-group" id="btngroup1" >
+                    <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px" href="/api/device/create">
+                        <span>新建</span>
+                    </a>
+                    <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;">
+                        <span>删除</span>
                     </a>
                 </div>
             </div>
@@ -35,7 +37,7 @@
                 <th> 容量 </th>
                 <th> 大小 </th>
                 <th> 长度 </th>
-                <th style="width: 15%;"> 操作</th>
+                <th style="width: 7%;"> 操作</th>
             </tr>
             </thead>
             <tbody>
@@ -50,18 +52,18 @@
                 <td> 600 × 480 </td>
                 <td> 15秒</td>
                 <td style="text-align: center;">
-                    <div class=" btn-group ">
+                    <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="#">
-                                    <i class="icon-shield"></i> 编辑</a>
+                                <a href="/api/device/edit">
+                                    <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="icon-user"></i> 删除</a>
+                                    <i class="glyphicon glyphicon-trash"></i> 删除</a>
                             </li>
                         </ul>
                     </div>
@@ -78,18 +80,18 @@
                 <td> 320 × 240 </td>
                 <td> 15秒</td>
                 <td style="text-align: center;">
-                    <div class=" btn-group ">
+                    <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="#">
-                                    <i class="icon-shield"></i> 编辑</a>
+                                <a href="/api/device/edit">
+                                    <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="icon-user"></i> 删除</a>
+                                    <i class="glyphicon glyphicon-trash"></i> 删除</a>
                             </li>
                         </ul>
                     </div>

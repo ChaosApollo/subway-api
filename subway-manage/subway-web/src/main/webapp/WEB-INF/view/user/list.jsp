@@ -14,51 +14,50 @@
     <%@ include file="../include/default-page-global-head.jsp" %>
     <%@ include file="include-page-level-head.jsp" %>
     <%@ include file="../include/default-system-css.jsp" %>
-    <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
-<%--<style type="text/css">--%>
-    <%--.control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body,option {--%>
-        <%--font-size: 12px;--%>
-    <%--}--%>
-    <%--thead, tr, th,td,.table td, .table th,.table thead tr th{--%>
-        <%--text-align: center;--%>
-    <%--}--%>
-    <%--.page-sidebar .page-sidebar-menu>li>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a {--%>
-        <%--display: block;--%>
-        <%--position: relative;--%>
-        <%--margin: 0;--%>
-        <%--border: 0;--%>
-        <%--/*padding: 10px 15px;*/--%>
-        <%--text-decoration: none;--%>
-        <%--font-size: 12px;--%>
-        <%--font-weight: 300;--%>
-    <%--}--%>
-    <%--.page-sidebar .page-sidebar-menu>li.open>a, .page-sidebar .page-sidebar-menu>li:hover>a{--%>
-        <%--background: #f4f6f8;--%>
-        <%--color: black;--%>
-    <%--}--%>
-    <%--.dropdown-menu {--%>
-        <%--box-shadow: 0px 0px ;--%>
-        <%--left: 10px;--%>
-        <%--min-width: 135px;--%>
-        <%--position: absolute;--%>
-        <%--background-color: #eaedf1;--%>
-    <%--}--%>
-    <%--legend{--%>
-        <%--font-size: 12px;--%>
-        <%--font-weight: bold;--%>
-        <%--padding-left: 10px;--%>
-        <%--padding-bottom: 10px;--%>
-    <%--}--%>
-    <%--.table>tbody>tr>td{--%>
-        <%--line-height: 2;--%>
-    <%--}--%>
-    <%--.backgrandcolor{--%>
-        <%--background-color: white;--%>
-    <%--}--%>
-    <%--.page-content-wrapper .page-content{--%>
-        <%--padding-bottom: 0px;--%>
-    <%--}--%>
+<style type="text/css">
+  /*  .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body,option {
+        font-size: 12px;
+    }
+    thead, tr, th,td,.table td, .table th,.table thead tr th{
+        text-align: center;
+    }
+    .page-sidebar .page-sidebar-menu>li>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a {
+        display: block;
+        position: relative;
+        margin: 0;
+        border: 0;
+        /*padding: 10px 15px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .page-sidebar .page-sidebar-menu>li.open>a, .page-sidebar .page-sidebar-menu>li:hover>a{
+        background: #f4f6f8;
+        color: black;
+    }
+    .dropdown-menu {
+        box-shadow: 0px 0px ;
+        left: 10px;
+        min-width: 135px;
+        position: absolute;
+        background-color: #eaedf1;
+    }
+    legend{
+        font-size: 12px;
+        font-weight: bold;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+    .table>tbody>tr>td{
+        line-height: 2;
+    }
+    .backgrandcolor{
+        background-color: white;
+    }
+    .page-content-wrapper .page-content{
+        padding-bottom: 0px;
+    }
 
     .ms-container .ms-selectable li.ms-elem-selectable,
     .ms-container .ms-selection li.ms-elem-selection{
@@ -72,8 +71,8 @@
     }
     .ms-container .ms-selectable, .ms-container .ms-selection{
         width: 47%;
-    }
-<%--</style>--%>
+    }*/
+</style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
 <%@include file="../include/default-system-header.jsp" %>
 
@@ -95,8 +94,16 @@
             <%--</div>--%>
             <div class="row">
                 <div class="col-sm-3 inner-menu-list" style="margin-top: -25px;margin-left: -20px;">
-                    <div style="height: 1300px;width:230px;background-color: #eaedf1;padding-bottom: 0px">
-                        <%@include file="treeview.jsp" %>
+                    <div style="height: 1300px;width:100%;background-color: #eaedf1;padding-bottom: 0px">
+                        <div class="col-sm-12 btn-group" id="btngroup1" style="margin-bottom: 10px;margin-top: 10px;padding-left: 0px">
+                            <a type="button" class="btn green" data-toggle="modal" href="#addusers" style="margin-left: 30%" >
+                                <span>新建</span>
+                            </a>
+                            <a type="button" class="btn green" style="margin-left: 8px" >
+                                <span>删除</span>
+                            </a>
+                        </div>
+
                         <div style="text-align: center;font-weight: bold;padding: 10px 20px 10px 20px;"><span >用户管理</span></div>
 
                         <div id="tree"></div>
@@ -126,67 +133,6 @@
 <%@ include file="../include/default-system-end-of-page.jsp" %>
 
 <%@include file="include-end-of-page.jsp"%>
-
+<%@include file="my_script.jsp" %>
 
 </body>
-
-<script type="text/javascript">
-    $(function () {
-        $(".date-picker").datetimepicker({
-            language: "zh-CN",
-            autoclose: true,//选中之后自动隐藏日期选择框
-            clearBtn: false,//清除按钮
-            todayBtn: true,//今日按钮
-            format: "yyyy-mm-dd",//日期格式，详见 http://bootstrap-datepicker.readthedocs.org/en/release/options.html#format
-            minView:4
-        });
-    });
-</script>
-<%--<script type="text/javascript">--%>
-    <%--function getTree() {--%>
-        <%--var tree = [--%>
-            <%--{--%>
-                <%--text: "系统管理员组",--%>
-
-                <%--nodes: [--%>
-                    <%--{--%>
-                        <%--text: "系统管理员",--%>
-                    <%--},--%>
-                <%--]--%>
-
-            <%--},--%>
-            <%--{--%>
-                <%--text: "运维组",--%>
-                <%--nodes: [--%>
-                    <%--{--%>
-                        <%--text: "运维01（运维经理）"--%>
-                    <%--},--%>
-                    <%--{--%>
-                        <%--text: "运维02（运维人员）"--%>
-                    <%--},--%>
-                    <%--{--%>
-                        <%--text: "运维03（运维人员）"--%>
-                    <%--},--%>
-                    <%--{--%>
-                        <%--text: "运维04（运维人员）"--%>
-                    <%--}--%>
-                <%--]--%>
-            <%--},--%>
-            <%--{--%>
-                <%--text: "Parent 3"--%>
-            <%--},--%>
-            <%--{--%>
-                <%--text: "Parent 4"--%>
-            <%--},--%>
-            <%--{--%>
-                <%--text: "Parent 5"--%>
-            <%--}--%>
-        <%--];--%>
-        <%--return tree;--%>
-    <%--}--%>
-    <%--$('#tree').treeview({data: getTree(),--%>
-        <%--backColor:'#eaedf1',--%>
-        <%--expandIcon:'glyphicon glyphicon-triangle-right',--%>
-        <%--collapseIcon:'glyphicon glyphicon-triangle-bottom',--%>
-        <%--borderColor:'#eaedf1'});--%>
-<%--</script>--%>

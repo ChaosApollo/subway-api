@@ -1,11 +1,11 @@
 <%--
   Created by IntelliJ IDEA.
-  User: zdw
-  Date: 2016/11/10
-  Time: 13:02
+  User: steven
+  Date: 15/10/2016
+  Time: 2:43 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <form commandName="contract" class="form-horizontal" role="form"
       id="addForm"
       action="${pageContext.request.contextPath}/api/contract/save"
@@ -18,211 +18,211 @@
                 <div class="portlet-body form">
                     <div class="form-body"style="padding-top: 10px;padding-bottom: 10px">
                         <fieldset>
-                            <legend style="border-color: white">基本信息</legend>
+                            <legend style="border-color: white">客户基本信息</legend>
                             <div class="form-group">
-                                <label for="username" class="col-sm-2 control-label "
-                                       style="text-align: center; ">用户名：</label>
-                                <div class="col-sm-5">
-                                    <input type="text" path="username" class="form-control"
-                                           id="username" placeholder=""/>
+                                <label for="name" class="col-sm-2 control-label "
+                                       style="text-align: center; ">客户简称</label>
+                                <div class="col-sm-3">
+                                    <input type="text" path="name" class="form-control"
+                                           id="name" placeholder="" />
+                                </div>
+                                <label for="company" class="col-sm-2 control-label"
+                                       style="text-align: center; ">单位名称</label>
+                                <div class="col-sm-3">
+                                    <input type="text" path="company" class="form-control" id="company"
+                                           placeholder="" />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="password" class="col-sm-2 control-label"
-                                       style="text-align: center; ">密码：</label>
-                                <div class="col-sm-5">
-                                    <input type="password" path="password" class="form-control"
-                                           id="password" placeholder="" />
+                                <label for="address" class="col-sm-2 control-label"
+                                       style="text-align: center; ">单位地址</label>
+                                <div class="col-sm-3">
+                                    <input type="text" path="address" class="form-control"
+                                           id="address" placeholder="" />
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label  class="col-sm-2 control-label"
-                                        style="text-align: center; "></label>
-                                <div class="col-sm-5">
-                                    <div class="btn-group" id="btngroup1">
-                                        <a href="javascript:;" class="btn green" style="margin-right: 8px">
-                                            &nbsp;<span>关联线路</span>&nbsp;
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="group_id" class="col-sm-2 control-label "
-                                       style="text-align: center; ">组别：</label>
-                                <div class="col-sm-5" style="">
-                                    <select path="group_id" class="form-control" id="group_id">
-                                        <option value ="000">————请选择————</option>
-                                        <option>系统管理员</option>
-                                        <option>运维</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="role" class="col-sm-2 control-label "
-                                       style="text-align: center; ">角色：</label>
-                                <div class="col-sm-5" style="">
-                                    <select path="role" class="form-control" id="role" >
-                                        <option value ="000">————请选择————</option>
+                                <label for="trade" class="col-sm-2 control-label"
+                                       style="text-align: center;">所属行业</label>
+                                <div class="col-sm-3">
+                                    <select path="trade" class="form-control" id="trade">
+                                        <option>个人护理品</option>
                                         <option>在线零售商</option>
                                         <option>在线平台</option>
+                                        <option>食品杂货</option>
+                                        <option>服装服饰</option>
+                                        <option>娱乐休闲媒体类</option>
+                                        <option>旅游及交通类</option>
+                                        <option>金融类</option>
+                                        <option>电器</option>
+                                        <option>电信设备/计算机</option>
+                                        <option>餐饮类</option>
+                                        <option>奢侈品</option>
+                                        <option>汽车</option>
+                                        <option>公共事业类</option>
+                                        <option>玩具及游戏类</option>
+                                        <option>酒类-啤酒</option>
+                                        <option>酒类-非啤酒</option>
+                                        <option>政府</option>
                                     </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label  class="col-sm-2 control-label "
-                                        style="text-align: center; ">权限：</label>
-                                <div class="col-sm-6" style="border: 1px solid #c2cad8;color: black;height: 150px;overflow: auto;text-align: left;margin-left: 15px ">
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;设备端指令操作</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;节目送审</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;节目内审</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;节目外审</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;管理组内用户</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;管理所有用户</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;线路管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;设备管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;客户管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;客户保护设定</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;客户管理员</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;合同管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;合同审核员</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;预约管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;预约审核员</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;约定管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;约定审核员</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;总排期管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;节目管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;实拍管理</span></label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label "
-                                       style="text-align: center; "></label>
-                                <div class="col-sm-5" style="margin: auto">
-                                    <div class="btn-group" id="btngroup2">
-                                        <a data-toggle="modal" href="#addcustomer" path="addContact" class="btn green" style="margin-right: 8px" >
-                                            &nbsp;<span>权限说明</span>&nbsp;
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </fieldset>
                         <fieldset>
-                            <legend style="border-color: white">个人资料</legend>
+                            <legend style="border-color: white">保护信息</legend>
                             <div class="form-group">
-                                <label for="name" class="col-sm-2 control-label "
-                                       style="text-align: center; ">姓名：</label>
-                                <div class="col-sm-5">
-                                    <input type="text" path="name" class="form-control"
-                                           id="name" placeholder=""/>
+                                <label for="owner" class="col-sm-2 control-label"
+                                       style="text-align: center;">客户所有者</label>
+                                <div class="col-sm-3">
+                                    <select path="owner" class="form-control" id="owner">
+                                        <option>系统管理员</option>
+                                        <option>蔚锦飞</option>
+                                        <option>刘盈娣</option>
+                                        <option>运维</option>
+                                        <option>技术</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-2 control-label">
+                                    <label >
+                                        <input type="checkbox" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;客户锁定</span></label>
                                 </div>
                             </div>
-                            <div class="form-group ">
-                                <label for="sex" class="col-sm-2 control-label"
-                                       style="text-align: center; " id="sex">性别：</label>
-                                <div class="col-sm-5">
-                                    <div class="col-sm-1">
-                                        <input type="radio" path="boy" name="sex" checked="true" style="margin-top: 12px" id="boy">
-                                    </div>
-                                    <label for="boy" class="col-sm-1 control-label th-head"
-                                           style="text-align: left;width: 78px ">男</label>
-                                    <div class="col-sm-1">
-                                        <input type="radio" path="girl" name="sex" style="margin-top: 12px;" id="girl ">
-                                    </div>
-                                    <label for="girl " class="col-sm-1 control-label th-head"
-                                           style="text-align: left; width: 78px">女</label>
-                                </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend style="border-color: white">客户联系人</legend>
+                            <button type="button" data-toggle="modal" href="#addcustomer" path="addcustomer" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px">新增</button>
+                            <button type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px">删除</button>
+                            <div>
+                                <table class="table table-striped table-bordered table-hover table-checkable">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 3%"><label
+                                                class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                            <input type="checkbox" class="checkboxes" value="1" /> <span></span>
+                                        </label></th>
+                                        <th> 姓名 </th>
+                                        <th> 职位 </th>
+                                        <th> 手机 </th>
+                                        <th> 座机 </th>
+                                        <th> 电子邮箱 </th>
+                                        <th> 传真 </th>
+                                        <th style="width: 8%"> 操作 </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><label
+                                                class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                            <input type="checkbox" class="checkboxes" value="1" /> <span></span>
+                                        </label></td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>
+                                            <a href="javascript:;">
+                                                <i class="glyphicon glyphicon-trash"></i> </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label
+                                                class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                            <input type="checkbox" class="checkboxes" value="1" /> <span></span>
+                                        </label></td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>
+                                            <a href="javascript:;">
+                                                <i class="glyphicon glyphicon-trash"></i> </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label
+                                                class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                            <input type="checkbox" class="checkboxes" value="1" /> <span></span>
+                                        </label></td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>  </td>
+                                        <td>
+                                            <a href="javascript:;">
+                                                <i class="glyphicon glyphicon-trash"></i> </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="form-group">
-                                <label for="birthday" class="col-sm-2 control-label"
-                                       style="text-align: center; ">出生日期：</label>
-                                <div class="col-sm-5">
-                                    <input type="text" path="birthday"
-                                           class="form-control date-picker" id="birthday"
-                                           placeholder="请选择出生日期" />
+                        </fieldset>
+                        <fieldset>
+                            <legend style="border-color: white">客户材料</legend>
+                            <div class="col-sm-12" style="margin: auto">
+                                <div class="btn-group" id="btngroup1">
+									<span class="btn green fileinput-button" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 5px">
+										新增<input type="file" path="addMaterial" name="files[]" multiple="">
+									</span>
+                                    <button type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px">删除</button>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="mobile_phone" class="col-sm-2 control-label "
-                                       style="text-align: center; ">手机：</label>
-                                <div class="col-sm-5">
-                                    <input type="text" path="mobile_phone" class="form-control"
-                                           id="mobile_phone" placeholder=""/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="telephnoe" class="col-sm-2 control-label "
-                                       style="text-align: center; ">电话：</label>
-                                <div class="col-sm-5">
-                                    <input type="text" path="telephnoe" class="form-control"
-                                           id="telephnoe" placeholder=""/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label "
-                                       style="text-align: center; ">邮箱：</label>
-                                <div class="col-sm-5">
-                                    <input type="text" path="email" class="form-control"
-                                           id="email" placeholder=""/>
+                                <div>
+                                    <table class="table table-striped table-bordered table-hover table-checkable">
+                                        <thead>
+                                        <tr>
+                                            <th> 名称 </th>
+                                            <th> 格式 </th>
+                                            <th style="width: 8%"> 操作 </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td style="text-align: center;">
+                                                <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                                                    <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu pull-right" role="menu">
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="glyphicon glyphicon-search"></i> 查看</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="glyphicon glyphicon-trash"></i> 删除</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>  </td>
+                                            <td>  </td>
+                                            <td style="text-align: center;">
+                                                <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                                                    <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu pull-right" role="menu">
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="glyphicon glyphicon-search"></i> 查看</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <i class="glyphicon glyphicon-trash"></i> 删除</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </fieldset>
@@ -240,32 +240,53 @@
         </div>
     </div>
 </form>
-<div class="modal fade" id="addcustomer" tabindex="-1" data-width="450">
+<div id="addcustomer" class="modal fade" tabindex="-1" data-width="760">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-        <h4 class="modal-title">权限说明</h4>
+        <h4 class="modal-title">新建客户联系人</h4>
     </div>
-    <div class="modal-body" style="margin-right: 20px;align-content: center">
-        <p>设备端指令操作：显示指示操作界面</p>
-        <p>节目送审：选择节目上刊线路并送审</p>
-        <p>节目内审：可以进行节目公司内部审核</p>
-        <p>节目外审：可以进行节目地铁或公司外部审核</p>
-        <p>管理组内用户：管理用户所在组的所有用户</p>
-        <p>管理所有用户：管理所有用户</p>
-        <p>线路管理：管理地铁线路、站点</p>
-        <p>设备管理：管理所有设备类型</p>
-        <p>客户管理：显式并可以操作客户管理模块</p>
-        <p>客户保护设定：可以对客户添加保护与锁定</p>
-        <p>客户管理员：客户模块的最高权限，管理所有客户</p>
-        <p>合同管理：显式并可以操作客户管理模块</p>
-        <p>合同审核员：可以对合同信息进行审核</p>
-        <p>约定管理：显式并可以操作约定管理模块</p>
-        <p>约定审核员：可以对约定信息进行审核</p>
-        <p>节目管理：显式并可以操作节目管理模块</p>
-        <p>总排期管理：显式并可以操作总排期管理模块</p>
+    <div class="modal-body" style="margin-right: 20px;overflow: hidden">
+        <div class="row">
+            <label for="custom.id" class="col-sm-2 control-label "
+                   style="text-align: center; ">姓名</label>
+            <div class="col-sm-9" style="margin-bottom: 10px">
+                <input type="text" path="custom.id" class="form-control"
+                       id="custom.id" placeholder="" />
+            </div>
+            <label for="mobile_phone" class="col-sm-2 control-label "
+                   style="text-align: center; ">手机</label>
+            <div class="col-sm-9" style="margin-bottom: 10px">
+                <input type="text" path="mobile_phone" class="form-control"
+                       id="mobile_phone" placeholder="" />
+            </div>
+            <label for="title" class="col-sm-2 control-label "
+                   style="text-align: center; ">职位</label>
+            <div class="col-sm-9" style="margin-bottom: 10px">
+                <input type="text" path="title" class="form-control"
+                       id="title" placeholder="" />
+            </div>
+            <label for="telephone" class="col-sm-2 control-label "
+                   style="text-align: center; ">座机</label>
+            <div class="col-sm-9" style="margin-bottom: 10px">
+                <input type="text" path="telephone" class="form-control"
+                       id="telephone" placeholder="" />
+            </div>
+            <label for="email" class="col-sm-2 control-label "
+                   style="text-align: center; ">邮箱</label>
+            <div class="col-sm-9" style="margin-bottom: 10px">
+                <input type="text" path="email" class="form-control"
+                       id="email" placeholder="" />
+            </div>
+            <label for="fax" class="col-sm-2 control-label "
+                   style="text-align: center; ">传真</label>
+            <div class="col-sm-9" style="margin-bottom: 10px">
+                <input type="text" path="fax" class="form-control"
+                       id="fax" placeholder="" />
+            </div>
+        </div>
     </div>
     <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn btn-outline dark">关闭</button>
+        <button type="button" data-dismiss="modal" class="btn btn-outline dark">取消</button>
+        <button type="button" class="btn green">确定</button>
     </div>
 </div>
-

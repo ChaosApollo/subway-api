@@ -12,14 +12,14 @@
     <title>Subway API Template</title>
 
     <%@ include file="../include/default-page-global-head.jsp" %>
-    <%@ include file="include-create-page-level-head.jsp" %>
-
+    <%@ include file="include-page-level-head.jsp" %>
+    <%@ include file="../include/default-system-css.jsp" %>
     <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
 <style type="text/css">
-    body,label,a,div{
+   /* body,label,a,div{
         /*font-family:"Microsoft YaHei",微软雅黑;*/
-        /*font-weight: bold;*/
+        /*font-weight: bold;
     }
     .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
         font-size: 12px;
@@ -32,6 +32,7 @@
         text-overflow:inherit;
         overflow:visible;
     }
+   */
 </style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
 
@@ -68,7 +69,7 @@
 
 <%@ include file="../include/default-system-end-of-page.jsp" %>
 
-<%@include file="include-create-end-of-page.jsp"%>
+<%@include file="include-end-of-page.jsp"%>
 
 </body>
 <script type="text/javascript">

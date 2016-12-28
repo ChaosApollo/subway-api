@@ -15,9 +15,11 @@
 <script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/clockface/js/clockface.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/plugins/datetimepicker-master/js/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/plugins/datatables/js/table-datatables-managed.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/scripts/datatable.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
-<%--<script src="${pageContext.request.contextPath}/plugins/datatables/js/table-datatables-managed.min.js" type="text/javascript"></script>--%>
-<script src="${pageContext.request.contextPath}/plugins/dashboard/assets/pages/scripts/table-datatables-managed.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/plugins/dashboard//assets/pages/scripts/ui-extended-modals.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->

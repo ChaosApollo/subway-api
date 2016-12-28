@@ -13,13 +13,13 @@
       method="post">
     <!-- BEGIN ACCORDION PORTLET-->
     <div id="addFormInfo">
-        <div class="col-sm-3" style="margin-left: 0px">
-            <div class="btn-group" id="btngroup1" style="margin-bottom: 10px;padding-left: 0px">
-                <a data-toggle="modal" href="#addusers" path="addUsers" class="btn green" style="margin-right: 8px" >
-                    &nbsp;<i class="fa fa-users">&nbsp;&nbsp;<span style="font-weight: bold">新增</span></i>&nbsp;
+        <div class="col-sm-6">
+            <div class="btn-group" id="btngroup1" >
+                <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px" href="/api/user/create">
+                    <span>新建</span>
                 </a>
-                <a href="javascript:;" class="btn green">
-                    &nbsp;<i class="fa fa-minus">删除</i>&nbsp;
+                <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;">
+                    <span>删除</span>
                 </a>
             </div>
         </div>
@@ -34,7 +34,7 @@
                 <th> 组别 </th>
                 <th> 用户 </th>
                 <th> 角色 </th>
-                <th style="width: 15%;"> 操作</th>
+                <th style="width: 10%;"> 操作</th>
             </tr>
             </thead>
             <tbody>
@@ -46,23 +46,23 @@
                 <td> 系统管理员组 </td>
                 <td> 系统管理员</td>
                 <td> 管理员 </td>
-                <td style="text-align: justify;padding-left: 30px;">
-                    <div class=" btn-group ">
-                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                <td style="text-align: center;">
+                    <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="#">
-                                    <i class="icon-bell"></i> 查看</a>
+                                <a href="/api/user/edit">
+                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
+                            </li>
+                            <li>
+                                <a href="/api/user/edit">
+                                    <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="icon-shield"></i> 编辑</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icon-user"></i> 删除</a>
+                                    <i class="glyphicon glyphicon-trash"></i> 删除</a>
                             </li>
                         </ul>
                     </div>
@@ -76,24 +76,23 @@
                 <td> 运营组 </td>
                 <td> 运营01</td>
                 <td> 运营销售总经理 </td>
-                <td style="text-align: justify;padding-left: 30px;">
-                    <div class=" btn-group ">
-                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                <td style="text-align: center;">
+                    <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="#">
-                                    <i class="icon-bell"></i> 新建 </a>
-
+                                <a href="/api/user/edit">
+                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
+                            </li>
+                            <li>
+                                <a href="/api/user/edit">
+                                    <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="icon-shield"></i> 编辑 </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icon-user"></i> 删除 </a>
+                                    <i class="glyphicon glyphicon-trash"></i> 删除</a>
                             </li>
                         </ul>
                     </div>
@@ -107,23 +106,23 @@
                 <td> 系统管理员组 </td>
                 <td> 系统管理员</td>
                 <td> 管理员 </td>
-                <td style="text-align: justify;padding-left: 30px;">
-                    <div class=" btn-group ">
-                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                <td style="text-align: center;">
+                    <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="#">
-                                    <i class="icon-bell"></i> 新建</a>
+                                <a href="/api/user/edit">
+                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
+                            </li>
+                            <li>
+                                <a href="/api/user/edit">
+                                    <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="icon-shield"></i> 编辑</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icon-user"></i> 删除</a>
+                                    <i class="glyphicon glyphicon-trash"></i> 删除</a>
                             </li>
                         </ul>
                     </div>
@@ -178,7 +177,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="associate_lines" class="col-sm-4 control-label "
+                <label class="col-sm-4 control-label "
                        style="text-align: center; ">关联线路</label>
                 <div class="col-sm-8">
                     <div class="col-sm-6" style="margin-bottom: 10px;padding-left: 0px">

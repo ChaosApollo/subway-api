@@ -30,4 +30,9 @@ public class ProgramVerifyController {
         ModelAndView modelandView = new ModelAndView("programVerify/list", "programVerify", new ContractEntity());
         return modelandView;
     }
+    @RequestMapping(value = "audit", method = RequestMethod.GET)
+    public ModelAndView  audit() {
+        ModelAndView modelandView = new ModelAndView("programVerify/audit", "programVerify", new ContractEntity());
+        return modelandView;
+    }
 }

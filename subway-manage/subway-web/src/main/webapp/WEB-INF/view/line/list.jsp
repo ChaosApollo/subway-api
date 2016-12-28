@@ -13,11 +13,11 @@
 
     <%@ include file="../include/default-page-global-head.jsp" %>
     <%@ include file="include-page-level-head.jsp" %>
+    <%@ include file="../include/default-system-css.jsp" %>
 
-    <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
 <style type="text/css">
-    .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
+   /* .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
         font-size: 12px;
     }
     thead, tr, th,td,.table td, .table th,.table thead tr th{
@@ -28,7 +28,7 @@
         position: relative;
         margin: 0;
         border: 0;
-        /*padding: 10px 15px;*/
+        /*padding: 10px 15px;
         text-decoration: none;
         font-size: 12px;
         font-weight: 300;
@@ -59,6 +59,7 @@
     .page-content-wrapper .page-content{
         padding-bottom: 0px;
     }
+    */
 </style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
 
@@ -82,9 +83,16 @@
             <%--</div>--%>
             <div class="row">
                 <div class="col-sm-3 inner-menu-list" style="margin-top: -25px;margin-left: -20px;">
-                    <div style="height: 1300px;width:230px;background-color: #eaedf1;padding-bottom: 0px">
-
-                        <div style="text-align: center;font-weight: bold;padding: 10px 20px 10px 20px;"><span >用户管理</span></div>
+                    <div style="height: 1300px;width:100%;background-color: #eaedf1;padding-bottom: 0px">
+                        <div class="col-sm-12 btn-group" id="btngroup1" style="margin-bottom: 10px;margin-top: 10px;padding-left: 0px">
+                            <a type="button" class="btn green" data-toggle="modal" href="#addline" style="margin-left: 30%" >
+                                <span>新建</span>
+                            </a>
+                            <a type="button" class="btn green" style="margin-left: 8px" >
+                                <span>删除</span>
+                            </a>
+                        </div>
+                        <div style="text-align: center;font-weight: bold;padding: 10px 20px 10px 20px;"><span >线路管理</span></div>
                         <div id="tree"></div>
                         <%--<%@include file="zuocedaohang.jsp"%>--%>
                     </div>

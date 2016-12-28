@@ -12,13 +12,13 @@
       method="post">
     <!-- BEGIN ACCORDION PORTLET-->
     <div id="addFormInfo">
-        <div class="col-sm-3" style="margin-left: 0px">
-            <div class="btn-group" id="btngroup1" style="margin-bottom: 10px;padding-left: 0px">
-                <a data-toggle="modal" href="#addusers" path="addUsers" class="btn green" style="margin-right: 8px" >
-                    &nbsp;<i class="fa fa-users">&nbsp;&nbsp;<span style="font-weight: bold">新增</span></i>&nbsp;
+        <div class="col-sm-6" style="margin-left: 0px">
+            <div class="btn-group" id="btngroup1" >
+                <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px" href="/api/line/create">
+                    <span>新建</span>
                 </a>
-                <a href="javascript:;" class="btn green">
-                    &nbsp;<i class="fa fa-minus">删除</i>&nbsp;
+                <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;">
+                    <span>删除</span>
                 </a>
             </div>
         </div>
@@ -34,7 +34,7 @@
                 <th> 城市 </th>
                 <th> 线路 </th>
                 <th> 名称 </th>
-                <th style="width: 15%;"> 操作 </th>
+                <th style="width: 10%;"> 操作 </th>
             </tr>
             </thead>
             <tbody>
@@ -47,19 +47,23 @@
                 <td> 北京 </td>
                 <td> 1号线 </td>
                 <td> 复兴门往西单 </td>
-                <td style="text-align: justify;padding-left: 30px;">
-                    <div class=" btn-group ">
-                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                <td style="text-align: center;">
+                    <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="#">
-                                    <i class="icon-shield"></i> 编辑</a>
+                                <a href="/api/line/edit">
+                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
+                            </li>
+                            <li>
+                                <a href="/api/line/edit">
+                                    <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="icon-user"></i> 删除</a>
+                                    <i class="glyphicon glyphicon-trash"></i> 删除</a>
                             </li>
                         </ul>
                     </div>
@@ -74,19 +78,23 @@
                 <td> 北京</td>
                 <td> 1号线 </td>
                 <td> 天安门西往天安门东 </td>
-                <td style="text-align: justify;padding-left: 30px;">
-                    <div class=" btn-group ">
-                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                <td style="text-align: center;">
+                    <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="#">
-                                    <i class="icon-shield"></i> 编辑</a>
+                                <a href="/api/line/edit">
+                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
+                            </li>
+                            <li>
+                                <a href="/api/line/edit">
+                                    <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="icon-user"></i> 删除</a>
+                                    <i class="glyphicon glyphicon-trash"></i> 删除</a>
                             </li>
                         </ul>
                     </div>
@@ -101,19 +109,23 @@
                 <td> 北京</td>
                 <td> 1号线 </td>
                 <td> 东单往建国门 </td>
-                <td style="text-align: justify;padding-left: 30px;">
-                    <div class=" btn-group ">
-                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                <td style="text-align: center;">
+                    <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="#">
-                                    <i class="icon-shield"></i> 编辑</a>
+                                <a href="/api/line/edit">
+                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
+                            </li>
+                            <li>
+                                <a href="/api/line/edit">
+                                    <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="icon-user"></i> 删除</a>
+                                    <i class="glyphicon glyphicon-trash"></i> 删除</a>
                             </li>
                         </ul>
                     </div>
@@ -128,19 +140,23 @@
                 <td> 北京</td>
                 <td> 1号线 </td>
                 <td> 永安里往国贸 </td>
-                <td style="text-align: justify;padding-left: 30px;">
-                    <div class=" btn-group ">
-                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                <td style="text-align: center;">
+                    <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="#">
-                                    <i class="icon-shield"></i> 编辑</a>
+                                <a href="/api/line/edit">
+                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
+                            </li>
+                            <li>
+                                <a href="/api/line/edit">
+                                    <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="icon-user"></i> 删除</a>
+                                    <i class="glyphicon glyphicon-trash"></i> 删除</a>
                             </li>
                         </ul>
                     </div>
@@ -155,19 +171,23 @@
                 <td> 北京</td>
                 <td> 1号线 </td>
                 <td> 永安里往建国门 </td>
-                <td style="text-align: justify;padding-left: 30px;">
-                    <div class=" btn-group ">
-                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                <td style="text-align: center;">
+                    <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                        <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="#">
-                                    <i class="icon-shield"></i> 编辑</a>
+                                <a href="/api/line/edit">
+                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
+                            </li>
+                            <li>
+                                <a href="/api/line/edit">
+                                    <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="icon-user"></i> 删除</a>
+                                    <i class="glyphicon glyphicon-trash"></i> 删除</a>
                             </li>
                         </ul>
                     </div>
@@ -179,7 +199,7 @@
 
     <!-- END ACCORDION PORTLET-->
 </form>
-<div class="modal fade" id="addusers" tabindex="-1" data-width="800">
+<div class="modal fade" id="addline" tabindex="-1" data-width="800">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
         <h4 class="modal-title">区域设置</h4>

@@ -21,5 +21,7 @@
 <link href="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/clockface/css/clockface.css" rel="stylesheet" type="text/css" />
 <link href="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
 <link href="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/plugins/dashboard/assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
 <!-- END PAGE LEVEL PLUGINS -->
 

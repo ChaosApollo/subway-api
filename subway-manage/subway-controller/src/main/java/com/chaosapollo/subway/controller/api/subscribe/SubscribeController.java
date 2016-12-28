@@ -30,4 +30,9 @@ public class SubscribeController {
         ModelAndView modelandView = new ModelAndView("subscribe/list", "subscribe", new ContractEntity());
         return modelandView;
     }
+    @RequestMapping(value = "audit", method = RequestMethod.GET)
+    public ModelAndView  audit() {
+        ModelAndView modelandView = new ModelAndView("subscribe/audit", "subscribe", new ContractEntity());
+        return modelandView;
+    }
 }

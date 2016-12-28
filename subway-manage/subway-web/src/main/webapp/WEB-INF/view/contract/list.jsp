@@ -12,9 +12,8 @@
     <title>Subway API Template</title>
 
     <%@ include file="../include/default-page-global-head.jsp" %>
-    <%@ include file="include-create-page-level-head.jsp" %>
+    <%@ include file="include-page-level-head.jsp" %>
     <%@ include file="../include/default-system-css.jsp" %>
-    <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
 <%--<style type="text/css">--%>
     <%--body,label,a,div{--%>
@@ -66,20 +65,8 @@
 
 <%@ include file="../include/default-system-end-of-page.jsp" %>
 
-<%@include file="include-create-end-of-page.jsp"%>
-
+<%@include file="include-end-of-page.jsp"%>
+<%@include file="my_script.jsp"%>
 </body>
-<script type="text/javascript">
-    $(function () {
-        $(".date-picker").datetimepicker({
-            language: "zh-CN",
-            autoclose: true,//选中之后自动隐藏日期选择框
-            clearBtn: false,//清除按钮
-            todayBtn: true,//今日按钮
-            format: "yyyy-mm-dd",//日期格式，详见 http://bootstrap-datepicker.readthedocs.org/en/release/options.html#format
-            minView:4
-        });
-    });
-</script>
 
 </html>

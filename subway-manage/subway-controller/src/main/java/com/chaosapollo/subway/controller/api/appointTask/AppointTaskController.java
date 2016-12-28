@@ -30,4 +30,9 @@ public class AppointTaskController {
         ModelAndView modelandView = new ModelAndView("appointTask/list", "appointTask", new ContractEntity());
         return modelandView;
     }
+    @RequestMapping(value = "audit", method = RequestMethod.GET)
+    public ModelAndView  audit() {
+        ModelAndView modelandView = new ModelAndView("appointTask/audit", "appointTask", new ContractEntity());
+        return modelandView;
+    }
 }

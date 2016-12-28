@@ -12,17 +12,18 @@
     <title>Subway API Template</title>
 
     <%@ include file="../include/default-page-global-head.jsp" %>
-    <%@ include file="include-create-page-level-head.jsp" %>
-
+    <%@ include file="include-page-level-head.jsp" %>
+    <%@ include file="../include/default-system-css.jsp" %>
     <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
 <style type="text/css">
-    .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
+   /* .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
         font-size: 12px;
     }
     thead, tr, th,td,.table td, .table th,.table thead tr th{
         text-align: center;
     }
+    */
 </style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
 
@@ -59,18 +60,7 @@
 
 <%@ include file="../include/default-system-end-of-page.jsp" %>
 
-<%@include file="include-create-end-of-page.jsp"%>
-
+<%@include file="include-end-of-page.jsp"%>
+<%@include file="my_script.jsp"%>
 </body>
-<script type="text/javascript">
-    $(function () {
-        $(".date-picker").datetimepicker({
-            language: "zh-CN",
-            autoclose: true,//选中之后自动隐藏日期选择框
-            clearBtn: false,//清除按钮
-            todayBtn: true,//今日按钮
-            format: "yyyy-mm-dd",//日期格式，详见 http://bootstrap-datepicker.readthedocs.org/en/release/options.html#format
-            minView:4
-        });
-    });
-</script>
+

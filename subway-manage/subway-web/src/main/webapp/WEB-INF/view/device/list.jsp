@@ -13,11 +13,11 @@
 
     <%@ include file="../include/default-page-global-head.jsp" %>
     <%@ include file="include-page-level-head.jsp" %>
+    <%@ include file="../include/default-system-css.jsp" %>
 
-    <!-- <link href="css/your-style.css" rel="stylesheet"> -->
 </head>
 <style type="text/css">
-    .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
+    /*  .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
         font-size: 12px;
     }
     thead, tr, th,td,.table td, .table th,.table thead tr th{
@@ -32,6 +32,7 @@
     .table>tbody>tr>td{
         line-height: 2;
     }
+    */
 </style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
 

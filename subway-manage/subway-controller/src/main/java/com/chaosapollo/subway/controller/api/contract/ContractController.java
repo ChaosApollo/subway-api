@@ -39,6 +39,11 @@ public class ContractController {
         ModelAndView modelandView = new ModelAndView("contract/edit", "contract", new ContractEntity());
         return modelandView;
     }
+    @RequestMapping(value = "audit", method = RequestMethod.GET)
+    public ModelAndView  audit() {
+        ModelAndView modelandView = new ModelAndView("contract/audit", "contract", new ContractEntity());
+        return modelandView;
+    }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
