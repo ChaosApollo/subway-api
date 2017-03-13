@@ -21,7 +21,7 @@
                             <legend style="border-color: white">节目信息</legend>
                             <div class="form-group">
                                 <label for="programvideo" class="col-sm-2 control-label "
-                                       style="text-align: center; ">节目视频：</label>
+                                ><span class="required">*</span>节目视频：</label>
                                 <div class="col-sm-7">
                                     <input type="text" path="programvideo" class="form-control"
                                            id="programvideo" placeholder="" readonly="true"/>
@@ -35,7 +35,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="name" class="col-sm-2 control-label"
-                                       style="text-align: center; ">节目名称：</label>
+                                ><span class="required">*</span>节目名称：</label>
                                 <div class="col-sm-7">
                                     <input type="text" path="name" class="form-control"
                                            id="name" placeholder="" />
@@ -48,11 +48,11 @@
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label th-head"
-                                       style="text-align: center; ">节目类型：</label>
-                                <label for="dynamic" class="col-sm-1 control-label th-head" checked="true"
+                                ><span class="required">*</span>节目类型：</label>
+                                <label for="dynamic" class="col-sm-1 control-label th-head"
                                        style="text-align: left; ">动态节目</label>
                                 <div class="col-sm-1">
-                                    <input type="radio" path="dynamic" name="program" style="margin-top: 12px" id="dynamic">
+                                    <input type="radio" path="dynamic" name="program" style="margin-top: 12px" id="dynamic" checked="true">
                                 </div>
                                 <label for="static"
                                        class="col-sm-1 control-label th-head"
@@ -60,17 +60,20 @@
                                 <div class="col-sm-1">
                                     <input type="radio" path="static" name="program" style="margin-top: 12px" id="static">
                                 </div>
-                                <div class="col-sm-2 control-label">
-                                    <label >
-                                        <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;补位节目</span></label>
-                                </div>
-                            </div>
 
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label "
+                                ></label>
+                                <label class="col-sm-2 control-label "
+                                       style="text-align: left; "><input type="checkbox" path="substitute" class="icheck" style="background-color: grey">
+                                    <span>&nbsp;&nbsp;&nbsp;补位节目</span></label>
+                            </div>
                             <div class="form-group">
                                 <label for="video_memo" class="col-sm-2 control-label "
-                                       style="text-align: center; ">备注信息：</label>
+                                >备注信息：</label>
                                 <div class="col-sm-7">
-                                    <textarea rows="2" cols="110" style="border: 1px solid #c2cad8;color: black;" path="video_memo" id="video_memo">
+                                    <textarea rows="3" cols="106" style="border: 1px solid #c2cad8;color: black;" path="video_memo" id="video_memo">
                                     </textarea>
                                 </div>
                             </div>
@@ -78,15 +81,26 @@
                         <fieldset>
                             <legend style="border-color: white">节目附件：</legend>
                             <div>
-                                <table class="table table-striped table-bordered table-hover table-checkable sample_6">
+                                <div class="btn-group" id="btngroup1" >
+                                    <span class="btn green fileinput-button" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px">
+                                        <input type="file" path="addMaterial" name="files[]" multiple="">新增
+                                    </span>
+                                    <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;">
+                                        <span>删除</span>
+                                    </a>
+                                </div>
+                                <table class="table table-striped table-bordered table-hover table-checkable">
                                     <thead>
                                     <tr>
                                         <th style="width: 10%;"><label
                                                 class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
                                             <input type="checkbox" class="group-checkable"
-                                                   data-set=".sample_6 .checkboxes" /> <span></span>
+                                                   data-set=".checkboxes" /> <span></span>
                                         </label></th>
                                         <th> 材料名称 </th>
+                                        <th> 格式 </th>
+                                        <th> 大小 </th>
+                                        <th> 上传时间 </th>
                                         <th style="width: 7%;"> 操作</th>
                                     </tr>
                                     </thead>
@@ -97,6 +111,9 @@
                                             <input type="checkbox" class="checkboxes" value="1" /> <span></span>
                                         </label></td>
                                         <td> 系统管理员组 </td>
+                                        <td> 系统管理员组 </td>
+                                        <td> 系统管理员组 </td>
+                                        <td> 系统管理员组 </td>
                                         <td style="text-align: center;">
                                             <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                                                 <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
@@ -106,10 +123,6 @@
                                                     <li>
                                                         <a href="#">
                                                             <i class="glyphicon glyphicon-search"></i> 查看</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="glyphicon glyphicon-edit"></i> 编辑</a>
                                                     </li>
                                                     <li>
                                                         <a href="#">
@@ -124,7 +137,10 @@
                                                 class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
                                             <input type="checkbox" class="checkboxes" value="1" /> <span></span>
                                         </label></td>
-                                        <td> 运营组 </td>
+                                        <td> 系统管理员组 </td>
+                                        <td> 系统管理员组 </td>
+                                        <td> 系统管理员组 </td>
+                                        <td> 系统管理员组 </td>
                                         <td style="text-align: center;">
                                             <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                                                 <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
@@ -137,7 +153,30 @@
                                                     </li>
                                                     <li>
                                                         <a href="#">
-                                                            <i class="glyphicon glyphicon-edit"></i> 编辑</a>
+                                                            <i class="glyphicon glyphicon-trash"></i> 删除</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label
+                                                class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+                                            <input type="checkbox" class="checkboxes" value="1" /> <span></span>
+                                        </label></td>
+                                        <td> 系统管理员组 </td>
+                                        <td> 系统管理员组 </td>
+                                        <td> 系统管理员组 </td>
+                                        <td> 系统管理员组 </td>
+                                        <td style="text-align: center;">
+                                            <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
+                                                <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
+                                                    <i class="fa fa-angle-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu pull-right" role="menu">
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="glyphicon glyphicon-search"></i> 查看</a>
                                                     </li>
                                                     <li>
                                                         <a href="#">
@@ -154,9 +193,11 @@
                     </div>
                     <div class="form-actions">
                         <div class="row">
-                            <div class="col-md-offset-10 col-md-10">
-                                <button type="submit" class="btn green">确定</button>
-                                <button type="button" class="btn default">取消</button>
+                            <div class="col-md-offset-6 col-md-6">
+                                <div class="col-md-offset-6 col-md-6">
+                                    <button type="submit" class="btn green">确定</button>
+                                    <button type="button" class="btn default">取消</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -165,3 +206,4 @@
         </div>
     </div>
 </form>
+

@@ -30,4 +30,9 @@ public class RealshotController {
         ModelAndView modelandView = new ModelAndView("realshot/list", "realshot", new ContractEntity());
         return modelandView;
     }
+    @RequestMapping(value = "check", method = RequestMethod.GET)
+    public ModelAndView  check() {
+        ModelAndView modelandView = new ModelAndView("realshot/check", "realshot", new ContractEntity());
+        return modelandView;
+    }
 }

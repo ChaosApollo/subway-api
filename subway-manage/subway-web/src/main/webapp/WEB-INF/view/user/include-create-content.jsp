@@ -11,6 +11,7 @@
       action="${pageContext.request.contextPath}/api/contract/save"
       method="post">
     <!-- BEGIN ACCORDION PORTLET-->
+    <div id="addFormInfo">
     <div class="row">
         <div class="col-md-12">
             <!-- BEGIN EXTRAS PORTLET-->
@@ -20,25 +21,33 @@
                         <fieldset>
                             <legend style="border-color: white">基本信息</legend>
                             <div class="form-group">
-                                <label for="username" class="col-sm-2 control-label "
-                                       style="text-align: center; ">用户名</label>
+                                <label for="username" class="col-sm-2 control-label "><span class="required">*</span>
+                                    用户名</label>
                                 <div class="col-sm-6">
                                     <input type="text" path="username" class="form-control"
                                            id="username" placeholder=""/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="password" class="col-sm-2 control-label"
-                                       style="text-align: center; ">密码</label>
+                                <label for="password" class="col-sm-2 control-label"><span class="required">*</span>密码</label>
                                 <div class="col-sm-6">
                                     <input type="password" path="password" class="form-control"
                                            id="password" placeholder="" />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label "
-                                       style="text-align: center; ">关联线路</label>
-                                <div class="col-sm-6">
+                                <label for="group_id" class="col-sm-2 control-label "><span class="required">*</span>组别</label>
+                                <div class="col-sm-6" style="">
+                                    <select path="group_id" class="form-control" id="group_id">
+                                        <option value ="000">————请选择————</option>
+                                        <option>系统管理员</option>
+                                        <option>运维</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label "><span class="required">*</span>关联线路</label>
+                                <div class="col-md-6">
                                     <div class="col-sm-6" style="margin-bottom: 10px;padding-left: 0px">
                                         <select path="contry" class="form-control" id="contry">
                                             <option>中国</option>
@@ -56,7 +65,7 @@
                                     </div>
                                     <select multiple="multiple" path="line" class="multi-select" id="my_multi_select2" name="my_multi_select2[]">
                                         <optgroup label="1号线">
-                                            <option style="font-size: 12px">复兴门往西单</option>
+                                            <option>复兴门往西单</option>
                                             <option>天安门西往天安门东</option>
                                             <option>东单往建国门</option>
                                             <option>永安里往国贸</option>
@@ -157,138 +166,38 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="group_id" class="col-sm-2 control-label "
-                                       style="text-align: center; ">组别</label>
-                                <div class="col-sm-6" style="">
-                                    <select path="group_id" class="form-control" id="group_id">
-                                        <option value ="000">————请选择————</option>
-                                        <option>系统管理员</option>
-                                        <option>运维</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="role" class="col-sm-2 control-label "
-                                       style="text-align: center; ">角色</label>
-                                <div class="col-sm-6" style="">
-                                    <select path="role" class="form-control" id="role" >
-                                        <option value ="000">————请选择————</option>
-                                        <option>在线零售商</option>
-                                        <option>在线平台</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label  class="col-sm-2 control-label "
-                                        style="text-align: center;    ">权限</label>
-                                <div class="col-sm-6" style="border: 1px solid #c2cad8;color: black;height: 150px;overflow: auto;text-align: left; margin-left: 15px">
+                                <label  class="col-sm-2 control-label "><span class="required">*</span>角色</label>
+                                <div class="col-sm-6" style="border: 1px solid #c2cad8;color: black;height: 150px;overflow: auto;text-align: left; margin-left: 15px;width: 413px">
                                     <div class="col-sm-6 control-label" style="text-align:left">
                                         <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;设备端指令操作</span></label>
+                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;系统管理员</span></label>
                                     </div>
                                     <div class="col-sm-6 control-label" style="text-align:left">
                                         <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;节目送审</span></label>
+                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;审核专员</span></label>
                                     </div>
                                     <div class="col-sm-6 control-label" style="text-align:left">
                                         <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;节目内审</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;节目外审</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;管理组内用户</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;管理所有用户</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                        <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;线路管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                        <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;设备管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;客户管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;客户保护设定</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;客户管理员</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;合同管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                        <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;合同审核员</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                        <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;预约管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                        <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;预约审核员</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                        <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;约定管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;约定审核员</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                        <label >
-                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;总排期管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                    <label >
-                                        <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;节目管理</span></label>
-                                    </div>
-                                    <div class="col-sm-6 control-label" style="text-align:left">
-                                    <label >
-                                        <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;实拍管理</span></label>
+                                            <input type="checkbox" path="substitute" class="icheck" style="background-color: grey"><span>&nbsp;&nbsp;&nbsp;运营专员</span></label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label "
-                                       style="text-align: center; "></label>
-                                    <div class="col-sm-5" style="margin: auto">
-                                        <div class="btn-group" id="btngroup2">
-                                            <a data-toggle="modal" href="#addcustomer" path="addContact" class="btn green" style="margin-right: 8px" >
-                                                &nbsp;<span>权限说明</span>&nbsp;
-                                            </a>
-                                        </div>
-                                    </div>
+                                <label class="col-sm-2 control-label ">权限</label>
+                                <label class="col-sm-6 control-label" style="text-align: left; ">用户管理、客户管理</label>
                             </div>
                         </fieldset>
                         <fieldset>
                             <legend style="border-color: white">个人资料</legend>
                             <div class="form-group">
-                                <label for="name" class="col-sm-2 control-label "
-                                       style="text-align: center; ">姓名</label>
+                                <label for="name" class="col-sm-2 control-label "><span class="required">*</span>姓名</label>
                                 <div class="col-sm-6">
                                     <input type="text" path="name" class="form-control"
                                            id="name" placeholder=""/>
                                 </div>
                             </div>
                             <div class="form-group ">
-                                <label for="sex" class="col-sm-2 control-label"
-                                       style="text-align: center; " id="sex">性别</label>
+                                <label for="sex" class="col-sm-2 control-label" id="sex">性别</label>
                                 <div class="col-sm-6">
                                     <div class="col-sm-1">
                                         <input type="radio" path="boy" name="sex" checked="true" style="margin-top: 12px" id="boy">
@@ -303,8 +212,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="birthday" class="col-sm-2 control-label"
-                                        style="text-align: center; ">出生日期</label>
+                                <label for="birthday" class="col-sm-2 control-label">出生日期</label>
                                 <div class="col-sm-6">
                                     <input type="text" path="birthday"
                                            class="form-control date-picker" id="birthday"
@@ -312,24 +220,22 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="mobile_phone" class="col-sm-2 control-label "
-                                       style="text-align: center; ">手机</label>
+                                <label for="mobile_phone" class="col-sm-2 control-label ">手机</label>
                                 <div class="col-sm-6">
-                                    <input type="text" path="mobile_phone" class="form-control"
-                                           id="mobile_phone" placeholder=""/>
+                                    <input class="form-control" type='text' path="mobile_phone" id="mobile_phone"
+                                           onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();" />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="telephnoe" class="col-sm-2 control-label "
-                                       style="text-align: center; ">电话</label>
+                                <label for="telephnoe" class="col-sm-2 control-label ">电话</label>
                                 <div class="col-sm-6">
                                     <input type="text" path="telephnoe" class="form-control"
-                                           id="telephnoe" placeholder=""/>
+                                           id="telephnoe" placeholder=""
+                                           onkeyup="(this.v=function(){this.value=this.value.replace(/[^0-9-]+/,'');}).call(this)" onblur="this.v();"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="email" class="col-sm-2 control-label "
-                                       style="text-align: center; ">邮箱</label>
+                                <label for="email" class="col-sm-2 control-label ">邮箱</label>
                                 <div class="col-sm-6">
                                     <input type="text" path="email" class="form-control"
                                            id="email" placeholder=""/>
@@ -339,9 +245,11 @@
                     </div>
                     <div class="form-actions">
                         <div class="row">
-                            <div class="col-md-offset-10 col-md-10">
-                                <button type="submit" class="btn green">确定</button>
-                                <button type="button" class="btn default">取消</button>
+                            <div class="col-md-offset-6 col-md-6">
+                                <div class="col-md-offset-6 col-md-6">
+                                    <button type="submit" class="btn green">确定</button>
+                                    <button type="button" class="btn default">取消</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -349,32 +257,5 @@
             </div>
         </div>
     </div>
+        </div>
 </form>
-<div class="modal fade" id="addcustomer" tabindex="-1" data-width="450">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-        <h4 class="modal-title">权限说明</h4>
-    </div>
-    <div class="modal-body" style="margin-right: 20px;align-content: center">
-        <p>设备端指令操作：显示指示操作界面</p>
-        <p>节目送审：选择节目上刊线路并送审</p>
-        <p>节目内审：可以进行节目公司内部审核</p>
-        <p>节目外审：可以进行节目地铁或公司外部审核</p>
-        <p>管理组内用户：管理用户所在组的所有用户</p>
-        <p>管理所有用户：管理所有用户</p>
-        <p>线路管理：管理地铁线路、站点</p>
-        <p>设备管理：管理所有设备类型</p>
-        <p>客户管理：显式并可以操作客户管理模块</p>
-        <p>客户保护设定：可以对客户添加保护与锁定</p>
-        <p>客户管理员：客户模块的最高权限，管理所有客户</p>
-        <p>合同管理：显式并可以操作客户管理模块</p>
-        <p>合同审核员：可以对合同信息进行审核</p>
-        <p>约定管理：显式并可以操作约定管理模块</p>
-        <p>约定审核员：可以对约定信息进行审核</p>
-        <p>节目管理：显式并可以操作节目管理模块</p>
-        <p>总排期管理：显式并可以操作总排期管理模块</p>
-    </div>
-    <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn btn-outline dark">关闭</button>
-    </div>
-</div>

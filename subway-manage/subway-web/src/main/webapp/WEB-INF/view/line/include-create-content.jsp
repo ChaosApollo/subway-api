@@ -21,15 +21,15 @@
                             <legend style="border-color: white">基本信息</legend>
                             <div class="form-group">
                                 <label for="line_id" class="col-sm-2 control-label "
-                                       style="text-align: center; ">线路ID</label>
+                                       style="text-align: center; "><span class="required">*</span>线路ID</label>
                                 <div class="col-sm-7">
                                     <input type="text" path="line_id" class="form-control"
-                                           id="line_id" placeholder="" />
+                                           id="line_id" value="0" placeholder="" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="col-sm-2 control-label"
-                                       style="text-align: center; ">线路名称</label>
+                                       style="text-align: center; "><span class="required">*</span>线路名称</label>
                                 <div class="col-sm-7">
                                     <input type="text" path="name" class="form-control"
                                            id="name" placeholder="" />
@@ -94,9 +94,11 @@
                     </div>
                     <div class="form-actions">
                         <div class="row">
-                            <div class="col-md-offset-10 col-md-10">
-                                <button type="submit" class="btn green">确定</button>
-                                <button type="button" class="btn default">取消</button>
+                            <div class="col-md-offset-6 col-md-6">
+                                <div class="col-md-offset-6 col-md-6">
+                                    <button type="submit" class="btn green">确定</button>
+                                    <button type="button" class="btn default">取消</button>
+                                </div>
                             </div>
                         </div>
                     </div>

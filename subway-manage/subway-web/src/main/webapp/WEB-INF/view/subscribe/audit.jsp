@@ -54,7 +54,7 @@
 
 <%@ include file="../include/default-system-end-of-page.jsp" %>
 <%@include file="include-end-of-page.jsp"%>
-<%@include file="my_script.jsp"%>
+<%@include file="../include/default-system-script.jsp"%>
 </body>
 </html>
 

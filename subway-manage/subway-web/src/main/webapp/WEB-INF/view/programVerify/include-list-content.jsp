@@ -12,7 +12,7 @@
       method="post">
     <!-- BEGIN ACCORDION PORTLET-->
     <div id="addFormInfo">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <div class="btn-group" id="btngroup1" >
                 <a type="button" href="/api/programVerify/create" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px" >
                     <span>节目送审</span>
@@ -21,6 +21,9 @@
                     <span>撤销申请</span>
                 </a>
             </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label " style="margin-left: 30px">用户管理/系统管理员组/系统管理员</label>
         </div>
         <table class="table table-striped table-bordered table-hover table-checkable sample_6">
             <thead>
@@ -36,7 +39,7 @@
                 <th> 申请人 </th>
                 <th> 节目名称 </th>
                 <th> 上刊站点 </th>
-                <th style="width: 8%;align-content: center"> 操作</th>
+                <th style="width:6%;align-content: center"> 操作</th>
             </tr>
             </thead>
             <tbody>
@@ -61,12 +64,8 @@
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="/api/programVerify/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看申请 </a>
-                            </li>
-                            <li>
                                 <a href="/api/programVerify/audit">
-                                    <i class="glyphicon glyphicon-trash"></i> 处理申请 </a>
+                                    <i class="glyphicon glyphicon-search"></i> 处理申请 </a>
                             </li>
                             <li>
                                 <a href="#">
@@ -97,12 +96,8 @@
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="/api/programVerify/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看申请 </a>
-                            </li>
-                            <li>
                                 <a href="/api/programVerify/audit">
-                                    <i class="glyphicon glyphicon-trash"></i> 处理申请 </a>
+                                    <i class="glyphicon glyphicon-search"></i> 处理申请 </a>
                             </li>
                             <li>
                                 <a href="#">
@@ -133,12 +128,8 @@
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="/api/programVerify/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看申请 </a>
-                            </li>
-                            <li>
                                 <a href="/api/programVerify/audit">
-                                    <i class="glyphicon glyphicon-trash"></i> 处理申请 </a>
+                                    <i class="glyphicon glyphicon-search"></i> 处理申请 </a>
                             </li>
                             <li>
                                 <a href="#">

@@ -37,17 +37,17 @@
 
                     </a>
             </li>
+            <li class="nav-item  ">
+                <a href="/api/device/list" class="nav-link nav-toggle">
+                    <i class="fa fa-archive"></i>
+                    <span class="title">设备管理</span>
+                </a>
+            </li>
             <li class="nav-item ">
                 <a href="/api/line/list" type="button">
                     <i class="fa fa-stumbleupon"></i>
                     <span class="title">线路管理</span>
 
-                </a>
-            </li>
-            <li class="nav-item  ">
-                <a href="/api/device/list" class="nav-link nav-toggle">
-                    <i class="fa fa-archive"></i>
-                    <span class="title">设备管理</span>
                 </a>
             </li>
             <li class="nav-item  ">
@@ -93,15 +93,15 @@
                 </a>
             </li>
             <li class="nav-item  ">
-                <a href="/api/realshot/list" class="nav-link nav-toggle">
-                    <i class=" icon-camera"></i>
-                    <span class="title">实拍管理</span>
-                </a>
-            </li>
-            <li class="nav-item  ">
                 <a href="/api/schedule/list" class="nav-link nav-toggle">
                     <i class="glyphicon glyphicon-calendar"></i>
                     <span class="title">总排期管理</span>
+                </a>
+            </li>
+            <li class="nav-item  ">
+                <a href="/api/realshot/list" class="nav-link nav-toggle">
+                    <i class=" icon-camera"></i>
+                    <span class="title">实拍管理</span>
                 </a>
             </li>
         </ul>

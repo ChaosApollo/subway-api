@@ -13,7 +13,7 @@
       method="post">
     <!-- BEGIN ACCORDION PORTLET-->
     <div id="addFormInfo">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <div class="btn-group" id="btngroup1" >
                 <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px" href="/api/user/create">
                     <span>新建</span>
@@ -23,6 +23,9 @@
                 </a>
             </div>
         </div>
+        <div class="form-group">
+            <label class="control-label " style="margin-left: 30px">用户管理/系统管理员组/系统管理员</label>
+        </div>
         <table class="table table-striped table-bordered table-hover table-checkable sample_6" >
             <thead>
             <tr>
@@ -31,9 +34,10 @@
                     <input type="checkbox" class="group-checkable"
                            data-set=".sample_6 .checkboxes" /> <span></span>
                 </label></th>
-                <th> 组别 </th>
-                <th> 用户 </th>
+                <th> 用户名 </th>
+                <th> 姓名 </th>
                 <th> 角色 </th>
+                <th> 组别 </th>
                 <th style="width: 10%;"> 操作</th>
             </tr>
             </thead>
@@ -46,16 +50,13 @@
                 <td> 系统管理员组 </td>
                 <td> 系统管理员</td>
                 <td> 管理员 </td>
+                <td> 管理员 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
-                            <li>
-                                <a href="/api/user/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
-                            </li>
                             <li>
                                 <a href="/api/user/edit">
                                     <i class="glyphicon glyphicon-edit"></i> 编辑</a>
@@ -76,16 +77,13 @@
                 <td> 运营组 </td>
                 <td> 运营01</td>
                 <td> 运营销售总经理 </td>
+                <td> 运营销售总经理 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
-                            <li>
-                                <a href="/api/user/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
-                            </li>
                             <li>
                                 <a href="/api/user/edit">
                                     <i class="glyphicon glyphicon-edit"></i> 编辑</a>
@@ -106,16 +104,13 @@
                 <td> 系统管理员组 </td>
                 <td> 系统管理员</td>
                 <td> 管理员 </td>
+                <td> 管理员 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
-                            <li>
-                                <a href="/api/user/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
-                            </li>
                             <li>
                                 <a href="/api/user/edit">
                                     <i class="glyphicon glyphicon-edit"></i> 编辑</a>
@@ -134,7 +129,7 @@
 
     <!-- END ACCORDION PORTLET-->
 </form>
-<div class="modal fade" id="addusers" tabindex="-1" data-width="800">
+<div class="modal fade" id="addusers" tabindex="-1" data-width="700">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
         <h4 class="modal-title">组别设置</h4>
@@ -143,16 +138,16 @@
         <fieldset>
             <legend style="border-color: white">基本信息</legend>
             <div class="form-group">
-                <label for="name" class="col-sm-4 control-label "
-                       style="text-align: center;">组别名称</label>
+                <label for="name" class="col-sm-3 control-label "
+                       style="text-align: center;"><span class="required">*</span>组别名称</label>
                 <div class="col-sm-8" style="margin-bottom: 10px">
                     <input type="text" path="name" class="form-control"
                            id="name" placeholder=""/>
                 </div>
             </div>
             <div class="form-group">
-                <label for="father_group_id" class="col-sm-4 control-label "
-                       style="text-align: center; ">上级组别</label>
+                <label for="father_group_id" class="col-sm-3 control-label "
+                       style="text-align: center; "><span class="required">*</span>上级组别</label>
                 <div class="col-sm-8" style="margin-bottom: 10px">
                     <select path="father_group_id" class="form-control" id="father_group_id">
                         <option value ="000">————请选择————</option>
@@ -162,8 +157,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="role" class="col-sm-4 control-label "
-                       style="text-align: center; ">部门类别</label>
+                <label for="role" class="col-sm-3 control-label "
+                       style="text-align: center; "><span class="required">*</span>部门类别</label>
                 <div class="col-sm-8" style="margin-bottom: 10px">
                     <select path="role" class="form-control" id="role">
                         <option value ="000">————请选择————</option>
@@ -177,8 +172,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-4 control-label "
-                       style="text-align: center; ">关联线路</label>
+                <label class="col-sm-3 control-label "
+                       style="text-align: center; "><span class="required">*</span>关联线路</label>
                 <div class="col-sm-8">
                     <div class="col-sm-6" style="margin-bottom: 10px;padding-left: 0px">
                         <select path="contry" class="form-control" id="contry">

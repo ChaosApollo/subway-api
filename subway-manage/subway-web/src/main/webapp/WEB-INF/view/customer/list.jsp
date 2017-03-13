@@ -12,7 +12,7 @@
     <title>Subway API Template</title>
 
     <%@ include file="../include/default-page-global-head.jsp" %>
-    <%@ include file="include-create-page-level-head.jsp" %>
+    <%@ include file="include-page-level-head.jsp" %>
     <%@ include file="../include/default-system-css.jsp" %>
 
 </head>
@@ -79,7 +79,7 @@
 
 <%@ include file="../include/default-system-end-of-page.jsp" %>
 
-<%@include file="include-create-end-of-page.jsp"%>
+<%@include file="include-end-of-page.jsp"%>
 <%@include file="my_script.jsp"%>
 </body>
 </html>

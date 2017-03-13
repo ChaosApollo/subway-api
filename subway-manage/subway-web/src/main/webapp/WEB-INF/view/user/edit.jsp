@@ -16,50 +16,6 @@
     <%@ include file="../include/default-system-css.jsp" %>
 
 </head>
-<style type="text/css">
-   /* .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
-        font-size: 12px;
-    }
-    thead, tr, th,td,.table td, .table th,.table thead tr th{
-        text-align: center;
-    }
-    .page-sidebar .page-sidebar-menu>li>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a {
-        display: block;
-        position: relative;
-        margin: 0;
-        border: 0;
-        /*padding: 10px 15px;
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: 300;
-    }
-    .page-sidebar .page-sidebar-menu>li.open>a, .page-sidebar .page-sidebar-menu>li:hover>a{
-        background: #f4f6f8;
-        color: black;
-    }
-    .dropdown-menu {
-        box-shadow: 0px 0px ;
-        left: 10px;
-        min-width: 135px;
-        position: absolute;
-        background-color: #eaedf1;
-    }
-    legend{
-        font-size: 12px;
-        font-weight: bold;
-        padding-left: 10px;
-        padding-bottom: 10px;
-    }
-    .table>tbody>tr>td{
-        line-height: 2;
-    }
-    .backgrandcolor{
-        background-color: white;
-    }
-    .page-content-wrapper .page-content{
-        padding-bottom: 0px;
-    }*/
-</style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white ">
 
 <%@include file="../include/default-system-header.jsp" %>
@@ -112,6 +68,7 @@
 <%@ include file="../include/default-system-end-of-page.jsp" %>
 
 <%@include file="include-end-of-page.jsp"%>
+<%@include file="../include/default-system-script.jsp"%>
 <%@include file="my_script.jsp"%>
 
 </body>

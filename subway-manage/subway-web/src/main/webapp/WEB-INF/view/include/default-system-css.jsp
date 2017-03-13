@@ -33,6 +33,10 @@
         font-weight: bold;
         padding-left: 10px;
         padding-bottom: 10px;
+        padding-top: 10px;
+        background-color: #f0f0f0;
+        margin-bottom: 10px;
+         border-bottom: 0;
     }
     .table>tbody>tr>td{
         line-height: 2;
@@ -52,10 +56,14 @@
         font-size: 12px;
     }
     .ms-container{
-        width: 460px;
+        width: 100%;
     }
-    .ms-container .ms-selectable, .ms-container .ms-selection{
-        width: 47%;
+     .ms-selectable, .ms-container .ms-selection{
+        width: 46%;
+    }
+
+    .table-checkable tr>td:first-child,.table-checkable tr>th:first-child {
+        max-width: 200px;
     }
 
 </style>

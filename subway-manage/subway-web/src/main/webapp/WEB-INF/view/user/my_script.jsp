@@ -7,18 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <script type="text/javascript">
-    $(function () {
-        $(".date-picker").datetimepicker({
-            language: "zh-CN",
-            autoclose: true,//选中之后自动隐藏日期选择框
-            clearBtn: false,//清除按钮
-            todayBtn: true,//今日按钮
-            format: "yyyy-mm-dd",//日期格式，详见 http://bootstrap-datepicker.readthedocs.org/en/release/options.html#format
-            minView:4
-        });
-    });
-</script>
-<script type="text/javascript">
     function getTree() {
         var tree = [
             {

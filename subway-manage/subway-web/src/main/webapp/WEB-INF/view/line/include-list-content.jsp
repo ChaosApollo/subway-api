@@ -12,7 +12,7 @@
       method="post">
     <!-- BEGIN ACCORDION PORTLET-->
     <div id="addFormInfo">
-        <div class="col-sm-6" style="margin-left: 0px">
+        <div class="col-sm-12" style="margin-left: 0px">
             <div class="btn-group" id="btngroup1" >
                 <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px" href="/api/line/create">
                     <span>新建</span>
@@ -22,6 +22,9 @@
                 </a>
             </div>
         </div>
+        <div class="form-group">
+            <label class="control-label " style="margin-left: 30px">用户管理/系统管理员组/系统管理员</label>
+        </div>
         <table class="table table-striped table-bordered table-hover table-checkable sample_6" >
             <thead>
             <tr>
@@ -30,10 +33,10 @@
                     <input type="checkbox" class="group-checkable"
                            data-set=".sample_6 .checkboxes" /> <span></span>
                 </label></th>
-                <th> 国家 </th>
-                <th> 城市 </th>
-                <th> 线路 </th>
-                <th> 名称 </th>
+                <th> 线路名称 </th>
+                <th> 级别 </th>
+                <th> 关联设备 </th>
+                <th> 可用节目数 </th>
                 <th style="width: 10%;"> 操作 </th>
             </tr>
             </thead>
@@ -43,20 +46,16 @@
                         class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
                     <input type="checkbox" class="checkboxes" value="1" /> <span></span>
                 </label></td>
-                <td> 中国 </td>
-                <td> 北京 </td>
-                <td> 1号线 </td>
                 <td> 复兴门往西单 </td>
+                <td> S </td>
+                <td> SG7 </td>
+                <td> 6 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
-                            <li>
-                                <a href="/api/line/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
-                            </li>
                             <li>
                                 <a href="/api/line/edit">
                                     <i class="glyphicon glyphicon-edit"></i> 编辑</a>
@@ -74,20 +73,16 @@
                         class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
                     <input type="checkbox" class="checkboxes" value="1" /> <span></span>
                 </label></td>
-                <td> 中国 </td>
-                <td> 北京</td>
-                <td> 1号线 </td>
-                <td> 天安门西往天安门东 </td>
+                <td> 复兴门往西单 </td>
+                <td> S </td>
+                <td> SG7 </td>
+                <td> 6 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
-                            <li>
-                                <a href="/api/line/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
-                            </li>
                             <li>
                                 <a href="/api/line/edit">
                                     <i class="glyphicon glyphicon-edit"></i> 编辑</a>
@@ -105,20 +100,16 @@
                         class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
                     <input type="checkbox" class="checkboxes" value="1" /> <span></span>
                 </label></td>
-                <td> 中国 </td>
-                <td> 北京</td>
-                <td> 1号线 </td>
-                <td> 东单往建国门 </td>
+                <td> 复兴门往西单 </td>
+                <td> S </td>
+                <td> SG7 </td>
+                <td> 6 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
-                            <li>
-                                <a href="/api/line/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
-                            </li>
                             <li>
                                 <a href="/api/line/edit">
                                     <i class="glyphicon glyphicon-edit"></i> 编辑</a>
@@ -136,20 +127,16 @@
                         class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
                     <input type="checkbox" class="checkboxes" value="1" /> <span></span>
                 </label></td>
-                <td> 中国 </td>
-                <td> 北京</td>
-                <td> 1号线 </td>
-                <td> 永安里往国贸 </td>
+                <td> 复兴门往西单 </td>
+                <td> S </td>
+                <td> SG7 </td>
+                <td> 6 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
-                            <li>
-                                <a href="/api/line/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
-                            </li>
                             <li>
                                 <a href="/api/line/edit">
                                     <i class="glyphicon glyphicon-edit"></i> 编辑</a>
@@ -167,20 +154,16 @@
                         class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
                     <input type="checkbox" class="checkboxes" value="1" /> <span></span>
                 </label></td>
-                <td> 中国 </td>
-                <td> 北京</td>
-                <td> 1号线 </td>
-                <td> 永安里往建国门 </td>
+                <td> 复兴门往西单 </td>
+                <td> S </td>
+                <td> SG7 </td>
+                <td> 6 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
                             <i class="fa fa-angle-down"></i>
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
-                            <li>
-                                <a href="/api/line/edit">
-                                    <i class="glyphicon glyphicon-search"></i> 查看</a>
-                            </li>
                             <li>
                                 <a href="/api/line/edit">
                                     <i class="glyphicon glyphicon-edit"></i> 编辑</a>
@@ -209,15 +192,15 @@
             <legend style="border-color: white">基本信息</legend>
             <div class="form-group">
                 <label for="zone_id" class="col-sm-4 control-label "
-                       style="text-align: center;">区域ID</label>
+                       style="text-align: center;"><span class="required">*</span>区域ID</label>
                 <div class="col-sm-8" style="margin-bottom: 10px">
                     <input type="text" path="zone_id" class="form-control"
-                           id="zone_id" placeholder=""/>
+                           id="zone_id" value="0" placeholder=""/>
                 </div>
             </div>
             <div class="form-group">
                 <label for="name" class="col-sm-4 control-label "
-                       style="text-align: center; ">区域名称</label>
+                       style="text-align: center; "><span class="required">*</span>区域名称</label>
                 <div class="col-sm-8" style="margin-bottom: 10px">
                     <input type="text" path="name" class="form-control"
                            id="name" placeholder=""/>

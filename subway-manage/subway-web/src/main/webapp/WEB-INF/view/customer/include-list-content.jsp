@@ -13,7 +13,7 @@
 	<!-- BEGIN ACCORDION PORTLET-->
 	<%--style="border:1px solid red;width:150px; white-space:nowrap;text-overflow:ellipsis;overflow:hidden; " display:inline;--%>
 	<div id="addFormInfo" style="padding-top: 10px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;table-layout: fixed" >
-		<div class="col-sm-6">
+		<div class="col-sm-12">
 			<div class="btn-group" id="btngroup1" >
 				<a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px" href="/api/customer/create">
 					<span>新建</span>
@@ -22,6 +22,9 @@
 					<span>删除</span>
 				</a>
 			</div>
+		</div>
+		<div class="form-group">
+			<label class="control-label " style="margin-left: 30px">用户管理/系统管理员组/系统管理员</label>
 		</div>
 		<table class="table table-striped table-bordered table-hover  table-checkable sample_6">
 			<thead>
@@ -36,7 +39,7 @@
 				<th> 行业 </th>
 				<th> 创建时间 </th>
 				<th> 创建人 </th>
-				<th> 所有者 </th>
+				<th> 所有人 </th>
 				<th style="width: 10%;"> 操作</th>
 			</tr>
 			</thead>
@@ -58,7 +61,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/customer/edit">
+								<a href="/api/customer/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -90,7 +93,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/customer/edit">
+								<a href="/api/customer/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -122,7 +125,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/customer/edit">
+								<a href="/api/customer/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -154,7 +157,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/customer/edit">
+								<a href="/api/customer/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -186,7 +189,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/customer/edit">
+								<a href="/api/customer/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -218,7 +221,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/customer/edit">
+								<a href="/api/customer/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -250,7 +253,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/customer/edit">
+								<a href="/api/customer/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -282,7 +285,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/customer/edit">
+								<a href="/api/customer/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -314,7 +317,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/customer/edit">
+								<a href="/api/customer/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>

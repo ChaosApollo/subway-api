@@ -30,4 +30,9 @@ public class ProgramController {
         ModelAndView modelandView = new ModelAndView("program/list", "program", new ContractEntity());
         return modelandView;
     }
+    @RequestMapping(value = "check", method = RequestMethod.GET)
+    public ModelAndView  check() {
+        ModelAndView modelandView = new ModelAndView("program/check", "program", new ContractEntity());
+        return modelandView;
+    }
 }

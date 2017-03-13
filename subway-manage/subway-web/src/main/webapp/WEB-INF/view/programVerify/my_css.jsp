@@ -37,5 +37,26 @@
     .table-checkable tr>td:first-child, .table-checkable tr>th:first-child {
          max-width: 100px;
     }
+
+
+    .icon-btn {
+        height: 45px;
+        padding-top: 2px;
+    }
+    .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
+        font-size: 12px;
+    }
+    thead, tr, th,td,.table td, .table th,.table thead tr th{
+        text-align: center;
+    }
+    legend{
+        font-size: 12px;
+        font-weight: bold;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+    .table>tbody>tr>td{
+        line-height: 2;
+    }
 </style>
 

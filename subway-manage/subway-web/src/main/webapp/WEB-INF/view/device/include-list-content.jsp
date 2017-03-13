@@ -13,7 +13,7 @@
     <!-- BEGIN ACCORDION PORTLET-->
     <div id="addFormInfo">
         <div>
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <div class="btn-group" id="btngroup1" >
                     <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px" href="/api/device/create">
                         <span>新建</span>
@@ -23,6 +23,9 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label " style="margin-left: 30px">用户管理/系统管理员组/系统管理员</label>
         </div>
         <table class="table table-striped table-bordered table-hover table-checkable sample_6">
             <thead>

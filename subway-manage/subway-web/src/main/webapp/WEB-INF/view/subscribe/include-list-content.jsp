@@ -12,8 +12,19 @@
       method="post">
     <!-- BEGIN ACCORDION PORTLET-->
     <div id="addFormInfo">
-        <a href = "/api/subscribe/create" ><input  type = "button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px" value="新建"/></a>
-        <button type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px">删除</button>
+        <div class="col-sm-12">
+            <div class="btn-group" id="btngroup1" >
+                <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px" href="/api/subscribe/create">
+                    <span>新建</span>
+                </a>
+                <a type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;">
+                    <span>删除</span>
+                </a>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label " style="margin-left: 30px">用户管理/系统管理员组/系统管理员</label>
+        </div>
         <table class="table table-striped table-bordered table-hover table-checkable sample_6">
             <thead>
             <tr>
@@ -22,13 +33,14 @@
                     <input type="checkbox" class="group-checkable"
                            data-set=".sample_6 .checkboxes" /> <span></span>
                 </label></th>
-                <th> # </th>
+                <th> 状态 </th>
                 <th> 客户简称 </th>
                 <th> 推广品牌 </th>
                 <th> 申请者 </th>
                 <th> 申请时间 </th>
                 <th> 审核状态 </th>
                 <th> 审核人 </th>
+                <th> 所有人 </th>
                 <th style="width: 8%;align-content: center"> 操作</th>
             </tr>
             </thead>
@@ -48,6 +60,7 @@
                 <td> 补位节目 </td>
                 <td> 2016/11/9</td>
                 <td> 系统管理员 </td>
+                <td> 系统管理员 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
@@ -55,7 +68,7 @@
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="/api/subscribe/edit">
+                                <a href="/api/subscribe/check">
                                     <i class="glyphicon glyphicon-search"></i> 查看</a>
                             </li>
                             <li>
@@ -89,6 +102,7 @@
                 <td> 补位节目 </td>
                 <td> 2016/11/9</td>
                 <td> 系统管理员 </td>
+                <td> 系统管理员 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
@@ -96,7 +110,7 @@
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="/api/subscribe/edit">
+                                <a href="/api/subscribe/check">
                                     <i class="glyphicon glyphicon-search"></i> 查看</a>
                             </li>
                             <li>
@@ -130,6 +144,7 @@
                 <td> 补位节目 </td>
                 <td> 2016/11/9</td>
                 <td> 系统管理员 </td>
+                <td> 系统管理员 </td>
                 <td style="text-align: center;">
                     <div class=" btn-group " style="display: table;width: auto;margin-left: 5px;margin-right: 5px;">
                         <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> 操作
@@ -137,7 +152,7 @@
                         </button>
                         <ul class="dropdown-menu pull-right" role="menu">
                             <li>
-                                <a href="/api/subscribe/edit">
+                                <a href="/api/subscribe/check">
                                     <i class="glyphicon glyphicon-search"></i> 查看</a>
                             </li>
                             <li>

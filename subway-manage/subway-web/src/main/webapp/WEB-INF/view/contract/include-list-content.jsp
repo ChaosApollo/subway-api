@@ -12,7 +12,7 @@
 	method="post" style="margin:0px;display:inline;">
 	<!-- BEGIN ACCORDION PORTLET-->
 	<div id="addFormInfo" style="padding-top: 10px;white-space:nowrap;" >
-		<div class="col-sm-6">
+		<div class="col-sm-12">
 			<div class="btn-group" id="btngroup1" >
 				<a type="button" href="/api/contract/create" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px;margin-right: 10px" >
 					<span>新建</span>
@@ -22,6 +22,9 @@
 				</a>
 			</div>
 		</div>
+		<div class="form-group">
+			<label class="control-label " style="margin-left: 30px">用户管理/系统管理员组/系统管理员</label>
+		</div>
 		<table class="table table-striped table-bordered table-hover  table-checkable sample_6" >
 			<thead>
 			<tr style="padding-left: 0px;padding-right: 0px;">
@@ -30,7 +33,7 @@
 					<input type="checkbox" class="group-checkable"
 						   data-set=".sample_6 .checkboxes" /> <span></span>
 				</label></th>
-				<th> # </th>
+				<th> 状态 </th>
 				<th> 合同号 </th>
 				<th> 合同名称 </th>
 				<th> 客户简称 </th>
@@ -68,7 +71,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -111,7 +114,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -154,7 +157,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -197,7 +200,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -240,7 +243,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -283,7 +286,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -326,7 +329,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -369,7 +372,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -412,7 +415,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -455,7 +458,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -498,7 +501,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -541,7 +544,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -584,7 +587,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>
@@ -627,7 +630,7 @@
 						</button>
 						<ul class="dropdown-menu pull-right" role="menu">
 							<li>
-								<a href="/api/contract/edit">
+								<a href="/api/contract/check">
 									<i class="glyphicon glyphicon-search"></i> 查看</a>
 							</li>
 							<li>

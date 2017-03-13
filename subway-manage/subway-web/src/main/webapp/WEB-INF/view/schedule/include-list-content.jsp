@@ -37,6 +37,9 @@
                 <button type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px">最近一月</button>
                 <button type="button" class="btn green" style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px">最近一周</button>
             </div>
+            <div class="form-group">
+                <label class="control-label " style="margin-left: 30px">用户管理/系统管理员组/系统管理员</label>
+            </div>
        </fieldset>
         <fieldset >
             <div class="tools"> </div>
@@ -46,7 +49,6 @@
                     <table class="table table-striped table-bordered table-hover table-checkable table-header-fixed dt-responsive" style="margin-top: 0px;">
                         <thead>
                         <tr>
-                            <th> </th>
                             <th> 线路 </th>
                             <th> 节目号 </th>
                             <th> 1-第26周<br> 2016-06-24 </th>
@@ -67,7 +69,6 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -82,7 +83,6 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -97,7 +97,6 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -112,7 +111,6 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -127,7 +125,6 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -142,7 +139,6 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -157,7 +153,6 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -172,7 +167,6 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -187,7 +181,6 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -202,7 +195,6 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -217,7 +209,34 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
+                            <td> 复兴门往西单 </td>
+                            <td> 1 </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                        </tr>
+                        <tr>
+                            <td> 复兴门往西单 </td>
+                            <td> 2 </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                            <td>  </td>
+                        </tr>
+                        <tr>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>
@@ -232,37 +251,6 @@
                             <td>  </td>
                         </tr>
                         <tr>
-                            <td> </td>
-                            <td> 复兴门往西单 </td>
-                            <td> 0 </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                        </tr>
-                        <tr>
-                            <td> </td>
-                            <td> 复兴门往西单 </td>
-                            <td> 0 </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                            <td>  </td>
-                        </tr>
-                        <tr>
-                            <td> </td>
                             <td> 复兴门往西单 </td>
                             <td> 0 </td>
                             <td>  </td>

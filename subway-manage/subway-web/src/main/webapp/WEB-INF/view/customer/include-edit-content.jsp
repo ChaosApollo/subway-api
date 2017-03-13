@@ -20,28 +20,24 @@
                         <fieldset>
                             <legend style="border-color: white">客户基本信息</legend>
                             <div class="form-group">
-                                <label for="name" class="col-sm-2 control-label "
-                                       style="text-align: center; ">客户简称</label>
+                                <label for="name" class="col-sm-2 control-label "><span class="required">*</span>客户简称</label>
                                 <div class="col-sm-3">
                                     <input type="text" path="name" class="form-control"
                                            id="name" placeholder="" />
                                 </div>
-                                <label for="company" class="col-sm-2 control-label"
-                                       style="text-align: center; ">单位名称</label>
+                                <label for="company" class="col-sm-2 control-label"><span class="required">*</span>单位名称</label>
                                 <div class="col-sm-3">
                                     <input type="text" path="company" class="form-control" id="company"
                                            placeholder="" />
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="address" class="col-sm-2 control-label"
-                                       style="text-align: center; ">单位地址</label>
+                                <label for="address" class="col-sm-2 control-label"><span class="required">*</span>单位地址</label>
                                 <div class="col-sm-3">
                                     <input type="text" path="address" class="form-control"
 												   id="address" placeholder="" />
                                 </div>
-                                <label for="trade" class="col-sm-2 control-label"
-                                       style="text-align: center;">所属行业</label>
+                                <label for="trade" class="col-sm-2 control-label"><span class="required">*</span>所属行业</label>
                                 <div class="col-sm-3">
                                     <select path="trade" class="form-control" id="trade">
                                         <option>个人护理品</option>
@@ -67,10 +63,10 @@
                             </div>
                         </fieldset>
                         <fieldset>
-                            <legend style="border-color: white">保护信息</legend>
+                            <legend>保护信息</legend>
+                            <label for="company" class="col-sm-2 control-label"><span class="required">*</span>单位名称</label>
                             <div class="form-group">
-                                <label for="owner" class="col-sm-2 control-label"
-                                       style="text-align: center;">客户所有者</label>
+                                <label for="owner" class="col-sm-2 control-label"><span class="required">*</span>客户所有者</label>
                                 <div class="col-sm-3">
                                     <select path="owner" class="form-control" id="owner">
                                         <option>系统管理员</option>
@@ -166,9 +162,11 @@
                     </div>
                     <div class="form-actions">
                         <div class="row">
-                            <div class="col-md-offset-10 col-md-10">
-                                <button type="submit" class="btn green">确定</button>
-                                <button type="button" class="btn default">取消</button>
+                            <div class="col-md-offset-6 col-md-6">
+                                <div class="col-md-offset-6 col-md-6">
+                                    <button type="submit" class="btn green">确定</button>
+                                    <button type="button" class="btn default">取消</button>
+                                </div>
                             </div>
                         </div>
                     </div>

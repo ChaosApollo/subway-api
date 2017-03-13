@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: zhaidawei
-  Date: 16/12/15
-  Time: 下午4:40
+  Date: 17/1/12
+  Time: 下午12:59
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -30,12 +30,6 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="approver" class="col-sm-2 control-label "><span class="required">*</span>审批/上报人：</label>
-                                <div class="col-sm-3" style="margin-bottom: 10px;padding-right: 0px;">
-                                    <select path="approver" class="form-control" id="approver">
-                                        <option>系统管理员</option>
-                                    </select>
-                                </div>
                                 <label class="col-sm-2 control-label"><span class="required">*</span>合同编号：</label>
                                 <div class="col-sm-3">
                                     <label class="col-sm-2 control-label "></label>
@@ -156,18 +150,6 @@
                                 </div>
                             </div>
                         </fieldset>
-                    </div>
-                    <div class="form-actions">
-                        <div class="row">
-                            <div class="col-md-offset-6 col-md-6">
-                                <div class="col-md-offset-6 col-md-6">
-                                    <button type="button" class="btn green">通过</button>
-                                    <button type="button" class="btn green">驳回</button>
-                                    <button type="button" class="btn green">上报</button>
-                                    <button type="button" class="btn default">取消</button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

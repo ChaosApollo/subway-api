@@ -37,7 +37,7 @@
         <div class="page-content">
             <%@include file="../include/default-system-content-page-header.jsp" %>
             <!-- BEGIN PAGE CONTENT-->
-            <%@include file="include-create-content.jsp" %>
+            <%@include file="include-edit-content.jsp" %>
             <!-- END PAGE CONTENT-->
         </div>
         <!-- END CONTENT BODY -->

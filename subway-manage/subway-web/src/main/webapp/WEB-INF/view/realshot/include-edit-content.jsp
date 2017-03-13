@@ -120,9 +120,13 @@
                     </div>
                     <div class="form-actions">
                         <div class="row">
-                            <div class="col-md-offset-10 col-md-10">
-                                <button type="submit" class="btn green">确定</button>
-                                <button type="button" class="btn default">取消</button>
+                            <div class="col-md-offset-6 col-md-6">
+                                <div class="col-md-offset-6 col-md-6">
+                                    <div class="col-md-offset-6 col-md-6">
+                                        <button type="submit" class="btn green">确定</button>
+                                        <button type="button" class="btn default">取消</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

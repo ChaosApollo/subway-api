@@ -14,25 +14,9 @@
     <%@ include file="../include/default-page-global-head.jsp" %>
     <%@ include file="include-page-level-head.jsp" %>
     <%@ include file="../include/default-system-css.jsp" %>
+    <%@ include file="my_css.jsp" %>
 
 </head>
-<style type="text/css">
-    .control-label,.table,.form-control,thead, tr, th,td,.table td, .table th,.table thead tr th,body {
-        font-size: 12px;
-    }
-    thead, tr, th,td,.table td, .table th,.table thead tr th{
-        text-align: center;
-    }
-    legend{
-        font-size: 12px;
-        font-weight: bold;
-        padding-left: 10px;
-        padding-bottom: 10px;
-    }
-    .table>tbody>tr>td{
-        line-height: 2;
-    }
-</style>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
 
 <%@include file="../include/default-system-header.jsp" %>
@@ -68,6 +52,6 @@
 
 <%@ include file="../include/default-system-end-of-page.jsp" %>
 <%@include file="include-end-of-page.jsp"%>
-<%@include file="my_script.jsp"%>
+<%@include file="../include/default-system-script.jsp"%>
 </body>
 </html>

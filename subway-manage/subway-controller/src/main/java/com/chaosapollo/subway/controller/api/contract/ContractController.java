@@ -44,7 +44,11 @@ public class ContractController {
         ModelAndView modelandView = new ModelAndView("contract/audit", "contract", new ContractEntity());
         return modelandView;
     }
-
+    @RequestMapping(value = "check", method = RequestMethod.GET)
+    public ModelAndView  check() {
+        ModelAndView modelandView = new ModelAndView("contract/check", "contract", new ContractEntity());
+        return modelandView;
+    }
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
     public List<ContractEntity> getAllContract() {

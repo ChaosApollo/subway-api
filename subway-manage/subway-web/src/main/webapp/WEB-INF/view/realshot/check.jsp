@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: zhaidawei
-  Date: 16/12/15
-  Time: 上午9:04
+  Date: 17/1/12
+  Time: 下午1:08
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -36,7 +36,7 @@
         <div class="page-content">
             <%@include file="../include/default-system-content-page-header.jsp" %>
             <!-- BEGIN PAGE CONTENT-->
-            <%@include file="include-edit-content.jsp" %>
+            <%@include file="include-check-content.jsp" %>
             <!-- END PAGE CONTENT-->
         </div>
         <!-- END CONTENT BODY -->

@@ -18,9 +18,10 @@
                 <div class="portlet-body form">
                     <div class="form-body"style="padding-top: 10px;padding-bottom: 10px">
                         <fieldset>
+                            <legend>基本信息</legend>
                             <div class="form-group">
                                 <label for="realshot_name" class="col-sm-2 control-label "
-                                       style="text-align: center; ">实拍名称：</label>
+                                       style="text-align: center; "><span class="required">*</span>实拍名称：</label>
                                 <div class="col-sm-3">
                                     <input type="text" path="realshot_name" class="form-control"
                                            id="realshot_name" placeholder=""/>
@@ -120,9 +121,11 @@
                     </div>
                     <div class="form-actions">
                         <div class="row">
-                            <div class="col-md-offset-10 col-md-10">
-                                <button type="submit" class="btn green">确定</button>
-                                <button type="button" class="btn default">取消</button>
+                            <div class="col-md-offset-6 col-md-6">
+                                <div class="col-md-offset-6 col-md-6">
+                                    <button type="submit" class="btn green">确定</button>
+                                    <button type="button" class="btn default">取消</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -131,68 +134,6 @@
         </div>
     </div>
 </form>
-<div class="modal fade" id="select_customer" tabindex="-1" data-width="80%">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-        <h4 class="modal-title">客户信息列表</h4>
-    </div>
-    <div class="modal-body" style="margin-right: 20px;align-content: center">
-        <div class="form-group"style="margin-top: 10px">
-            <div >
-                <table class="table table-striped table-bordered table-hover table-checkable sample_6" style="margin-top: 20px">
-                    <thead>
-                    <tr>
-                        <th> 客户简称 </th>
-                        <th> 单位名称 </th>
-                        <th> 行业 </th>
-                        <th> 创建时间 </th>
-                        <th> 创建人 </th>
-                        <th> 所有者 </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td> BJJR201611001 </td>
-                        <td> 2016-12-14 </td>
-                        <td> 金日 </td>
-                        <td> 21212 </td>
-                        <td> 2016-12-14 </td>
-                        <td> 2016-12-14 </td>
-                    </tr>
-                    <tr>
-                        <td> BJJR201611001 </td>
-                        <td> 2016-12-14 </td>
-                        <td> 金日 </td>
-                        <td> 21212 </td>
-                        <td> 2016-12-14 </td>
-                        <td> 2016-12-14 </td>
-                    </tr>
-                    <tr>
-                        <td> BJJR201611001 </td>
-                        <td> 2016-12-14 </td>
-                        <td> 金日 </td>
-                        <td> 21212 </td>
-                        <td> 2016-12-14 </td>
-                        <td> 2016-12-14 </td>
-                    </tr>
-                    <tr>
-                        <td> BJJR201611001 </td>
-                        <td> 2016-12-14 </td>
-                        <td> 金日 </td>
-                        <td> 21212 </td>
-                        <td> 2016-12-14 </td>
-                        <td> 2016-12-14 </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn green">确定</button>
-        <button type="button" data-dismiss="modal" class="btn btn-outline dark">取消</button>
-    </div>
-</div>
 
 <div class="modal fade" id="addrealshot" tabindex="-1" data-width="60%">
     <div class="modal-header">
@@ -204,10 +145,12 @@
             <label for="customer_id" class="col-sm-2 control-label "
                    style="text-align: center; ">客户简称：</label>
             <div class="col-sm-3">
-                <select path="customer_id" class="form-control" id="customer_id">
-                    <option>金日</option>
-                    <option>恒升</option>
-                </select>
+                <input type="text" path="customer_id" class="form-control"
+                       id="customer_id" placeholder="" readonly="true"/>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" data-toggle="modal" href="#select_customer" path="select_customer" class="btn green"
+                        style="padding-left: 30px;padding-right: 30px;margin-bottom: 10px">新增</button>
             </div>
             <div class="col-sm-3">
                 <select path="realshot" class="form-control" id="realshot">
@@ -218,7 +161,7 @@
         </fieldset>
         <fieldset style="margin-bottom: 20px">
             <div class="form-group">
-                <div class="col-sm-2"></div>
+                <div class="col-sm-2" style="text-align: center; ">上刊时间：</div>
                 <div class="col-sm-3">
                     <input type="text" path="begin"
                            class="form-control date-picker" id="begin" style="margin-bottom: 10px"
@@ -236,8 +179,8 @@
         </fieldset>
         <fieldset>
             <div class="form-group">
-                <label for="area" class="col-sm-1 control-label"
-                       style="text-align: center; ">地区</label>
+                <label for="area" class="col-sm-2 control-label"
+                       style="text-align: center; ">上刊地区：</label>
                 <div class="col-sm-2">
                     <select path="area" class="form-control" id="area">
                         <option>朝阳区</option>
@@ -268,7 +211,7 @@
                         <option>分钟寺站</option>
                     </select>
                 </div>
-                <div class="col-sm-3" style="margin: auto">
+                <div class="col-sm-2" style="margin: auto">
                     <div class="btn-group" id="btngroup2">
                         <a href="javascript:;" class="btn green" style="margin-right: 8px">
                             &nbsp;<i class="fa fa-plus"></i>&nbsp;
@@ -362,6 +305,49 @@
                 </div>
             </div>
         </fieldset>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn green">确定</button>
+        <button type="button" data-dismiss="modal" class="btn btn-outline dark">取消</button>
+    </div>
+</div>
+
+<div class="modal fade" id="select_customer" tabindex="-1" data-width="50%">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title">客户信息列表</h4>
+    </div>
+    <div class="modal-body" style="margin-right: 20px;align-content: center">
+        <div class="form-group"style="margin-top: 10px">
+            <div >
+                <table class="table table-striped table-bordered table-hover table-checkable sample_6" style="margin-top: 20px">
+                    <thead>
+                    <tr>
+                        <th> 客户简称 </th>
+                        <th> 单位名称 </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td> 金日 </td>
+                        <td> 21212 </td>
+                    </tr>
+                    <tr>
+                        <td> 金日 </td>
+                        <td> 21212 </td>
+                    </tr>
+                    <tr>
+                        <td> 金日 </td>
+                        <td> 21212 </td>
+                    </tr>
+                    <tr>
+                        <td> 金日 </td>
+                        <td> 21212 </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn green">确定</button>
